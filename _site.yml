@@ -1,0 +1,20 @@
+name: "r-workshop"
+navbar:
+  title: "R Workshop"
+  type: default
+  left:
+    - text: "Introduction"
+      href: index.html
+    - text: "Software"
+      href: software.html
+
+output_dir: "."
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float:
+        collapsed: false
+    theme: paper
+    highlight: textmate
+    mathjax: null

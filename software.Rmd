@@ -1,0 +1,32 @@
+---
+title: "Software"
+---
+
+Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested.
+Below are the instructions for installing software used in this workshop.
+If you do not have install access to your computer,
+you will need to contact your IT representative to have them install it.
+You can give them a link to this page for instructions.
+These instructions are for installing software on a Windows operating system.
+
+
+# R
+
+Download the latest binary distribution from the Comprehensive R Archive Network.
+([CRAN](http://cran.rstudio.com/bin/windows/base/ "R for Windows")).
+Once the installer downloads, double left-click the installation file.
+Accept default options on all but the following dialogs.
+
+Set the default location for the R installation to someplace you have write access, such as you Documents folder.
+This may already be the default if you're not installing with administrator privileges.
+
+![](images/software-r_01.png)
+
+Customize startup options by specifying *Yes (cumstomized startup)*.
+
+![](images/software-r_02.png)
+
+Set the R graphical user interface to operate with multiple top-level windows for the console,
+graphics and pager, by specifying *SDI (seperate windows)*.
+
+![](images/software-r_03.png)
