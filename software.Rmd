@@ -16,7 +16,7 @@ Download the latest binary distribution of R from the Comprehensive R Archive Ne
 Once the installer downloads, double left-click the installation file.
 Accept default options on all but the following dialogs.
 
-Set the default location for the R installation to someplace you have write access, such as you Documents folder.
+Set the default location for the R installation to someplace you have write access, such as your Documents folder.
 This may already be the default if you're not installing with administrator privileges.
 
 | ![](images/software-r_01.png)
