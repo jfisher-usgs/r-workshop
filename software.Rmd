@@ -40,8 +40,8 @@ Once running the R console should look something like:
 
 # Notepad++
 
-If you don't already have a favorite text editor (Notepad and Wordpad don't count, UltraEdit does)
-[download](https://notepad-plus-plus.org/download/)
+If you don't already have a favorite text editor
+(Notepad and Wordpad don't count, [UltraEdit](http://www.ultraedit.com/) does)
 the latest 32-bit version of Notepad++.
 Once the installer downloads, right-click on it and select "Run as administrator".
 Accept default options on all dialogs.
@@ -54,6 +54,7 @@ Once running the file is opened in the text editor and should look something lik
 
 # RStudio
 
+<span style="color:red;">Optional</span>:
 RStudio requires an installation of R.
 [Download](http://www.rstudio.com/products/rstudio/download/)
 RStudio Desktop, an integrated development environment (IDE) for R.
@@ -67,6 +68,7 @@ Once running the RStudio Desktop should look something like:
 
 # RTools
 
+<span style="color:red;">Optional</span>:
 [Download](https://cloud.r-project.org/bin/windows/Rtools/)
 the latest ("frozen" snapshot) collection of resources for building packages for R.
 Once the installer downloads, right-click on it and select "Run as administrator".
@@ -85,3 +87,15 @@ Once installed, check if Rtools can be used in R.
 Close the current R session and open a new R session.
 Execute the `Sys.getenv("PATH")` command to see if Rtools is included in System Path.
 You should see "c:\\\\Rtools\\\\bin;c:\\\\Rtools\\\\gcc-4.6.3\\\\bin;..." in the output.
+
+
+# Git
+
+<span style="color:red;">Optional</span>: [Download](https://git-scm.com/downloads)
+the latest version of Git, a version control system that is used for software development and other version control tasks.
+Once the installer downloads, right-click on it and select "Run as administrator".
+Accept default options on all but the following dialog.
+
+# MikTeX
+
+# Texmaker

@@ -318,23 +318,33 @@ div.tocify {
 </div>
 <div id="notepad" class="section level1">
 <h1>Notepad++</h1>
-<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, UltraEdit does) <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of Notepad++. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all dialogs.</p>
+<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, <a href="http://www.ultraedit.com/">UltraEdit</a> does) the latest 32-bit version of Notepad++. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all dialogs.</p>
 <p>Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file) and select “Edit with Notepad++”. Once running the file is opened in the text editor and should look something like:</p>
 <p><img src="images/software-notepad_01.png" /></p>
 </div>
 <div id="rstudio" class="section level1">
 <h1>RStudio</h1>
-<p>RStudio requires an installation of R. <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> RStudio Desktop, an integrated development environment (IDE) for R. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all dialogs. Once installed, R should be accessible from the start menu. Startup an RStudio session. Once running the RStudio Desktop should look something like:</p>
+<p><span style="color:red;">Optional</span>: RStudio requires an installation of R. <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> RStudio Desktop, an integrated development environment (IDE) for R. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all dialogs. Once installed, R should be accessible from the start menu. Startup an RStudio session. Once running the RStudio Desktop should look something like:</p>
 <p><img src="images/software-rstudio_01.png" /></p>
 </div>
 <div id="rtools" class="section level1">
 <h1>RTools</h1>
-<p><a href="https://cloud.r-project.org/bin/windows/Rtools/">Download</a> the latest (“frozen” snapshot) collection of resources for building packages for R. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all but the following dialog.</p>
+<p><span style="color:red;">Optional</span>: <a href="https://cloud.r-project.org/bin/windows/Rtools/">Download</a> the latest (“frozen” snapshot) collection of resources for building packages for R. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all but the following dialog.</p>
 <p>Select the additional task to edit the current value of the System Path.</p>
 <p><img src="images/software-rtools_01.png" /></p>
 <p>Confirm that “c:\Rtools” and “c:\Rtools\gcc-4.6.3\bin” (version number may differ) are located at the beginning of the System Path.</p>
 <p><img src="images/software-rtools_02.png" /></p>
 <p>Once installed, check if Rtools can be used in R. Close the current R session and open a new R session. Execute the <code>Sys.getenv(&quot;PATH&quot;)</code> command to see if Rtools is included in System Path. You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output.</p>
+</div>
+<div id="git" class="section level1">
+<h1>Git</h1>
+<p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/downloads">Download</a> the latest version of Git, a version control system that is used for software development and other version control tasks. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all but the following dialog.</p>
+</div>
+<div id="miktex" class="section level1">
+<h1>MikTeX</h1>
+</div>
+<div id="texmaker" class="section level1">
+<h1>Texmaker</h1>
 </div>
 
 
