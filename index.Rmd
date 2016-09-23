@@ -2,58 +2,8 @@
 title: "Introduction"
 ---
 
-Hello, Website!
-
-# Dog One
-
 Something
 
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-## Dog Two
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-Something
-
-# Dog Three
+## Site Organization
 
 Something

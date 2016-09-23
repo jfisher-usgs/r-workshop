@@ -7,6 +7,8 @@ navbar:
       href: index.html
     - text: "Software"
       href: software.html
+    - text: "R Lessons"
+      href: r-lessons.html
 
 output_dir: "."
 output:
