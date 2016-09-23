@@ -303,19 +303,40 @@ div.tocify {
 </div>
 
 
-<p>Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested. Below are the instructions for installing software used in this workshop. If you do not have install access to your computer, you will need to contact your IT representative to have them install it. You can give them a link to this page for instructions. These instructions are for installing software on a Windows operating system.</p>
+<p>Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested. Below are the instructions for installing software used in this workshop (some are optional). If you do not have install access to your computer, you will need to contact your IT representative to have them install it. You can give them a link to this page for instructions. These instructions are for installing software on a Windows operating system (OS).</p>
 <div id="r" class="section level1">
 <h1>R</h1>
-<p>Download the latest binary distribution of R from the Comprehensive R Archive Network. (<a href="http://cran.rstudio.com/bin/windows/base/" title="R for Windows">CRAN</a>). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
+<p><a href="http://cran.rstudio.com/bin/windows/base/">Download</a> the latest binary distribution of R from the Comprehensive R Archive Network (CRAN). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
 <p>Set the default location for the R installation to someplace you have write access, such as your Documents folder. This may already be the default if you’re not installing with administrator privileges.</p>
 <p><img src="images/software-r_01.png" /></p>
-<p>Customize startup options by specifying <em>Yes (cumstomized startup)</em>.</p>
+<p>Customize startup options by specifying <em>Yes (customized startup)</em>.</p>
 <p><img src="images/software-r_02.png" /></p>
-<p>Set the R graphical user interface to operate with multiple top-level windows for the console, graphics and pager, by specifying <em>SDI (seperate windows)</em>.</p>
+<p>Set the R console to operate with multiple top-level windows for the console, graphics and pager, by specifying <em>SDI (separate windows)</em>.</p>
 <p><img src="images/software-r_03.png" /></p>
+<p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R console should look something like:</p>
+<p><img src="images/software-r_04.png" /></p>
+</div>
+<div id="notepad" class="section level1">
+<h1>Notepad++</h1>
+<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, UltraEdit does) <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of Notepad++.</p>
+<p>Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all dialogs.</p>
+<p>Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file) and select “Edit with Notepad++”. Once running the file is opened in the text editor and should look something like:</p>
+<p><img src="images/software-notepad_1.png" /></p>
+</div>
+<div id="rstudio" class="section level1">
+<h1>RStudio</h1>
+<p>RStudio requires an installation of R. <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> RStudio Desktop, an integrated development environment (IDE) for R. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all dialogs.</p>
+<p>Once installed, R should be accessible from the start menu. Startup an RStudio session. Once running the RStudio Desktop should look something like:</p>
+<p><img src="images/software-rstudio_01.png" /></p>
 </div>
 <div id="rtools" class="section level1">
 <h1>RTools</h1>
+<p><a href="https://cloud.r-project.org/bin/windows/Rtools/">Download</a> the latest (“frozen” snapshot) collection of resources for building packages for R. Once the installer downloads, right-click on it and select “Run as administrator”. Accept default options on all but the following dialog.</p>
+<p>Select the additional task to edit the current value of the System Path.</p>
+<p><img src="images/software-rtools_01.png" /></p>
+<p>Confirm that “c:\Rtools” and “c:\Rtools\gcc-4.6.3\bin” (version number may differ) are located at the beginning of the System Path.</p>
+<p><img src="images/software-rtools_02.png" /></p>
+<p>Once installed, check if Rtools can be used in R. Close the current R session and open a new R session. Execute the <code>Sys.getenv(&quot;PATH&quot;)</code> command to see if Rtools is included in System Path. You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output.</p>
 </div>
 
 
