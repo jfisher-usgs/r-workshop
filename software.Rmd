@@ -51,7 +51,7 @@ Once installed, Notepad++ is accessible from Windows Explorer,
 right-click on a text file (such as an R source file) and select "Edit with Notepad++".
 Once running the file is opened in the text editor and should look something like:
 
-| ![](images/software-notepad_1.png)
+| ![](images/software-notepad_01.png)
 
 # RStudio
 
