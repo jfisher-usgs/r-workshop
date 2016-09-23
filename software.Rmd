@@ -43,7 +43,6 @@ Once running the R console should look something like:
 If you don't already have a favorite text editor (Notepad and Wordpad don't count, UltraEdit does)
 [download](https://notepad-plus-plus.org/download/)
 the latest 32-bit version of Notepad++.
-
 Once the installer downloads, right-click on it and select "Run as administrator".
 Accept default options on all dialogs.
 
@@ -60,7 +59,6 @@ RStudio requires an installation of R.
 RStudio Desktop, an integrated development environment (IDE) for R.
 Once the installer downloads, right-click on it and select "Run as administrator".
 Accept default options on all dialogs.
-
 Once installed, R should be accessible from the start menu.
 Startup an RStudio session.
 Once running the RStudio Desktop should look something like:
