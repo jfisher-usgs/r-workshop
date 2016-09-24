@@ -7,13 +7,13 @@ Below are the instructions for installing software used in this workshop.
 If you do not have install access to your computer,
 you will need to contact your IT representative to have them install it.
 You can give them a link to this page for instructions.
-These instructions are for installing software on a Windows operating system (OS).
+These instructions are for installing software on a Windows 7 (or higher) operating system (OS).
 
 ## R
 
 R is a programming language and software environment for statistical computing and graphics.
-[Download](http://cran.rstudio.com/bin/windows/base/)
-the latest binary distribution of R from the Comprehensive R Archive Network (CRAN).
+[Download](http://cran.rstudio.com/bin/windows/base/) the latest binary distribution of R
+from the Comprehensive R Archive Network (CRAN).
 Once the installer downloads, double left-click the installation file.
 Accept default options on all but the following dialogs.
 
@@ -66,14 +66,14 @@ Once running the file is opened in the text editor, it should look something lik
 ## RStudio
 
 <span style="color:red;">Optional</span>:
-RStudio requires an installation of R.
-[Download](http://www.rstudio.com/products/rstudio/download/) RStudio Desktop,
+[Download](http://www.rstudio.com/products/rstudio/download/) RStudio Desktop (free license),
 an integrated development environment (IDE) for R.
+Note that RStudio requires R to run.
 Once the installer downloads, right-click on it and select *Run as administrator*.
 Accept default options on all dialogs.
-Once installed, R should be accessible from the start menu.
+Once installed, RStudio should be accessible from the start menu.
 Startup an RStudio session.
-Once running the RStudio Desktop should look something like:
+Once running it should look something like:
 
 | ![](images/software-rstudio_01.png)
 
@@ -123,8 +123,8 @@ Choose to install missing packages on-the-fly by specify *Yes* in the pull-down-
 
 | ![](images/software-miktex_02.png)
 
-Once installed, open the **MiKTeX Settings** application from the start menu and select the *Roots* tab,
-it should look like this:
+Once installed, open the **MiKTeX Settings** application from the start menu.
+Select the *Roots* tab, it should look something like:
 
 | ![](images/software-miktex_03.png)
 
@@ -152,7 +152,7 @@ That is, no checks are made to ensure that these paths are correct.
 The only path you need to concern yourself with is located in the *R Sweave* entry.
 Check that the path to "R.exe" is correct, change as needed.
 In addition, configure the *R Sweave* entry to use the **knitr** R package,
-it should look like this:
+it should look something like:
 
 ```{r, engine="bash", eval=FALSE}
 "C:/Users/jfisher/Documents/R/R-3.3.1/bin/R.exe" CMD Rscript -e "knitr::knit('%.Rnw')"

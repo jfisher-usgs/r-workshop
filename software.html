@@ -306,7 +306,7 @@ div.tocify {
 </div>
 
 
-<p>Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested. Below are the instructions for installing software used in this workshop. If you do not have install access to your computer, you will need to contact your IT representative to have them install it. You can give them a link to this page for instructions. These instructions are for installing software on a Windows operating system (OS).</p>
+<p>Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested. Below are the instructions for installing software used in this workshop. If you do not have install access to your computer, you will need to contact your IT representative to have them install it. You can give them a link to this page for instructions. These instructions are for installing software on a Windows 7 (or higher) operating system (OS).</p>
 <div id="r" class="section level2">
 <h2>R</h2>
 <p>R is a programming language and software environment for statistical computing and graphics. <a href="http://cran.rstudio.com/bin/windows/base/">Download</a> the latest binary distribution of R from the Comprehensive R Archive Network (CRAN). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
@@ -329,7 +329,7 @@ div.tocify {
 </div>
 <div id="rstudio" class="section level2">
 <h2>RStudio</h2>
-<p><span style="color:red;">Optional</span>: RStudio requires an installation of R. <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> RStudio Desktop, an integrated development environment (IDE) for R. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, R should be accessible from the start menu. Startup an RStudio session. Once running the RStudio Desktop should look something like:</p>
+<p><span style="color:red;">Optional</span>: <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> RStudio Desktop (free license), an integrated development environment (IDE) for R. Note that RStudio requires R to run. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, RStudio should be accessible from the start menu. Startup an RStudio session. Once running it should look something like:</p>
 <p><img src="images/software-rstudio_01.png" /></p>
 </div>
 <div id="rtools" class="section level2">
@@ -351,7 +351,7 @@ div.tocify {
 <p><img src="images/software-miktex_01.png" /></p>
 <p>Choose to install missing packages on-the-fly by specify <em>Yes</em> in the pull-down-menu.</p>
 <p><img src="images/software-miktex_02.png" /></p>
-<p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu and select the <em>Roots</em> tab, it should look like this:</p>
+<p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu. Select the <em>Roots</em> tab, it should look something like:</p>
 <p><img src="images/software-miktex_03.png" /></p>
 <p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the <em>texmf</em> folder within the R installation, mine is located here: “C:\Users\jfisher\Documents\R\R-3.3.1\share\texmf”.</p>
 <p>R functions that that let you write LaTeX documents are included in the <strong>knitr</strong> package.</p>
@@ -360,7 +360,7 @@ div.tocify {
 <h2>Texmaker</h2>
 <p><span style="color:red;">Optional</span>: <a href="http://www.xm1math.net/texmaker/download.html">Download</a> the latest version of Texmaker, a tool for developing documents with LaTeX. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Texmaker should be accessible from the start menu or desktop shortcut. Startup a Texmaker session, it should look something like:</p>
 <p><img src="images/software-texmaker_01.png" /></p>
-<p>Select <em>Configure Texmaker</em> under the <em>Options</em> pull-down menu. For better or worse, Texmaker commands are configured using best guesses for default paths. That is, no checks are made to ensure that these paths are correct. The only path you need to concern yourself with is located in the <em>R Sweave</em> entry. Check that the path to “R.exe” is correct, change as needed. In addition, configure the <em>R Sweave</em> entry to use the <strong>knitr</strong> R package, it should look like this:</p>
+<p>Select <em>Configure Texmaker</em> under the <em>Options</em> pull-down menu. For better or worse, Texmaker commands are configured using best guesses for default paths. That is, no checks are made to ensure that these paths are correct. The only path you need to concern yourself with is located in the <em>R Sweave</em> entry. Check that the path to “R.exe” is correct, change as needed. In addition, configure the <em>R Sweave</em> entry to use the <strong>knitr</strong> R package, it should look something like:</p>
 <pre class="bash"><code>&quot;C:/Users/jfisher/Documents/R/R-3.3.1/bin/R.exe&quot; CMD Rscript -e &quot;knitr::knit(&#39;%.Rnw&#39;)&quot;</code></pre>
 <p>Next, click on the <em>Quick Build</em> button located on the left-hand-side of the Configure Texmaker dialog window and specify to use the <em>PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf</em> command.</p>
 <p>The basic workflow is to open an R Sweave document (*.Rda) in Texmaker. Select <em>R Sweave</em> under the <em>Tools</em> pull-down menu. If the process exits normally press the <em>Quick Build</em> button.</p>
