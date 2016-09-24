@@ -309,73 +309,71 @@ div.tocify {
 <p>Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested. Below are the instructions for installing software used in this workshop. If you do not have install access to your computer, you will need to contact your IT representative to have them install it. You can give them a link to this page for instructions. These instructions are for installing software on a Windows 7 (or higher) operating system (OS).</p>
 <div id="r" class="section level2">
 <h2>R</h2>
-<p>R is a programming language and software environment for statistical computing and graphics. <a href="http://cran.rstudio.com/bin/windows/base/">Download</a> the latest binary distribution of R from the Comprehensive R Archive Network (CRAN). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
-<p>Set the default location for the R installation to someplace you have write access, such as your Documents folder. This may already be the default if you’re installing as a standard user, without administrative privileges.</p>
+<p><a href="https://www.r-project.org/">R</a> is a programming language and software environment for statistical computing and graphics. <a href="http://cran.rstudio.com/bin/windows/base/">Download</a> the latest binary distribution of R from the Comprehensive R Archive Network (CRAN). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
+<p>Set the location for the R installation to someplace you have write access, such as your “Documents” folder. This may already be the default if you’re installing as a standard user, without administrative privileges.</p>
 <p><img src="images/software-r_01.png" /></p>
 <p>Customize startup options by specifying <em>Yes (customized startup)</em>.</p>
 <p><img src="images/software-r_02.png" /></p>
-<p>Set the R console to operate with multiple top-level windows for the console, graphics and pager, by specifying <em>SDI (separate windows)</em>.</p>
+<p>Set the R graphical user interface to operate with multiple top-level windows for the console, graphics and pager, by specifying <em>SDI (separate windows)</em>.</p>
 <p><img src="images/software-r_03.png" /></p>
-<p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R console should look something like:</p>
+<p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R Console should look something like:</p>
 <p><img src="images/software-r_04.png" /></p>
 <p>Packages are collections of R functions, data, and compiled code in a well-defined format. R comes with a standard set of packages. Other user-contributed packages are available for download and installation.</p>
-<p>Install the following packages available from <a href="https://cloud.r-project.org/web/packages/">CRAN</a> by pasting the following code in the R console and hitting enter.</p>
+<p>Install the following packages available from <a href="https://cloud.r-project.org/web/packages/">CRAN</a> by pasting the following code in the R console and pressing Enter.</p>
 <pre class="r"><code>install.packages(c(&quot;inlmisc&quot;, &quot;dataRetrieval&quot;, &quot;lattice&quot;, &quot;ggplot2&quot;, &quot;devtools&quot;, &quot;knitr&quot;))</code></pre>
 </div>
 <div id="notepad" class="section level2">
 <h2>Notepad++</h2>
-<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, <a href="http://www.ultraedit.com/">UltraEdit</a> does), <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of Notepad++. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file [*.R]) and select <em>Edit with Notepad++</em>. Once running the file is opened in the text editor, it should look something like:</p>
+<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, <a href="http://www.ultraedit.com/">UltraEdit</a> does), <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of <a href="https://notepad-plus-plus.org/">Notepad++</a>. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file [*.R]) and select <em>Edit with Notepad++</em>. Once running the file is opened in the text editor, it should look something like:</p>
 <p><img src="images/software-notepad_01.png" /></p>
 </div>
 <div id="rstudio" class="section level2">
 <h2>RStudio</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> RStudio Desktop (free license), an integrated development environment (IDE) for R. Note that RStudio requires R to run. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, RStudio should be accessible from the start menu. Startup an RStudio session. Once running it should look something like:</p>
+<p><span style="color:red;">Optional</span>: <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> is an integrated development environment (IDE) for R; it requires R to run. <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> the latest free-license version of RStudio Desktop. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, RStudio should be accessible from the start menu. Startup an RStudio session, it should look something like:</p>
 <p><img src="images/software-rstudio_01.png" /></p>
 </div>
 <div id="rtools" class="section level2">
 <h2>RTools</h2>
-<p><span style="color:red;">Optional</span>: <a href="https://cloud.r-project.org/bin/windows/Rtools/">Download</a> the latest (“frozen” snapshot) collection of resources for building packages for R. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialog.</p>
+<p><span style="color:red;">Optional</span>: RTools is a collection of resources for building packages for R. <a href="https://cloud.r-project.org/bin/windows/Rtools/">Download</a> the latest “frozen” version of Rtools. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
 <p>Select the additional task to edit the current value of the System Path.</p>
 <p><img src="images/software-rtools_01.png" /></p>
-<p>Confirm that “c:\Rtools” and “c:\Rtools\gcc-4.6.3\bin” (version number may differ) are located at the beginning of the System Path.</p>
+<p>Confirm that “c:\Rtools\bin” and “c:\Rtools\gcc-4.6.3\bin” (version number may differ) are located at the beginning of the System Path.</p>
 <p><img src="images/software-rtools_02.png" /></p>
-<p>Once installed, check if Rtools can be used in R. Close the current R session and open a new R session and pasting the following command to see if Rtools is included in System Path.</p>
+<p>Once installed, check if Rtools can be accessed through R. Close the current R session (assuming you have it open) and open a new R session. Paste the following command into the R Console to see if Rtools is included in the System Path.</p>
 <pre class="r"><code>Sys.getenv(&quot;PATH&quot;)</code></pre>
 <p>You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output.</p>
-<p>R functions that simplify common package development tasks are included in the <strong>devtools</strong> package.</p>
+<p>R functions that simplify common package development tasks are included in the <a href="https://CRAN.R-project.org/package=devtools">devtools</a> package.</p>
 </div>
 <div id="miktex" class="section level2">
 <h2>MiKTeX</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://miktex.org/download">Download</a> the latest 32-bit version of Basic MiKTeX, an implementation of <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> and related programs for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
+<p><span style="color:red;">Optional</span>: <a href="http://miktex.org/">MiKTeX</a> is an implementation of TeX/LaTeX and related programs for Windows. <a href="http://miktex.org/download">Download</a> the latest 32-bit version of Basic MiKTeX. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
 <p>Change the installation directory to “C:\miktex”, its been my experience that other locations can result in access errors.</p>
 <p><img src="images/software-miktex_01.png" /></p>
 <p>Choose to install missing packages on-the-fly by specify <em>Yes</em> in the pull-down-menu.</p>
 <p><img src="images/software-miktex_02.png" /></p>
-<p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu. Select the <em>Roots</em> tab, it should look something like:</p>
+<p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu, and select the <em>Roots</em> tab, it should look something like:</p>
 <p><img src="images/software-miktex_03.png" /></p>
-<p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the <em>texmf</em> folder within the R installation, mine is located here: “C:\Users\jfisher\Documents\R\R-3.3.1\share\texmf”.</p>
-<p>R functions that that let you write LaTeX documents are included in the <strong>knitr</strong> package.</p>
+<p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the “texmf” folder within the R installation directory structure, mine is located here: “C:\Users\jfisher\Documents\R\R-3.3.1\share\texmf”.</p>
+<p>R functions that let you write LaTeX documents are included in the <a href="https://CRAN.R-project.org/package=knitr">knitr</a> package.</p>
 </div>
 <div id="texmaker" class="section level2">
 <h2>Texmaker</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://www.xm1math.net/texmaker/download.html">Download</a> the latest version of Texmaker, a tool for developing documents with LaTeX. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Texmaker should be accessible from the start menu or desktop shortcut. Startup a Texmaker session, it should look something like:</p>
+<p><span style="color:red;">Optional</span>: <a href="http://www.xm1math.net/texmaker/">Texmaker</a> is a tool for developing documents with LaTeX. <a href="http://www.xm1math.net/texmaker/download.html">Download</a> the latest 32-bit version of Texmaker for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Texmaker should be accessible from the start menu or desktop shortcut. Startup a Texmaker session, it should look something like:</p>
 <p><img src="images/software-texmaker_01.png" /></p>
-<p>Select <em>Configure Texmaker</em> under the <em>Options</em> pull-down menu. For better or worse, Texmaker commands are configured using best guesses for default paths. That is, no checks are made to ensure that these paths are correct. The only path you need to concern yourself with is located in the <em>R Sweave</em> entry. Check that the path to “R.exe” is correct, change as needed. In addition, configure the <em>R Sweave</em> entry to use the <strong>knitr</strong> R package, it should look something like:</p>
+<p>Select <em>Configure Texmaker</em> under the <em>Options</em> pull-down menu. For better or worse Texmaker commands are configured using best guesses for default paths. That is, no checks are made to ensure that these paths are correct. The only path you need to concern yourself with is located in the <em>R Sweave</em> entry. Check that the path to “R.exe” is correct, change as needed. In addition, configure the <em>R Sweave</em> entry to use the <strong>knitr</strong> R package, it should look something like:</p>
 <pre class="bash"><code>&quot;C:/Users/jfisher/Documents/R/R-3.3.1/bin/R.exe&quot; CMD Rscript -e &quot;knitr::knit(&#39;%.Rnw&#39;)&quot;</code></pre>
-<p>Next, click on the <em>Quick Build</em> button located on the left-hand-side of the Configure Texmaker dialog window and specify to use the <em>PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf</em> command.</p>
-<p>The basic workflow is to open an R Sweave document (*.Rda) in Texmaker. Select <em>R Sweave</em> under the <em>Tools</em> pull-down menu. If the process exits normally press the <em>Quick Build</em> button.</p>
+<p>Next, click on the <em>Quick Build</em> button located on the left-hand-side of the Configure Texmaker dialog and specify to use the <em>PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf</em> command.</p>
+<p>The basic workflow is to open an R Sweave document (*.Rda) in Texmaker. Select <em>R Sweave</em> under the <em>Tools</em> pull-down menu. And if the process exits normally, press the <em>Quick Build</em> button to complete the conversion to a PDF document.</p>
 </div>
 <div id="ghostscript" class="section level2">
 <h2>Ghostscript</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://ghostscript.com/download/gsdnld.html">Download</a> the latest 64-bit (or 32-bit) version of Ghostscript (AGPL Release), a Postscript and PDF interpreter/renderer. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Manually edit the <em>system environment variables</em> to include the Ghostscript bin directory (such as “C:\Program Files\gs\gs9.19\bin”) in the <em>Path</em>.</p>
-<p>The Ghostscript executable will be accessible through R using the <code>compactPDF</code> function in the <strong>tools</strong> package (pre-installed with R).</p>
+<p><span style="color:red;">Optional</span>: <a href="http://ghostscript.com/">Ghostscript</a> is a Postscript and PDF interpreter/renderer. <a href="http://ghostscript.com/download/gsdnld.html">Download</a> the latest 64-bit (or 32-bit) version of Ghostscript (AGPL release). Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Manually edit the Windows <em>system environment variables</em> to include the Ghostscript bin directory (such as “C:\Program Files\gs\gs9.19\bin”) in the <em>Path</em>. The Ghostscript executable will then be accessible through R using the <code>compactPDF</code> function in the <strong>tools</strong> package (pre-installed with R).</p>
 </div>
 <div id="git" class="section level2">
 <h2>Git</h2>
-<p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/downloads">Download</a> the latest version of Git, a version control system that is used for software development and other version control tasks. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu.</p>
-<p>Open the <strong>Git Shell</strong> application, it should look something like:</p>
+<p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/">Git</a> is a version control system that is used for software development and other version control tasks. <a href="https://git-scm.com/download">Download</a> the latest 64-bit (or 32-bit) version of Git for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu. Startup a <em>Git Bash</em> session, it should look something like:</p>
 <p><img src="images/software-git_01.png" /></p>
-<p>Tell Git your name so your commits will be properly labeled by typing the following command (edit name, such as, “Jason Fisher”):</p>
+<p>Tell Git your name so your commits will be properly labeled by typing the following command (edit name, for example, “Jason Fisher”):</p>
 <pre class="bash"><code>git config --global user.name &quot;YOUR NAME&quot;</code></pre>
 <p>Tell Git the <em>email address</em> that will be associated with your Git commits.</p>
 <pre class="bash"><code>git config --global user.name &quot;YOUR EMAIL ADDRESS&quot;</code></pre>
