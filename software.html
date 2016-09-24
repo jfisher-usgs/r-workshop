@@ -318,9 +318,9 @@ div.tocify {
 <p><img src="images/software-r_03.png" /></p>
 <p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R console should look something like:</p>
 <p><img src="images/software-r_04.png" /></p>
-<p>Packages are collections of R functions, data, and compiled code in a well-defined format. R comes with a standard set of packages. Others are available for download and installation.</p>
-<p>Install the following user-contributed packages available from <a href="https://cloud.r-project.org/web/packages/">CRAN</a> by pasting the following code in the R console and hitting enter.</p>
-<pre class="r"><code>install.packages(c(&quot;inlmisc&quot;, &quot;dataRetrieval&quot;, &quot;lattice&quot;, &quot;ggplot2&quot;, &quot;knitr&quot;))</code></pre>
+<p>Packages are collections of R functions, data, and compiled code in a well-defined format. R comes with a standard set of packages. Other user-contributed packages are available for download and installation.</p>
+<p>Install the following packages available from <a href="https://cloud.r-project.org/web/packages/">CRAN</a> by pasting the following code in the R console and hitting enter.</p>
+<pre class="r"><code>install.packages(c(&quot;inlmisc&quot;, &quot;dataRetrieval&quot;, &quot;lattice&quot;, &quot;ggplot2&quot;, &quot;devtools&quot;, &quot;knitr&quot;))</code></pre>
 </div>
 <div id="notepad" class="section level2">
 <h2>Notepad++</h2>
@@ -339,24 +339,14 @@ div.tocify {
 <p><img src="images/software-rtools_01.png" /></p>
 <p>Confirm that “c:\Rtools” and “c:\Rtools\gcc-4.6.3\bin” (version number may differ) are located at the beginning of the System Path.</p>
 <p><img src="images/software-rtools_02.png" /></p>
-<p>Once installed, check if Rtools can be used in R. Close the current R session and open a new R session and type the following command to see if Rtools is included in System Path.</p>
+<p>Once installed, check if Rtools can be used in R. Close the current R session and open a new R session and pasting the following command to see if Rtools is included in System Path.</p>
 <pre class="r"><code>Sys.getenv(&quot;PATH&quot;)</code></pre>
-<p>You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output. R functions that simplify common package development tasks are included in the <strong>devtools</strong> package, install it from CRAN.</p>
-<pre class="r"><code>install.packages(&quot;devtools&quot;)</code></pre>
-</div>
-<div id="git" class="section level2">
-<h2>Git</h2>
-<p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/downloads">Download</a> the latest version of Git, a version control system that is used for software development and other version control tasks. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu.</p>
-<p>Open the <strong>Git Shell</strong> application, it should look something like:</p>
-<p><img src="images/software-git_01.png" /></p>
-<p>Tell Git your name so your commits will be properly labeled by typing the following command (edit name, such as, “Jason Fisher”):</p>
-<pre class="bash"><code>git config --global user.name &quot;YOUR NAME&quot;</code></pre>
-<p>Tell Git the <em>email address</em> that will be associated with your Git commits.</p>
-<pre class="bash"><code>git config --global user.name &quot;YOUR EMAIL ADDRESS&quot;</code></pre>
+<p>You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output.</p>
+<p>R functions that simplify common package development tasks are included in the <strong>devtools</strong> package.</p>
 </div>
 <div id="miktex" class="section level2">
-<h2>MikTeX</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://miktex.org/download">Download</a> the latest 32-bit version of Basic MiKTeX, an implementation of TeX/<a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> and related programs for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
+<h2>MiKTeX</h2>
+<p><span style="color:red;">Optional</span>: <a href="http://miktex.org/download">Download</a> the latest 32-bit version of Basic MiKTeX, an implementation of <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> and related programs for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
 <p>Change the installation directory to “C:\miktex”, its been my experience that other locations can result in access errors.</p>
 <p><img src="images/software-miktex_01.png" /></p>
 <p>Choose to install missing packages on-the-fly by specify <em>Yes</em> in the pull-down-menu.</p>
@@ -364,6 +354,7 @@ div.tocify {
 <p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu and select the <em>Roots</em> tab, it should look like this:</p>
 <p><img src="images/software-miktex_03.png" /></p>
 <p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the <em>texmf</em> folder within the R installation, mine is located here: “C:\Users\jfisher\Documents\R\R-3.3.1\share\texmf”.</p>
+<p>R functions that that let you write LaTeX documents are included in the <strong>knitr</strong> package.</p>
 </div>
 <div id="texmaker" class="section level2">
 <h2>Texmaker</h2>
@@ -374,9 +365,20 @@ div.tocify {
 <p>Next, click on the <em>Quick Build</em> button located on the left-hand-side of the Configure Texmaker dialog window and specify to use the <em>PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf</em> command.</p>
 <p>The basic workflow is to open an R Sweave document (*.Rda) in Texmaker. Select <em>R Sweave</em> under the <em>Tools</em> pull-down menu. If the process exits normally press the <em>Quick Build</em> button.</p>
 </div>
-<div id="qpdf" class="section level2">
-<h2>QPDF</h2>
-<p><span style="color:red;">Optional</span>: <a href="https://sourceforge.net/projects/qpdf/files/qpdf/">Download</a> the latest 64-bit (or 32-bit) binary version of <a href="http://qpdf.sourceforge.net/">QPDF</a> (built with mingw), a command-line program that does structural, content-preserving transformations on PDF files. Once the file downloads, unzip the compressed file and place anywhere on your local machine. Manually edit the <em>system environment variables</em> to include the QPDF bin directory (such as “…\qpdf-6.0.0\bin”) in the <em>Path</em>.</p>
+<div id="ghostscript" class="section level2">
+<h2>Ghostscript</h2>
+<p><span style="color:red;">Optional</span>: <a href="http://ghostscript.com/download/gsdnld.html">Download</a> the latest 64-bit (or 32-bit) version of Ghostscript (AGPL Release), a Postscript and PDF interpreter/renderer. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Manually edit the <em>system environment variables</em> to include the Ghostscript bin directory (such as “C:\Program Files\gs\gs9.19\bin”) in the <em>Path</em>.</p>
+<p>The Ghostscript executable will be accessible through R using the <code>compactPDF</code> function in the <strong>tools</strong> package (pre-installed with R).</p>
+</div>
+<div id="git" class="section level2">
+<h2>Git</h2>
+<p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/downloads">Download</a> the latest version of Git, a version control system that is used for software development and other version control tasks. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu.</p>
+<p>Open the <strong>Git Shell</strong> application, it should look something like:</p>
+<p><img src="images/software-git_01.png" /></p>
+<p>Tell Git your name so your commits will be properly labeled by typing the following command (edit name, such as, “Jason Fisher”):</p>
+<pre class="bash"><code>git config --global user.name &quot;YOUR NAME&quot;</code></pre>
+<p>Tell Git the <em>email address</em> that will be associated with your Git commits.</p>
+<pre class="bash"><code>git config --global user.name &quot;YOUR EMAIL ADDRESS&quot;</code></pre>
 </div>
 
 

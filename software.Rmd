@@ -41,22 +41,20 @@ Once running the R console should look something like:
 
 Packages are collections of R functions, data, and compiled code in a well-defined format.
 R comes with a standard set of packages.
-Others are available for download and installation.
+Other user-contributed packages are available for download and installation.
 
-Install the following user-contributed packages available from
-[CRAN](https://cloud.r-project.org/web/packages/)
+Install the following packages available from [CRAN](https://cloud.r-project.org/web/packages/)
 by pasting the following code in the R console and hitting enter.
 
 ```{r, eval=FALSE}
-install.packages(c("inlmisc", "dataRetrieval", "lattice", "ggplot2", "knitr"))
+install.packages(c("inlmisc", "dataRetrieval", "lattice", "ggplot2", "devtools", "knitr"))
 ```
 
 ## Notepad++
 
 If you don't already have a favorite text editor
 (Notepad and Wordpad don't count, [UltraEdit](http://www.ultraedit.com/) does),
-[download](https://notepad-plus-plus.org/download/)
-the latest 32-bit version of Notepad++.
+[download](https://notepad-plus-plus.org/download/) the latest 32-bit version of Notepad++.
 Once the installer downloads, right-click on it and select *Run as administrator*.
 Accept default options on all dialogs.
 Once installed, Notepad++ is accessible from Windows Explorer,
@@ -69,8 +67,8 @@ Once running the file is opened in the text editor, it should look something lik
 
 <span style="color:red;">Optional</span>:
 RStudio requires an installation of R.
-[Download](http://www.rstudio.com/products/rstudio/download/)
-RStudio Desktop, an integrated development environment (IDE) for R.
+[Download](http://www.rstudio.com/products/rstudio/download/) RStudio Desktop,
+an integrated development environment (IDE) for R.
 Once the installer downloads, right-click on it and select *Run as administrator*.
 Accept default options on all dialogs.
 Once installed, R should be accessible from the start menu.
@@ -97,7 +95,7 @@ are located at the beginning of the System Path.
 | ![](images/software-rtools_02.png)
 
 Once installed, check if Rtools can be used in R.
-Close the current R session and open a new R session and type the following command
+Close the current R session and open a new R session and pasting the following command
 to see if Rtools is included in System Path.
 
 ```{r, eval=FALSE}
@@ -105,48 +103,15 @@ Sys.getenv("PATH")
 ```
 
 You should see "c:\\\\Rtools\\\\bin;c:\\\\Rtools\\\\gcc-4.6.3\\\\bin;..." in the output.
-R functions that simplify common package development tasks are included in the **devtools** package,
-install it from CRAN.
 
-```{r, eval=FALSE}
-install.packages("devtools")
-```
+R functions that simplify common package development tasks are included in the **devtools** package.
 
-## Git
+## MiKTeX
 
 <span style="color:red;">Optional</span>:
-[Download](https://git-scm.com/downloads)
-the latest version of Git, a version control system that is used for software development and other version control tasks.
+[Download](http://miktex.org/download) the latest 32-bit version of Basic MiKTeX,
+an implementation of [LaTeX](https://en.wikipedia.org/wiki/LaTeX) and related programs for Windows.
 Once the installer downloads, right-click on it and select *Run as administrator*.
-Accept default options on all dialogs.
-Once installed, Git should be accessible from the start menu.
-
-Open the **Git Shell** application, it should look something like:
-
-| ![](images/software-git_01.png)
-
-Tell Git your name so your commits will be properly labeled by typing the following command
-(edit name, such as, "Jason Fisher"):
-
-```{r, engine="bash", eval=FALSE}
-git config --global user.name "YOUR NAME"
-```
-
-Tell Git the *email address* that will be associated with your Git commits.
-
-```{r, engine="bash", eval=FALSE}
-git config --global user.name "YOUR EMAIL ADDRESS"
-```
-
-## MikTeX
-
-<span style="color:red;">Optional</span>:
-[Download](http://miktex.org/download)
-the latest 32-bit version of Basic MiKTeX, an implementation of
-TeX/[LaTeX](https://en.wikipedia.org/wiki/LaTeX)
-and related programs for Windows.
-Once the installer downloads,
-right-click on it and select *Run as administrator*.
 Accept default options on all but the following dialogs.
 
 Change the installation directory to "C:\\miktex",
@@ -167,14 +132,14 @@ Push the *Add...* button and select the root directory for R's LaTeX supplementa
 Your looking for the *texmf* folder within the R installation, mine is located here:
 "C:\\Users\\jfisher\\Documents\\R\\R-3.3.1\\share\\texmf".
 
+R functions that that let you write LaTeX documents are included in the **knitr** package.
 
 ## Texmaker
 
 <span style="color:red;">Optional</span>:
-[Download](http://www.xm1math.net/texmaker/download.html)
-the latest version of Texmaker, a tool for developing documents with LaTeX.
-Once the installer downloads,
-right-click on it and select *Run as administrator*.
+[Download](http://www.xm1math.net/texmaker/download.html) the latest version of Texmaker,
+a tool for developing documents with LaTeX.
+Once the installer downloads, right-click on it and select *Run as administrator*.
 Accept default options on all dialogs.
 Once installed, Texmaker should be accessible from the start menu or desktop shortcut.
 Startup a Texmaker session, it should look something like:
@@ -200,12 +165,41 @@ The basic workflow is to open an R Sweave document (\*.Rda) in Texmaker.
 Select *R Sweave* under the *Tools* pull-down menu.
 If the process exits normally press the *Quick Build* button.
 
-## QPDF
+## Ghostscript
 
 <span style="color:red;">Optional</span>:
-[Download](https://sourceforge.net/projects/qpdf/files/qpdf/)
-the latest 64-bit (or 32-bit) binary version of [QPDF](http://qpdf.sourceforge.net/) (built with mingw),
-a command-line program that does structural, content-preserving transformations on PDF files.
-Once the file downloads, unzip the compressed file and place anywhere on your local machine.
-Manually edit the *system environment variables* to include the QPDF bin directory
-(such as "...\\qpdf-6.0.0\\bin") in the *Path*.
+[Download](http://ghostscript.com/download/gsdnld.html) the latest 64-bit (or 32-bit) version of Ghostscript (AGPL Release),
+a Postscript and PDF interpreter/renderer.
+Once the installer downloads, right-click on it and select *Run as administrator*.
+Manually edit the *system environment variables* to include the Ghostscript bin directory
+(such as "C:\\Program Files\\gs\\gs9.19\\bin") in the *Path*.
+
+The Ghostscript executable will be accessible through R using the `compactPDF` function
+in the **tools** package (pre-installed with R).
+
+
+## Git
+
+<span style="color:red;">Optional</span>:
+[Download](https://git-scm.com/downloads) the latest version of Git,
+a version control system that is used for software development and other version control tasks.
+Once the installer downloads, right-click on it and select *Run as administrator*.
+Accept default options on all dialogs.
+Once installed, Git should be accessible from the start menu.
+
+Open the **Git Shell** application, it should look something like:
+
+| ![](images/software-git_01.png)
+
+Tell Git your name so your commits will be properly labeled by typing the following command
+(edit name, such as, "Jason Fisher"):
+
+```{r, engine="bash", eval=FALSE}
+git config --global user.name "YOUR NAME"
+```
+
+Tell Git the *email address* that will be associated with your Git commits.
+
+```{r, engine="bash", eval=FALSE}
+git config --global user.name "YOUR EMAIL ADDRESS"
+```
