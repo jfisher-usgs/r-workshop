@@ -164,8 +164,8 @@ Next, click on the *Quick Build* button located on the left-hand-side of the Con
 and specify to use the *PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf* command.
 
 The basic workflow is to open an R Sweave document (\*.Rda) in Texmaker.
-Select *R Sweave* under the *Tools* pull-down menu.
-And if the process exits normally, press the *Quick Build* button to complete the conversion to a PDF document.
+Select *R Sweave* under the *Tools* pull-down menu;
+and if the process exits normally, press the *Quick Build* button to complete the conversion to a PDF document.
 
 ## Ghostscript
 
