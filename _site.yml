@@ -22,3 +22,6 @@ output:
     theme: paper
     highlight: textmate
     mathjax: null
+    include:
+      after_body: footer.html
+    css: css/styles.css

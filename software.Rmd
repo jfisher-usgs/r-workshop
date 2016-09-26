@@ -40,10 +40,8 @@ Once running the R Console should look something like:
 
 | ![](images/software-r_04.png)
 
-Packages are collections of R functions, data, and compiled code in a well-defined format.
 R comes with a standard set of packages.
 Other user-contributed packages are available for download and installation.
-
 Install the following packages available from [CRAN](https://cloud.r-project.org/web/packages/)
 by pasting the following code in the R console and pressing Enter.
 

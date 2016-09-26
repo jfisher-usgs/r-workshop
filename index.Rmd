@@ -2,8 +2,101 @@
 title: "Introduction"
 ---
 
+Over the course of this 1-day workshop you will learn the basics of the
+[R](https://www.r-project.org/)-programming language and
+how to use R (and related software) for data analysis, graphics, and reproducible research.
+Throughout the workshop, I encourage you to ask questions and get help from those around you.
+
+
+## Tentative schedule
+
+* Introduction
+
+* [Software installation](software.html)
+
+* [R lessons](r-lessons.html)
+
+* [Git lessons](git-lessons.html)
+
+* Questions/Final thoughts
+
+## R terminology
+
 Something
 
-## Something
+
+
+### Objects
 
 Something
+
+### Functions
+
+Something
+
+
+### Packages
+
+Packages are collections of R functions, data, and compiled code in a well-defined format.
+
+
+
+
+
+
+
+
+
+## Pros and cons of R
+
+Pros include:
+
+* It is free and open-source software that is available for most operating systems
+  (such as Windows, OS X, and Linux).
+
+* Because your work is stored in scripts, and the software is freely available, anyone can easily replicate it.
+  This is often not the case for GUI-driven workflows, such as those relying on Excel or ArcGIS.
+
+* It is extensible and offers robust tools for developers to build their own packages,
+  these are collections of functions, data, and compiled code in a well-defined format.
+  There are over ten-thousand packages available for download that address almost all of your data science needs,
+  everything from statistical modelling to machine learning.
+
+* Immediate access to the very latest statistical techniques and implementations.
+
+* An extremely active community dedicated to helping each other.
+  There are a variety of forums for asking questions, such as the
+  [R mailing lists](https://www.r-project.org/mail.html) and
+  [stackoverflow](http://stackoverflow.com/questions/tagged/r).
+
+* Provides tools for communicating your research using dynamic
+  [report](http://yihui.name/knitr/) and
+  [website](http://rmarkdown.rstudio.com/rmarkdown_websites.html) generation.
+
+* Designed to connect to other programming languages such as
+  C, Fortran, C++, SQL, and tcl/tk.
+
+* Includes many functions that can be used for reading, visualizing, and analyzing
+  geographical [spatial data](https://CRAN.R-project.org/view=Spatial).
+
+Cons include:
+
+* Scientists without programming experience are often frustrated by R's steep learning curve.
+  It can be difficult to remember R syntax and function names,
+  especially if you don't code on a regular basis.
+
+* The quality of contributed packages can vary from abysmal to superb.
+  Therefore, determining which package to apply to a given problem can be a little overwhelming.
+
+* R is not a high-performance programming language like C and Fortran,
+  and it's not uncommon to run into memory limitations.
+  These issues are partly attriubted to poorly written R code.
+
+
+
+## Website information
+
+This website was written in [Rmarkdown](http://rmarkdown.rstudio.com/) and
+rendered as a static website using the [rmarkdown](https://CRAN.R-project.org/package=rmarkdown) package.
+Website files are hosted using [GitHub Pages](https://pages.github.com/)
+and the complete source is available on [GitHub](https://github.com/jfisher-usgs/r-workshop).
