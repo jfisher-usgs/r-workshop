@@ -215,9 +215,9 @@ Copy the example function from above and paste it into a *New File* in your text
 Save the file to your working directory and name it "function.R";
 the ".R" file extension indicates that it's an R source file.
 Next, load the function into your current R session using the `source` function.
-Type `ls()` to confirm that the function is in your working diretory.
-Run the function passing what you think are approriate arguments.
-Repeat the process by redefining the function, loading it into the R session, and using the function.
+Type `ls()` to confirm that the function is in your working directory.
+Run the function passing what you think are appropriate arguments.
+Repeat the process by refining the function, loading it into the R session, and using the function.
 One trick in the R Console is to use the up and down arrows to recall previously used commands.
 
 ### Packages
