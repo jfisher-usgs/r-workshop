@@ -2,54 +2,32 @@
 title: "Introduction"
 ---
 
-Over the course of this 1-day workshop you will learn the basics of the
-[R](https://www.r-project.org/)-programming language and
+Over the course of this 1-day workshop you will learn the basics of the R-programming language and
 how to use R (and related software) for data analysis, graphics, and reproducible research.
 Throughout the workshop, I encourage you to ask questions and get help from those around you.
+Software used in this workshop should be installed on your computer prior to instruction.
 
+## Tentative Schedule
 
-## Tentative schedule
+* Introduction to R
 
-* Introduction
+* [Software](software.html) installation instructions for R and its development environment.
 
-* [Software installation](software.html)
+* [R lessons](r-lessons.html) covering data structures, subsetting, reading data,
+  temporal and spatial analysis.
 
-* [R lessons](r-lessons.html)
-
-* [Git lessons](git-lessons.html)
+* [Git lessons](git-lessons.html) covering the basics of using a version control system.
 
 * Questions/Final thoughts
 
-## R terminology
+## What is R?
 
-Something
+[R](https://www.r-project.org/about.html) is a language and environment for data analysis,
+ statistical computing, and graphics.
 
+## Assessment of R
 
-
-### Objects
-
-Something
-
-### Functions
-
-Something
-
-
-### Packages
-
-Packages are collections of R functions, data, and compiled code in a well-defined format.
-
-
-
-
-
-
-
-
-
-## Pros and cons of R
-
-Pros include:
+Advantages:
 
 * It is free and open-source software that is available for most operating systems
   (such as Windows, OS X, and Linux).
@@ -59,7 +37,7 @@ Pros include:
 
 * It is extensible and offers robust tools for developers to build their own packages,
   these are collections of functions, data, and compiled code in a well-defined format.
-  There are over ten-thousand packages available for download that address almost all of your data science needs,
+  There are many packages available for download that address almost all of your data science needs,
   everything from statistical modelling to machine learning.
 
 * Immediate access to the very latest statistical techniques and implementations.
@@ -79,7 +57,7 @@ Pros include:
 * Includes many functions that can be used for reading, visualizing, and analyzing
   geographical [spatial data](https://CRAN.R-project.org/view=Spatial).
 
-Cons include:
+Disadvantages:
 
 * Scientists without programming experience are often frustrated by R's steep learning curve.
   It can be difficult to remember R syntax and function names,
@@ -90,11 +68,47 @@ Cons include:
 
 * R is not a high-performance programming language like C and Fortran,
   and it's not uncommon to run into memory limitations.
-  These issues are partly attriubted to poorly written R code.
+  These issues are partly attributed to poorly written R code.
+
+* Documentation is sometimes patchy and terse.
+
+
+## Using R
+
+
+### Functions
+
+Something
 
 
 
-## Website information
+### Packages
+
+Something
+
+
+
+
+### Help
+
+Something
+
+
+
+
+
+
+## Acknowledgements
+
+I'd like to acknowledge that certain material has been borrowed for this workshop and
+thank them for openly sharing their materials.
+Sources of material include:
+
+* USGS R training course - [Introduction to R](https://owi.usgs.gov/R/training-curriculum/intro-curriculum/)
+
+* Hadley Wickham's website for [Advanced R](http://adv-r.had.co.nz/), a book in Chapman & Hall's R Series.
+
+## Website Information
 
 This website was written in [Rmarkdown](http://rmarkdown.rstudio.com/) and
 rendered as a static website using the [rmarkdown](https://CRAN.R-project.org/package=rmarkdown) package.
