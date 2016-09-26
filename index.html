@@ -310,7 +310,7 @@ div.tocify {
 </div>
 
 
-<p>Over the course of this 1-day workshop you will learn the basics of the R-programming language and how to use R (and related software) for data analysis, graphics, and reproducible research. Throughout the workshop, I encourage you to ask questions and get help from those around you. Software used in this workshop should be installed on your computer prior to instruction.</p>
+<p>Over the course of this 1-day workshop you will learn the basics of the R-programming language and how to use R (and related software) for data analysis, graphics, and reproducible research. No prior programming experience is needed. After completing the workshop you should have enough experience and skills to get started analyzing your own data in R, or at the very least, you’ll be provided resources for learning how to learn R on your own. Throughout the workshop I encourage you to ask questions and get help from those around you. Software used in the workshop should be installed on your computer prior to instruction.</p>
 <div id="tentative-schedule" class="section level2">
 <h2>Tentative Schedule</h2>
 <ul>
@@ -329,11 +329,11 @@ div.tocify {
 <h2>Assessment of R</h2>
 <p>Advantages:</p>
 <ul>
-<li><p>It is free and open-source software that is available for most operating systems (such as Windows, OS X, and Linux).</p></li>
-<li><p>Because your work is stored in scripts, and the software is freely available, anyone can easily replicate it. This is often not the case for GUI-driven workflows, such as those relying on Excel or ArcGIS.</p></li>
+<li><p>It’s free and open-source software that is available for most operating system’s (OS’s) (such as Windows, OS X, and Linux).</p></li>
+<li><p>Because your work is stored in scripts, and the software is freely available, anyone can easily replicate it. This is often not the case for graphical user interface (GUI)-driven workflows, such as those relying on Excel or ArcGIS.</p></li>
 <li><p>It is extensible and offers robust tools for developers to build their own packages, these are collections of functions, data, and compiled code in a well-defined format. There are many packages available for download that address almost all of your data science needs, everything from statistical modelling to machine learning.</p></li>
-<li><p>Immediate access to the very latest statistical techniques and implementations.</p></li>
-<li><p>An extremely active community dedicated to helping each other. There are a variety of forums for asking questions, such as the <a href="https://www.r-project.org/mail.html">R mailing lists</a> and <a href="http://stackoverflow.com/questions/tagged/r">stackoverflow</a>.</p></li>
+<li><p>Provides immediate access to the very latest statistical techniques and implementations.</p></li>
+<li><p>It has an extremely active community dedicated to helping each other. There are a variety of forums for asking questions, such as the <a href="https://www.r-project.org/mail.html">R mailing lists</a> and <a href="http://stackoverflow.com/questions/tagged/r">stackoverflow</a>.</p></li>
 <li><p>Provides tools for communicating your research using dynamic <a href="http://yihui.name/knitr/">report</a> and <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">website</a> generation.</p></li>
 <li><p>Designed to connect to other programming languages such as C, Fortran, C++, SQL, and tcl/tk.</p></li>
 <li><p>Includes many functions that can be used for reading, visualizing, and analyzing geographical <a href="https://CRAN.R-project.org/view=Spatial">spatial data</a>.</p></li>
@@ -341,16 +341,72 @@ div.tocify {
 <p>Disadvantages:</p>
 <ul>
 <li><p>Scientists without programming experience are often frustrated by R’s steep learning curve. It can be difficult to remember R syntax and function names, especially if you don’t code on a regular basis.</p></li>
-<li><p>The quality of contributed packages can vary from abysmal to superb. Therefore, determining which package to apply to a given problem can be a little overwhelming.</p></li>
+<li><p>The quality of contributed packages can vary from awful to excellent. Therefore, determining which package to apply to a given problem can be a little overwhelming.</p></li>
 <li><p>R is not a high-performance programming language like C and Fortran, and it’s not uncommon to run into memory limitations. These issues are partly attributed to poorly written R code.</p></li>
 <li><p>Documentation is sometimes patchy and terse.</p></li>
 </ul>
 </div>
 <div id="using-r" class="section level2">
 <h2>Using R</h2>
+<p>R should be accessible from the start menu, desktop shortcut, or command shell. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. For Windows users you will be opening a GUI for R called the “R Console”. You will notice a number of pull-down menus that look something like:</p>
+<p><img src="images/intro-r_01.png" /></p>
+<p>Because everything in R can be done from the command line, these pull-down menus are unnecessary for working in R. That said, they do provide a convenient way to execute common tasks in R, such as updating packages, installing package(s) from local files, or opening help documentation.</p>
+<div id="exercise" class="section level4">
+<h4>Exercise</h4>
+<p>Spend a little time getting familiar with the R Console. Please refrain from running <em>Update packages…&quot; under the </em>Packages* menu during the workshop because of the burden it would place on our centers internet bandwidth. Let me know if anyone is having trouble opening an R session.</p>
+</div>
 <div id="functions" class="section level3">
 <h3>Functions</h3>
-<p>Something</p>
+<p>As John Chambers (<a href="http://www.springer.com/gp/book/9780387759357">2008</a>) said:</p>
+<blockquote>
+<p>Nearly everything that happens in R results from a function call. Therefore, basic programming centers on creating and refining functions.</p>
+</blockquote>
+<p>He goes on to explain that</p>
+<blockquote>
+<p>everything is an object—the arguments, the value, and in fact the function and the call itself: All of these are defined as objects.</p>
+</blockquote>
+<p>To better understand functions, let’s write our own. Paste the following code into your R session at the command prompt (<code>&gt;</code>).</p>
+<pre class="r"><code>sum.of.squares &lt;- function(x, y) {
+  return(x^2 + y^2)
+}</code></pre>
+<p>You have now created a function called <code>sum.of.squares</code> which requires two arguments and returns the sum of the squares of these arguments. Since you ran the code at the command prompt, the function is now available, like any of the other built-in functions within R. Running <code>sum.of.squares(3, 4)</code> will give you the answer <code>25</code>.</p>
+<p>The procedure for writing any other functions is similar, involving three key steps:</p>
+<ol style="list-style-type: decimal">
+<li>define the function,</li>
+<li>load the function into the R session, and</li>
+<li>use the function.</li>
+</ol>
+<p>The basic syntax of functions is given below:</p>
+<pre class="r"><code>FunctionName &lt;- function(arg.1, arg.2, arg.3 = 2, ...) {
+  new.var &lt;- arg.1 + arg.2  # comment
+  return(new.var / arg.3)
+}</code></pre>
+<p>where:</p>
+<ul>
+<li><p><code>FunctionName</code> is the name of the function. This can be any valid variable name, but you should avoid using names that are used elsewhere in R, such as dir, function, plot, etc.</p></li>
+<li><p><code>function</code> is a reserved word in R that is used to provide a mechanism for defining new functions in R.</p></li>
+<li><p><code>( )</code> is used to contain function arguments. Parenthesis can also be used in mathematical expressions to denote modifications to normal order of operations (precedence rules).</p></li>
+<li><p><code>arg.1</code>, <code>arg.2</code>, <code>arg.3</code> are the arguments of the function. You can write a function with any number of arguments. These can be R objects: numbers, strings, arrays, data tables, or even pointers to other functions; anything that is needed for the function to run. Some arguments have default values specified, such as <code>arg.3 = 2</code> in our example. Arguments without a default must have a value supplied for the function to run. You are not required to provide a value for those arguments with a default, as the function will use the default value.</p></li>
+<li><p><code>...</code> is a special argument called the ellipsis. This argument will match any arguments not otherwise matched, and can be easily passed on to other functions. This technique is often used in plotting, but also has uses in many other places. For this example function it was not used, but included in order to make you aware of its existence. An example of a function that uses the ellipsis argument is given at the end of this section.</p></li>
+<li><p><code>{ }</code> is used to contain the function body, code that is run every time the function is called.</p></li>
+<li><p><code>&lt;-</code> is an assignment operator. In the example function, the first and second arguments are summed (<code>arg.1 + arg.2</code>) and the result is assigned to a new variable (<code>new.var</code>).</p></li>
+<li><p><code>#</code> is the character defining comments, the rest of the line after this character is ignored.</p></li>
+<li><p><code>return</code> is a function in R. If the end of a function is reached without calling this function, the value of the last evaluated expression is returned. Therefore, it was not needed in the example function.</p></li>
+</ul>
+<p>For R to be able to run your function, it needs first to be read into memory. There are two methods for loading functions into the memory:</p>
+<ol style="list-style-type: decimal">
+<li>copy the function text and paste it into the console, or</li>
+<li>use the <code>source(file)</code> function to load your function(s) from a file.</li>
+</ol>
+<p>The <code>file</code> argument in the <code>source</code> function is typically specified as a character string giving the pathname of the file or URL to read from. One could also specify the name of the file and the <code>source</code> function will assume the file is located in the #working directory#. Every R session has a default location on your OS’s file structure called the working directory. You need to keep track and deliberately set your working directory in each R session. If you read or write files to disk, this takes place in the working directory. If you don’t set the working directory to your desired location, you could easily write files to an undesirable file location.</p>
+<p>The <code>getwd</code> function tells you what the current working directory is. For my current R session the working directory is:</p>
+<pre class="r"><code>getwd()</code></pre>
+<pre><code>## [1] &quot;I:/Software/r-workshop&quot;</code></pre>
+<p>To change the working directory, use the <code>setwd</code> function. Be sure to enter the working directory as a character string (enclose it in quotes) and specify the separator between folders using a forward slash (/) or double backslash (\\). For Windows users, the forward slash will look strange because you’re use to the backslash (\) separator used by File Explorer (previously known as Windows Explorer).</p>
+<div id="exercise-1" class="section level4">
+<h4>Exercise</h4>
+<p>Copy the example function from above and paste it into a <em>New File</em> in your text editor (Notepad++). Save the file to your working directory and name it “function.R”; the “.R” file extension indicates that it’s an R source file. Next, load the function into your current R session using the <code>source</code> function. Type <code>ls()</code> to confirm that the function is in your working diretory. Run the function passing what you think are approriate arguments. Repeat the process by redefining the function, loading it into the R session, and using the function. One trick in the R Console is to use the up and down arrows to recall previously used commands.</p>
+</div>
 </div>
 <div id="packages" class="section level3">
 <h3>Packages</h3>
@@ -363,10 +419,11 @@ div.tocify {
 </div>
 <div id="acknowledgements" class="section level2">
 <h2>Acknowledgements</h2>
-<p>I’d like to acknowledge that certain material has been borrowed for this workshop and thank them for openly sharing their materials. Sources of material include:</p>
+<p>I’d like to acknowledge that certain material has been borrowed for the workshop and thank them for openly sharing their materials. Sources of material include:</p>
 <ul>
 <li><p>USGS R training course - <a href="https://owi.usgs.gov/R/training-curriculum/intro-curriculum/">Introduction to R</a></p></li>
 <li><p>Hadley Wickham’s website for <a href="http://adv-r.had.co.nz/">Advanced R</a>, a book in Chapman &amp; Hall’s R Series.</p></li>
+<li><p>Nice R Code blog - <a href="https://nicercode.github.io/guides/functions/">The Nice R code guides to…</a></p></li>
 </ul>
 </div>
 <div id="website-information" class="section level2">
