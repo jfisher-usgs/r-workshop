@@ -235,7 +235,7 @@ PlotNoisyData <- function(x, y, ...) {
 
 Notice that both the `PlotNoisyData` function and the embedded `plot` function include an ellipsis argument `...`.
 Now we can run the function and not only pass the required data arguments (`x` and `y`)
-but also a set of optional graphical agruments (`type` and `col`) that are
+but also a set of optional graphical arguments (`type` and `col`) that are
 accepted by the `plot` function and passed through `...` .
 An argument specification of `type = "b"` indicates that both points and lines are desired,
 whereas `col = "red"` indicates that the drawn points and lines will be the color red.
@@ -259,6 +259,31 @@ Something
 
 Something
 
+```{r, eval=FALSE}
+help.start()
+```
+
+Something
+
+| ![](images/intro-help_01.png)
+
+Something
+
+```{r, eval=FALSE}
+help(package = "sp")
+```
+
+| ![](images/intro-help_02.png)
+
+
+Something
+
+```{r, eval=FALSE}
+help(bbox, package = "sp")  # ?sp::bbox is the short-hand notation
+```
+
+| ![](images/intro-help_03.png)
+
 
 
 ### Closing R
@@ -266,6 +291,7 @@ Something
 Something
 
 | ![](images/intro-closingr_01.png)
+
 
 
 

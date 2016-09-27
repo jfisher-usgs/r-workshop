@@ -415,7 +415,7 @@ div.tocify {
   new.y &lt;- y + rnorm(length(y), 0, 5)
   plot(x, new.y, ...)
 }</code></pre>
-<p>Notice that both the <code>PlotNoisyData</code> function and the embedded <code>plot</code> function include an ellipsis argument <code>...</code>. Now we can run the function and not only pass the required data arguments (<code>x</code> and <code>y</code>) but also a set of optional graphical agruments (<code>type</code> and <code>col</code>) that are accepted by the <code>plot</code> function and passed through <code>...</code> . An argument specification of <code>type = &quot;b&quot;</code> indicates that both points and lines are desired, whereas <code>col = &quot;red&quot;</code> indicates that the drawn points and lines will be the color red.</p>
+<p>Notice that both the <code>PlotNoisyData</code> function and the embedded <code>plot</code> function include an ellipsis argument <code>...</code>. Now we can run the function and not only pass the required data arguments (<code>x</code> and <code>y</code>) but also a set of optional graphical arguments (<code>type</code> and <code>col</code>) that are accepted by the <code>plot</code> function and passed through <code>...</code> . An argument specification of <code>type = &quot;b&quot;</code> indicates that both points and lines are desired, whereas <code>col = &quot;red&quot;</code> indicates that the drawn points and lines will be the color red.</p>
 <pre class="r"><code>PlotNoisyData(x = 1:50, y = rep(0, 50), type = &quot;b&quot;, col = &quot;red&quot;)</code></pre>
 <p><img src="index_files/figure-html/intro-ellipsis-1.png" width="672" /></p>
 </div>
@@ -427,6 +427,15 @@ div.tocify {
 <div id="help" class="section level3">
 <h3>Help</h3>
 <p>Something</p>
+<pre class="r"><code>help.start()</code></pre>
+<p>Something</p>
+<p><img src="images/intro-help_01.png" /></p>
+<p>Something</p>
+<pre class="r"><code>help(package = &quot;sp&quot;)</code></pre>
+<p><img src="images/intro-help_02.png" /></p>
+<p>Something</p>
+<pre class="r"><code>help(bbox, package = &quot;sp&quot;)  # ?sp::bbox is the short-hand notation</code></pre>
+<p><img src="images/intro-help_03.png" /></p>
 </div>
 <div id="closing-r" class="section level3">
 <h3>Closing R</h3>
