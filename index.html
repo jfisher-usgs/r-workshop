@@ -323,7 +323,7 @@ div.tocify {
 </div>
 <div id="what-is-r" class="section level2">
 <h2>What is R?</h2>
-<p><a href="https://www.r-project.org/about.html">R</a> is a language and environment for data analysis, statistical computing, and graphics.</p>
+<p><a href="https://www.r-project.org/about.html">R</a> is a high-level programming language used primarily for data analysis, statistical computing, and graphics.</p>
 </div>
 <div id="assessment-of-r" class="section level2">
 <h2>Assessment of R</h2>
@@ -398,11 +398,11 @@ div.tocify {
 <li>copy the function text and paste it into the console, or</li>
 <li>use the <code>source(file)</code> function to load your function(s) from a file.</li>
 </ol>
-<p>The <code>file</code> argument in the <code>source</code> function is typically specified as a character string giving the pathname of the file or URL to read from. One could also specify the name of the file and the <code>source</code> function will assume the file is located in the #working directory#. Every R session has a default location on your OS’s file structure called the working directory. You need to keep track and deliberately set your working directory in each R session. If you read or write files to disk, this takes place in the working directory. If you don’t set the working directory to your desired location, you could easily write files to an undesirable file location.</p>
+<p>The <code>file</code> argument in the <code>source</code> function is typically specified as a character string giving the pathname of the file or URL to read from. One could also specify the name of the file and the <code>source</code> function will assume the file is located in the <em>working directory</em>. Every R session has a default location on your OS’s file structure called the working directory. You need to keep track and deliberately set your working directory in each R session.</p>
 <p>The <code>getwd</code> function tells you what the current working directory is. For my current R session the working directory is:</p>
 <pre class="r"><code>getwd()</code></pre>
 <pre><code>## [1] &quot;I:/Software/r-workshop&quot;</code></pre>
-<p>To change the working directory, use the <code>setwd(dir)</code> function, where <code>dir</code> is the pathname of the new working directory. Be sure to enter the new working directory as a character string (enclose it in quotes) and specify the separator between folders using a forward slash (/). For Windows users, the forward slash will look strange because you’re use to the backslash (\) separator used by File Explorer (previously known as Windows Explorer).</p>
+<p>To change the working directory, use the <code>setwd(dir)</code> function, where <code>dir</code> is the pathname of the new working directory. Be sure to enter the new working directory as a character string (enclose it in quotes) and specify the separator between folders using a forward slash (/). For Windows users, the forward slash will look strange because you’re used to the backslash (\) separator used by File Explorer (previously known as Windows Explorer).</p>
 </div>
 <div id="exercise-1" class="section level4">
 <h4>Exercise</h4>
@@ -415,7 +415,7 @@ div.tocify {
   new.y &lt;- y + rnorm(length(y), 0, 5)
   plot(x, new.y, ...)
 }</code></pre>
-<p>Now run the function passing additonal arguments that will be automatically passed to the <code>plot</code> function called within the function body. The arguments <code>type</code> and <code>col</code> describe the plot type and color, respectively.</p>
+<p>Notice that both the <code>PlotNoisyData</code> function and the embedded <code>plot</code> function include an ellipsis argument <code>...</code>. Now we can run the function and not only pass the required data arguments (<code>x</code> and <code>y</code>) but also a set of optional graphical agruments (<code>type</code> and <code>col</code>) that are accepted by the <code>plot</code> function and passed through <code>...</code> . An argument specification of <code>type = &quot;b&quot;</code> indicates that both points and lines are desired, whereas <code>col = &quot;red&quot;</code> indicates that the drawn points and lines will be the color red.</p>
 <pre class="r"><code>PlotNoisyData(x = 1:50, y = rep(0, 50), type = &quot;b&quot;, col = &quot;red&quot;)</code></pre>
 <p><img src="index_files/figure-html/intro-ellipsis-1.png" width="672" /></p>
 </div>
@@ -438,9 +438,9 @@ div.tocify {
 <h2>Acknowledgements</h2>
 <p>I’d like to acknowledge that certain material has been borrowed for the workshop and thank them for openly sharing their materials. Sources of material include:</p>
 <ul>
-<li><p>USGS R training course - <a href="https://owi.usgs.gov/R/training-curriculum/intro-curriculum/">Introduction to R</a></p></li>
-<li><p>Hadley Wickham’s website for <a href="http://adv-r.had.co.nz/">Advanced R</a>, a book in Chapman &amp; Hall’s R Series.</p></li>
-<li><p>Nice R Code blog - <a href="https://nicercode.github.io/guides/functions/">The Nice R code guides to…</a></p></li>
+<li><p>USGS R training course – <a href="https://owi.usgs.gov/R/training-curriculum/intro-curriculum/">Introduction to R</a></p></li>
+<li><p>Hadley Wickham’s book – <a href="http://adv-r.had.co.nz/">Advanced R</a></p></li>
+<li><p>Nice R Code blog – <a href="https://nicercode.github.io/guides/functions/">The Nice R code guides to…</a></p></li>
 </ul>
 </div>
 <div id="website-information" class="section level2">

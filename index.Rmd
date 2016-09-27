@@ -26,8 +26,8 @@ Software used in the workshop should be installed on your computer prior to inst
 
 ## What is R?
 
-[R](https://www.r-project.org/about.html) is a language and environment for data analysis,
- statistical computing, and graphics.
+[R](https://www.r-project.org/about.html) is a high-level programming language used primarily for
+data analysis, statistical computing, and graphics.
 
 ## Assessment of R
 
@@ -191,13 +191,9 @@ There are two methods for loading functions into the memory:
 
 The `file` argument in the `source` function is typically specified as a character string
 giving the pathname of the file or URL to read from.
-One could also specify the name of the file and the `source` function will assume the file
-is located in the #working directory#.
+One could also specify the name of the file and the `source` function will assume the file is located in the *working directory*.
 Every R session has a default location on your OS's file structure called the working directory.
 You need to keep track and deliberately set your working directory in each R session.
-If you read or write files to disk, this takes place in the working directory.
-If you don't set the working directory to your desired location,
-you could easily write files to an undesirable file location.
 
 The `getwd` function tells you what the current working directory is.
 For my current R session the working directory is:
@@ -210,7 +206,7 @@ To change the working directory, use the `setwd(dir)` function,
 where `dir` is the pathname of the new working directory.
 Be sure to enter the new working directory as a character string (enclose it in quotes) and
 specify the separator between folders using a forward slash (/).
-For Windows users, the forward slash will look strange because you're use to the backslash (\\) separator
+For Windows users, the forward slash will look strange because you're used to the backslash (\\) separator
 used by File Explorer (previously known as Windows Explorer).
 
 #### Exercise
@@ -226,8 +222,7 @@ One trick in the R Console is to use the up and down arrows to recall previously
 
 #### Ellipsis argument
 
-The ellipsis argument `...` is a way of passing an arbitrary number of arguments
-to a function inside another function.
+The ellipsis argument `...` is a way of passing an arbitrary number of arguments to a function inside another function.
 For example, suppose you wanted to define a function that adds noise to your data and plots the results.
 You can define the function as:
 
@@ -238,9 +233,12 @@ PlotNoisyData <- function(x, y, ...) {
 }
 ```
 
-Now run the function passing additonal arguments that will be
-automatically passed to the `plot` function called within the function body.
-The arguments `type` and `col` describe the plot type and color, respectively.
+Notice that both the `PlotNoisyData` function and the embedded `plot` function include an ellipsis argument `...`.
+Now we can run the function and not only pass the required data arguments (`x` and `y`)
+but also a set of optional graphical agruments (`type` and `col`) that are
+accepted by the `plot` function and passed through `...` .
+An argument specification of `type = "b"` indicates that both points and lines are desired,
+whereas `col = "red"` indicates that the drawn points and lines will be the color red.
 
 ```{r, echo=FALSE}
 set.seed(1)
@@ -261,11 +259,17 @@ Something
 
 Something
 
+
+
 ### Closing R
 
 Something
 
 | ![](images/intro-closingr_01.png)
+
+
+
+
 
 
 ## Acknowledgements
@@ -274,11 +278,11 @@ I'd like to acknowledge that certain material has been borrowed for the workshop
 thank them for openly sharing their materials.
 Sources of material include:
 
-* USGS R training course - [Introduction to R](https://owi.usgs.gov/R/training-curriculum/intro-curriculum/)
+* USGS R training course -- [Introduction to R](https://owi.usgs.gov/R/training-curriculum/intro-curriculum/)
 
-* Hadley Wickham's website for [Advanced R](http://adv-r.had.co.nz/), a book in Chapman & Hall's R Series.
+* Hadley Wickham's book -- [Advanced R](http://adv-r.had.co.nz/)
 
-* Nice R Code blog - [The Nice R code guides to...](https://nicercode.github.io/guides/functions/)
+* Nice R Code blog -- [The Nice R code guides to...](https://nicercode.github.io/guides/functions/)
 
 ## Website Information
 
