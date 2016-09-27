@@ -142,7 +142,7 @@ FunctionName <- function(arg.1, arg.2, arg.3 = 2, ...) {
 }
 ```
 
-where:
+where
 
 * `FunctionName` is the name of the function.
   This can be any valid variable name, but you should avoid using names that are used elsewhere in R,
@@ -167,7 +167,7 @@ where:
   This argument will match any arguments not otherwise matched, and can be easily passed on to other functions.
   This technique is often used in plotting, but also has uses in many other places.
   For this example function it was not used, but included in order to make you aware of its existence.
-  An example of a function that uses the ellipsis argument is given at the end of this section.
+  An example of a function that uses the ellipsis argument is given in the "Ellipsis argument" section.
 
 * `{ }` is used to contain the function body, code that is run every time the function is called.
 
@@ -261,9 +261,11 @@ Something
 
 Something
 
+### Closing R
 
+Something
 
-
+| ![](images/intro-closingr_01.png)
 
 
 ## Acknowledgements

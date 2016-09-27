@@ -378,13 +378,13 @@ div.tocify {
   new.var &lt;- arg.1 + arg.2  # comment
   return(new.var / arg.3)
 }</code></pre>
-<p>where:</p>
+<p>where</p>
 <ul>
 <li><p><code>FunctionName</code> is the name of the function. This can be any valid variable name, but you should avoid using names that are used elsewhere in R, such as dir, function, plot, etc.</p></li>
 <li><p><code>function</code> is a reserved word in R that is used to provide a mechanism for defining new functions in R.</p></li>
 <li><p><code>( )</code> is used to contain function arguments. Parenthesis can also be used in mathematical expressions to denote modifications to normal order of operations (precedence rules).</p></li>
 <li><p><code>arg.1</code>, <code>arg.2</code>, <code>arg.3</code> are the arguments of the function. You can write a function with any number of arguments. These can be R objects: numbers, strings, arrays, data tables, or even pointers to other functions; anything that is needed for the function to run. Some arguments have default values specified, such as <code>arg.3 = 2</code> in our example. Arguments without a default must have a value supplied for the function to run. You are not required to provide a value for those arguments with a default, as the function will use the default value.</p></li>
-<li><p><code>...</code> is a special argument called the ellipsis. This argument will match any arguments not otherwise matched, and can be easily passed on to other functions. This technique is often used in plotting, but also has uses in many other places. For this example function it was not used, but included in order to make you aware of its existence. An example of a function that uses the ellipsis argument is given at the end of this section.</p></li>
+<li><p><code>...</code> is a special argument called the ellipsis. This argument will match any arguments not otherwise matched, and can be easily passed on to other functions. This technique is often used in plotting, but also has uses in many other places. For this example function it was not used, but included in order to make you aware of its existence. An example of a function that uses the ellipsis argument is given in the “Ellipsis argument” section.</p></li>
 <li><p><code>{ }</code> is used to contain the function body, code that is run every time the function is called.</p></li>
 <li><p><code>&lt;-</code> is an assignment operator. In the example function, the first and second arguments are summed (<code>arg.1 + arg.2</code>) and the result is assigned to a new variable (<code>new.var</code>).</p></li>
 <li><p><code>#</code> is the character defining comments, the rest of the line after this character is ignored.</p></li>
@@ -427,6 +427,11 @@ div.tocify {
 <div id="help" class="section level3">
 <h3>Help</h3>
 <p>Something</p>
+</div>
+<div id="closing-r" class="section level3">
+<h3>Closing R</h3>
+<p>Something</p>
+<p><img src="images/intro-closingr_01.png" /></p>
 </div>
 </div>
 <div id="acknowledgements" class="section level2">
