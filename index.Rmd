@@ -127,10 +127,11 @@ like any of the other built-in functions within R.
 Running `sum.of.squares(3, 4)` will give you the answer `25`.
 
 The procedure for writing any other functions is similar, involving three key steps:
+(1) define the function,
+(2) load the function into the R session, and
+(3) use the function.
 
-1. define the function,
-2. load the function into the R session, and
-3. use the function.
+#### Define a function
 
 The basic syntax of functions is given below:
 
@@ -180,6 +181,8 @@ where:
   If the end of a function is reached without calling this function, the value of the last evaluated expression is returned.
   Therefore, it was not needed in the example function.
 
+#### Load a function
+
 For R to be able to run your function, it needs first to be read into memory.
 There are two methods for loading functions into the memory:
 
@@ -203,9 +206,10 @@ For my current R session the working directory is:
 getwd()
 ```
 
-To change the working directory, use the `setwd` function.
-Be sure to enter the working directory as a character string (enclose it in quotes) and
-specify the separator between folders using a forward slash (/) or double backslash (\\\\).
+To change the working directory, use the `setwd(dir)` function,
+where `dir` is the pathname of the new working directory.
+Be sure to enter the new working directory as a character string (enclose it in quotes) and
+specify the separator between folders using a forward slash (/).
 For Windows users, the forward slash will look strange because you're use to the backslash (\\) separator
 used by File Explorer (previously known as Windows Explorer).
 
@@ -219,6 +223,28 @@ Type `ls()` to confirm that the function is in your working directory.
 Run the function passing what you think are appropriate arguments.
 Repeat the process by refining the function, loading it into the R session, and using the function.
 One trick in the R Console is to use the up and down arrows to recall previously used commands.
+
+#### Ellipsis argument
+
+The ellipsis argument `...` is a way of passing an arbitrary number of arguments
+to a function inside another function.
+For example, suppose you wanted to define a function that adds noise to your data and plots the results.
+You can define the function as:
+
+```{r}
+PlotNoisyData <- function(x, y, ...) {
+  new.y <- y + rnorm(length(y), 0, 5)
+  plot(x, new.y, ...)
+}
+```
+
+Now run the function passing additonal arguments that will be
+automatically passed to the `plot` function called within the function body.
+The arguments `type` and `col` describe the plot type and color, respectively.
+
+```{r}
+PlotNoisyData(x = 1:50, y = rep(0, 50), type = "b", col = "red")
+```
 
 ### Packages
 

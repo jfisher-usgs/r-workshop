@@ -370,12 +370,9 @@ div.tocify {
   return(x^2 + y^2)
 }</code></pre>
 <p>You have now created a function called <code>sum.of.squares</code> which requires two arguments and returns the sum of the squares of these arguments. Since you ran the code at the command prompt, the function is now available, like any of the other built-in functions within R. Running <code>sum.of.squares(3, 4)</code> will give you the answer <code>25</code>.</p>
-<p>The procedure for writing any other functions is similar, involving three key steps:</p>
-<ol style="list-style-type: decimal">
-<li>define the function,</li>
-<li>load the function into the R session, and</li>
-<li>use the function.</li>
-</ol>
+<p>The procedure for writing any other functions is similar, involving three key steps: (1) define the function, (2) load the function into the R session, and (3) use the function.</p>
+<div id="define-a-function" class="section level4">
+<h4>Define a function</h4>
 <p>The basic syntax of functions is given below:</p>
 <pre class="r"><code>FunctionName &lt;- function(arg.1, arg.2, arg.3 = 2, ...) {
   new.var &lt;- arg.1 + arg.2  # comment
@@ -393,6 +390,9 @@ div.tocify {
 <li><p><code>#</code> is the character defining comments, the rest of the line after this character is ignored.</p></li>
 <li><p><code>return</code> is a function in R. If the end of a function is reached without calling this function, the value of the last evaluated expression is returned. Therefore, it was not needed in the example function.</p></li>
 </ul>
+</div>
+<div id="load-a-function" class="section level4">
+<h4>Load a function</h4>
 <p>For R to be able to run your function, it needs first to be read into memory. There are two methods for loading functions into the memory:</p>
 <ol style="list-style-type: decimal">
 <li>copy the function text and paste it into the console, or</li>
@@ -402,10 +402,22 @@ div.tocify {
 <p>The <code>getwd</code> function tells you what the current working directory is. For my current R session the working directory is:</p>
 <pre class="r"><code>getwd()</code></pre>
 <pre><code>## [1] &quot;I:/Software/r-workshop&quot;</code></pre>
-<p>To change the working directory, use the <code>setwd</code> function. Be sure to enter the working directory as a character string (enclose it in quotes) and specify the separator between folders using a forward slash (/) or double backslash (\\). For Windows users, the forward slash will look strange because you’re use to the backslash (\) separator used by File Explorer (previously known as Windows Explorer).</p>
+<p>To change the working directory, use the <code>setwd(dir)</code> function, where <code>dir</code> is the pathname of the new working directory. Be sure to enter the new working directory as a character string (enclose it in quotes) and specify the separator between folders using a forward slash (/). For Windows users, the forward slash will look strange because you’re use to the backslash (\) separator used by File Explorer (previously known as Windows Explorer).</p>
+</div>
 <div id="exercise-1" class="section level4">
 <h4>Exercise</h4>
-<p>Copy the example function from above and paste it into a <em>New File</em> in your text editor (Notepad++). Save the file to your working directory and name it “function.R”; the “.R” file extension indicates that it’s an R source file. Next, load the function into your current R session using the <code>source</code> function. Type <code>ls()</code> to confirm that the function is in your working diretory. Run the function passing what you think are approriate arguments. Repeat the process by refining the function, loading it into the R session, and using the function. One trick in the R Console is to use the up and down arrows to recall previously used commands.</p>
+<p>Copy the example function from above and paste it into a <em>New File</em> in your text editor (Notepad++). Save the file to your working directory and name it “function.R”; the “.R” file extension indicates that it’s an R source file. Next, load the function into your current R session using the <code>source</code> function. Type <code>ls()</code> to confirm that the function is in your working directory. Run the function passing what you think are appropriate arguments. Repeat the process by refining the function, loading it into the R session, and using the function. One trick in the R Console is to use the up and down arrows to recall previously used commands.</p>
+</div>
+<div id="ellipsis-argument" class="section level4">
+<h4>Ellipsis argument</h4>
+<p>The ellipsis argument <code>...</code> is a way of passing an arbitrary number of arguments to a function inside another function. For example, suppose you wanted to define a function that adds noise to your data and plots the results. You can define the function as:</p>
+<pre class="r"><code>PlotNoisyData &lt;- function(x, y, ...) {
+  new.y &lt;- y + rnorm(length(y), 0, 5)
+  plot(x, new.y, ...)
+}</code></pre>
+<p>Now run the function passing additonal arguments that will be automatically passed to the <code>plot</code> function called within the function body. The arguments <code>type</code> and <code>col</code> describe the plot type and color, respectively.</p>
+<pre class="r"><code>PlotNoisyData(x = 1:50, y = rep(0, 50), type = &quot;b&quot;, col = &quot;red&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
 </div>
 <div id="packages" class="section level3">
