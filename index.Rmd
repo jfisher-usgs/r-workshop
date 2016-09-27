@@ -95,7 +95,7 @@ such as updating packages, installing package(s) from local files, or opening he
 #### Exercise
 
 Spend a little time getting familiar with the R Console.
-Please refrain from running *Update packages..." under the *Packages* menu during the workshop
+Please refrain from running *Update packages...* under the *Packages* menu during the workshop
 because of the burden it would place on our centers internet bandwidth.
 Let me know if anyone is having trouble opening an R session.
 
