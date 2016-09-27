@@ -320,21 +320,21 @@ div.tocify {
 <p><img src="images/software-r_02.png" /></p>
 <p>Set the R graphical user interface to operate with multiple top-level windows for the console, graphics and pager, by specifying <em>SDI (separate windows)</em>.</p>
 <p><img src="images/software-r_03.png" /></p>
-<p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R Console should look something like:</p>
+<p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R Console should look something like this</p>
 <p><img src="images/software-r_04.png" /></p>
 <p>R comes with a standard set of packages, these are collections of R functions, data, and compiled code in a well-defined format. Other user-contributed packages are available for download and installation. Install the following packages available from <a href="https://cloud.r-project.org/web/packages/">CRAN</a> by pasting the following code in the R console and pressing Enter.</p>
 <pre class="r"><code>install.packages(c(&quot;raster&quot;, &quot;rgdal&quot;, &quot;rgeos&quot;, &quot;dplyr&quot;, &quot;dataRetrieval&quot;, &quot;lattice&quot;,
-                   &quot;ggplot2&quot;, &quot;colorspace&quot;, &quot;viridis&quot;, &quot;animation&quot;, &quot;sfsmisc&quot;, &quot;devtools&quot;,
-                   &quot;roxygen2&quot;, &quot;knitr&quot;, &quot;xtable&quot;))</code></pre>
+                   &quot;ggplot2&quot;, &quot;colorspace&quot;, &quot;viridis&quot;, &quot;animation&quot;, &quot;sfsmisc&quot;,
+                   &quot;devtools&quot;, &quot;roxygen2&quot;, &quot;knitr&quot;, &quot;xtable&quot;))</code></pre>
 </div>
 <div id="notepad" class="section level2">
 <h2>Notepad++</h2>
-<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, <a href="http://www.ultraedit.com/">UltraEdit</a> does), <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of <a href="https://notepad-plus-plus.org/">Notepad++</a>. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file [*.R]) and select <em>Edit with Notepad++</em>. Once running the file is opened in the text editor, it should look something like:</p>
+<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, <a href="http://www.ultraedit.com/">UltraEdit</a> does), <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of <a href="https://notepad-plus-plus.org/">Notepad++</a>. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file [*.R]) and select <em>Edit with Notepad++</em>. Once running the file is opened in the text editor, it should look something like this</p>
 <p><img src="images/software-notepad_01.png" /></p>
 </div>
 <div id="rstudio" class="section level2">
 <h2>RStudio</h2>
-<p><span style="color:red;">Optional</span>: <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> is an integrated development environment (IDE) for R; it requires R to run. <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> the latest free-license version of RStudio Desktop. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, RStudio should be accessible from the start menu. Startup an RStudio session, it should look something like:</p>
+<p><span style="color:red;">Optional</span>: <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> is an integrated development environment (IDE) for R; it requires R to run. <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> the latest free-license version of RStudio Desktop. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, RStudio should be accessible from the start menu. Startup an RStudio session, it should look something like this</p>
 <p><img src="images/software-rstudio_01.png" /></p>
 </div>
 <div id="rtools" class="section level2">
@@ -356,16 +356,16 @@ div.tocify {
 <p><img src="images/software-miktex_01.png" /></p>
 <p>Choose to install missing packages on-the-fly by specify <em>Yes</em> in the pull-down-menu.</p>
 <p><img src="images/software-miktex_02.png" /></p>
-<p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu, and select the <em>Roots</em> tab, it should look something like:</p>
+<p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu, and select the <em>Roots</em> tab, it should look something like this</p>
 <p><img src="images/software-miktex_03.png" /></p>
 <p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the “texmf” folder within the R installation directory structure, mine is located here: “C:\Users\jfisher\Documents\R\R-3.3.1\share\texmf”.</p>
 <p>R functions that let you write LaTeX documents are included in the <a href="https://CRAN.R-project.org/package=knitr">knitr</a> package.</p>
 </div>
 <div id="texmaker" class="section level2">
 <h2>Texmaker</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://www.xm1math.net/texmaker/">Texmaker</a> is a tool for developing documents with LaTeX. <a href="http://www.xm1math.net/texmaker/download.html">Download</a> the latest 32-bit version of Texmaker for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Texmaker should be accessible from the start menu or desktop shortcut. Startup a Texmaker session, it should look something like:</p>
+<p><span style="color:red;">Optional</span>: <a href="http://www.xm1math.net/texmaker/">Texmaker</a> is a tool for developing documents with LaTeX. <a href="http://www.xm1math.net/texmaker/download.html">Download</a> the latest 32-bit version of Texmaker for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Texmaker should be accessible from the start menu or desktop shortcut. Startup a Texmaker session, it should look something like this</p>
 <p><img src="images/software-texmaker_01.png" /></p>
-<p>Select <em>Configure Texmaker</em> under the <em>Options</em> pull-down menu. For better or worse Texmaker commands are configured using best guesses for default paths. That is, no checks are made to ensure that these paths are correct. The only path you need to concern yourself with is located in the <em>R Sweave</em> entry. Check that the path to “R.exe” is correct, change as needed. In addition, configure the <em>R Sweave</em> entry to use the <strong>knitr</strong> R package, it should look something like:</p>
+<p>Select <em>Configure Texmaker</em> under the <em>Options</em> pull-down menu. For better or worse Texmaker commands are configured using best guesses for default paths. That is, no checks are made to ensure that these paths are correct. The only path you need to concern yourself with is located in the <em>R Sweave</em> entry. Check that the path to “R.exe” is correct, change as needed. In addition, configure the <em>R Sweave</em> entry to use the <strong>knitr</strong> R package, it should look something like this</p>
 <pre class="bash"><code>&quot;C:/Users/jfisher/Documents/R/R-3.3.1/bin/R.exe&quot; CMD Rscript -e &quot;knitr::knit(&#39;%.Rnw&#39;)&quot;</code></pre>
 <p>Next, click on the <em>Quick Build</em> button located on the left-hand-side of the Configure Texmaker dialog and specify to use the <em>PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf</em> command.</p>
 <p>The basic workflow is to open an R Sweave document (*.Rda) in Texmaker. Select <em>R Sweave</em> under the <em>Tools</em> pull-down menu; and if the process exits normally, press the <em>Quick Build</em> button to complete the conversion to a PDF document.</p>
@@ -376,7 +376,7 @@ div.tocify {
 </div>
 <div id="git" class="section level2">
 <h2>Git</h2>
-<p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/">Git</a> is a version control system that is used for software development and other version control tasks. <a href="https://git-scm.com/download">Download</a> the latest 64-bit (or 32-bit) version of Git for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu. Startup a <em>Git Bash</em> session, it should look something like:</p>
+<p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/">Git</a> is a version control system that is used for software development and other version control tasks. <a href="https://git-scm.com/download">Download</a> the latest 64-bit (or 32-bit) version of Git for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu. Startup a <em>Git Bash</em> session, it should look something like this</p>
 <p><img src="images/software-git_01.png" /></p>
 </div>
 

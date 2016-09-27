@@ -333,7 +333,7 @@ div.tocify {
 <li><p>Because your work is stored in scripts, and the software is freely available, anyone can easily replicate it. This is often not the case for graphical user interface (GUI)-driven workflows, such as those relying on Excel or ArcGIS.</p></li>
 <li><p>It is extensible and offers robust tools for developers to build their own packages, these are collections of functions, data, and compiled code in a well-defined format. There are many packages available for download that address almost all of your data science needs, everything from statistical modelling to machine learning.</p></li>
 <li><p>Provides immediate access to the very latest statistical techniques and implementations.</p></li>
-<li><p>It has an extremely active community dedicated to helping each other. There are a variety of forums for asking questions, such as the <a href="https://www.r-project.org/mail.html">R mailing lists</a> and <a href="http://stackoverflow.com/questions/tagged/r">stackoverflow</a>.</p></li>
+<li><p>It has an extremely active community dedicated to helping each other. There are a variety of forums for asking questions, such as the <a href="https://www.r-project.org/mail.html">R mailing lists</a>.</p></li>
 <li><p>Provides tools for communicating your research using dynamic <a href="http://yihui.name/knitr/">report</a> and <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">website</a> generation.</p></li>
 <li><p>Designed to connect to other programming languages such as C, Fortran, C++, SQL, and tcl/tk.</p></li>
 <li><p>Includes many functions that can be used for reading, visualizing, and analyzing geographical <a href="https://CRAN.R-project.org/view=Spatial">spatial data</a>.</p></li>
@@ -348,7 +348,7 @@ div.tocify {
 </div>
 <div id="using-r" class="section level2">
 <h2>Using R</h2>
-<p>R should be accessible from the start menu, desktop shortcut, or command shell. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. For Windows users you will be opening a GUI for R called the “R Console”. You will notice a number of pull-down menus that look something like:</p>
+<p>R should be accessible from the start menu, desktop shortcut, or command shell. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. For Windows users you will be opening a GUI for R called the “R Console”. You will notice a number of pull-down menus that look something like this</p>
 <p><img src="images/intro-r_01.png" /></p>
 <p>Because everything in R can be done from the command line, these pull-down menus are unnecessary for working in R. That said, they do provide a convenient way to execute common tasks in R, such as updating packages, installing package(s) from local files, or opening help documentation.</p>
 <div id="exercise" class="section level4">
@@ -406,7 +406,17 @@ div.tocify {
 </div>
 <div id="exercise-1" class="section level4">
 <h4>Exercise</h4>
-<p>Copy the example function from above and paste it into a <em>New File</em> in your text editor (Notepad++). Save the file to your working directory and name it “function.R”; the “.R” file extension indicates that it’s an R source file. Next, load the function into your current R session using the <code>source</code> function. Type <code>ls()</code> to confirm that the function is in your working directory. Run the function passing what you think are appropriate arguments. Repeat the process by refining the function, loading it into the R session, and using the function. One trick in the R Console is to use the up and down arrows to recall previously used commands.</p>
+<p>This exercise will test your ability to define and load a function into R.</p>
+<ol style="list-style-type: decimal">
+<li>Copy (CTRL+C) the example function from above and paste (CTRL+V) it into a <em>New File</em> in your text editor, such as Notepad++.</li>
+<li>Save the file to a folder of your choosing and name it “function.R”—the “.R” file extension indicates an R-source (script) file.</li>
+<li>Set the working directory to the folder containing your R-source file.</li>
+<li>Load the function into your current R session using the <code>source</code> function.</li>
+<li>Confirm that your function is available for use by typing <code>ls()</code> to list all R objects you’ve created or loaded during your R session.</li>
+<li>Run the function passing what you think are appropriate arguments.</li>
+<li>Repeat the process by refining the function, loading it into the R session, and using it.</li>
+</ol>
+<p>One trick for working in a console is to use the up and down arrows to recall previously used commands.</p>
 </div>
 <div id="ellipsis-argument" class="section level4">
 <h4>Ellipsis argument</h4>
@@ -426,20 +436,53 @@ div.tocify {
 </div>
 <div id="help" class="section level3">
 <h3>Help</h3>
-<p>Something</p>
+<p>Being able to find help and interpret that help is one of the most important skills for learning a programming language.</p>
+<div id="getting-help-from-the-console" class="section level4">
+<h4>Getting help from the console</h4>
+<p>To start R’s online documentation in a web browser, the command is</p>
 <pre class="r"><code>help.start()</code></pre>
 <p><img src="images/intro-help_01.png" /></p>
-<p>Something</p>
+<p>To get more information on any specific package, for example <strong>sp</strong>, the command is</p>
 <pre class="r"><code>help(package = &quot;sp&quot;)</code></pre>
 <p><img src="images/intro-help_02.png" /></p>
-<p>Something</p>
-<pre class="r"><code>help(bbox, package = &quot;sp&quot;)  # ?sp::bbox is the short-hand notation</code></pre>
+<p>And to open the help documentation for a specific function, for example <code>bbox</code>, the command is</p>
+<pre class="r"><code>?bbox</code></pre>
+<pre><code>## No documentation for &#39;bbox&#39; in specified packages and libraries:
+## you could try &#39;??bbox&#39;</code></pre>
+<p>Wait a gosh-darn minute, that didn’t work! It appears R is unable to find the help documentation for <code>bbox</code> because it belongs to the <strong>sp</strong> package, and the <strong>sp</strong> package is not loaded in our current R session. At this point, you can either do a fuzzy match of the function name using the <code>??bbox</code> command (as recommended in the error message and appropriate when you don’t know the package name), load the <strong>sp</strong> package using the <code>library</code> function and rerun <code>?bbox</code>, or alternatively run</p>
+<pre class="r"><code>?sp::bbox</code></pre>
 <p><img src="images/intro-help_03.png" /></p>
+</div>
+<div id="task-views" class="section level4">
+<h4>Task views</h4>
+<p><a href="http://cran.r-project.org/web/views/">CRAN Task Views</a> are guides to the packages and functions useful for certain disciplines and methodologies. These guides are maintained by volunteers with expertise in a specified area. The maintainers provide annotated guidance to routines and packages. This is particularly helpful to track new packages or functionality.</p>
+</div>
+<div id="other-resources" class="section level4">
+<h4>Other resources</h4>
+<p>There are endless resources online, here’s just a few</p>
+<ul>
+<li><p><a href="http://rforcats.net/">R for cats</a> is a lighthearted introduction to the R-programming language.</p></li>
+<li><p><a href="https://www.r-bloggers.com/">R-bloggers</a> is a blog aggregator of content contributed by bloggers who write about R.</p></li>
+<li><p><a href="http://stackoverflow.com/questions/tagged/r">StackOverflow</a> is a discussion forum for all things related to programming.</p></li>
+<li><p><a href="http://adv-r.had.co.nz/">Advanced R</a> and <a href="http://r4ds.had.co.nz/index.html">R for Data Science</a>, books by Hadley Wickham.</p></li>
+</ul>
+</div>
+<div id="exercise-2" class="section level4">
+<h4>Exercise</h4>
+<ol style="list-style-type: decimal">
+<li><p>Spend a little time exploring R’s online documentation.</p></li>
+<li><p>Find a function in the <strong>stats</strong> package that can be used for fitting linear models.</p></li>
+<li><p>Open the functions help documentation and run its example code.</p></li>
+<li><p>Open a task view of your choosing and explore available packages.</p></li>
+</ol>
+</div>
 </div>
 <div id="closing-r" class="section level3">
 <h3>Closing R</h3>
-<p>Something</p>
+<p>Every time you terminate an R session, by either typing <code>q()</code> at the command prompt or manually shutting down the R Console by point and click, you are prompted as to whether to save the workspace image, it may look something like this</p>
 <p><img src="images/intro-closingr_01.png" /></p>
+<p>Your workspace image consists of all R objects you’ve created or loaded during your R session. Recall that you can use the <code>ls</code> function to list these R objects. When R asks if you want to save your workspace image, and you respond <em>No</em>, all of the new objects you’ve created during the current R session are deleted forever. If you say <em>Yes</em>, the <code>save.image</code> and <code>savehistory</code> functions are run, resulting in files called “.RData” and “.Rhistory” being written to your working directory. The “.RData” file stores your R objects and the “.Rhistory” file stores a transcript of your previous commands entered at the command prompt. The next time you start an R session in this directory, your workspace image is restored and all objects and commands will be made available for use.</p>
+<p>My recommendation to you is to <strong>never save your workspace image</strong>. This is because your code should almost always be typed in a script file and not directly in the console. In other words, save your R-source code in a text file (adhering to a <a href="https://google.github.io/styleguide/Rguide.xml">style guide</a>), and then just load the code into a new R session to re-create the previous workspace. In my opinion, this is the key behind making your work reproducible.</p>
 </div>
 </div>
 <div id="acknowledgements" class="section level2">
@@ -449,6 +492,8 @@ div.tocify {
 <li><p>USGS R training course – <a href="https://owi.usgs.gov/R/training-curriculum/intro-curriculum/">Introduction to R</a></p></li>
 <li><p>Hadley Wickham’s book – <a href="http://adv-r.had.co.nz/">Advanced R</a></p></li>
 <li><p>Nice R Code blog – <a href="https://nicercode.github.io/guides/functions/">The Nice R code guides to…</a></p></li>
+<li><p>Tutorials by William B. King – <a href="https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html">Saving and Loading Objects in R</a></p></li>
+<li><p>SAS and R blog – <a href="http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html">another look at CRAN Task Views</a></p></li>
 </ul>
 </div>
 <div id="website-information" class="section level2">

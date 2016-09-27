@@ -36,7 +36,7 @@ Once installed, R should be accessible from the start menu or desktop shortcut.
 Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version.
 The 64-bit version of R (R x64) is preferred.
 Startup an R session.
-Once running the R Console should look something like:
+Once running the R Console should look something like this
 
 | ![](images/software-r_04.png)
 
@@ -48,8 +48,8 @@ by pasting the following code in the R console and pressing Enter.
 
 ```{r, eval=FALSE}
 install.packages(c("raster", "rgdal", "rgeos", "dplyr", "dataRetrieval", "lattice",
-                   "ggplot2", "colorspace", "viridis", "animation", "sfsmisc", "devtools",
-                   "roxygen2", "knitr", "xtable"))
+                   "ggplot2", "colorspace", "viridis", "animation", "sfsmisc",
+                   "devtools", "roxygen2", "knitr", "xtable"))
 ```
 
 ## Notepad++
@@ -62,7 +62,7 @@ Once the installer downloads, right-click on it and select *Run as administrator
 Accept default options on all dialogs.
 Once installed, Notepad++ is accessible from Windows Explorer,
 right-click on a text file (such as an R source file [*.R]) and select *Edit with Notepad++*.
-Once running the file is opened in the text editor, it should look something like:
+Once running the file is opened in the text editor, it should look something like this
 
 | ![](images/software-notepad_01.png)
 
@@ -74,7 +74,7 @@ Once running the file is opened in the text editor, it should look something lik
 Once the installer downloads, right-click on it and select *Run as administrator*.
 Accept default options on all dialogs.
 Once installed, RStudio should be accessible from the start menu.
-Startup an RStudio session, it should look something like:
+Startup an RStudio session, it should look something like this
 
 | ![](images/software-rstudio_01.png)
 
@@ -126,7 +126,7 @@ Choose to install missing packages on-the-fly by specify *Yes* in the pull-down-
 | ![](images/software-miktex_02.png)
 
 Once installed, open the **MiKTeX Settings** application from the start menu, and
-select the *Roots* tab, it should look something like:
+select the *Roots* tab, it should look something like this
 
 | ![](images/software-miktex_03.png)
 
@@ -145,7 +145,7 @@ R functions that let you write LaTeX documents are included in the
 Once the installer downloads, right-click on it and select *Run as administrator*.
 Accept default options on all dialogs.
 Once installed, Texmaker should be accessible from the start menu or desktop shortcut.
-Startup a Texmaker session, it should look something like:
+Startup a Texmaker session, it should look something like this
 
 | ![](images/software-texmaker_01.png)
 
@@ -155,7 +155,7 @@ That is, no checks are made to ensure that these paths are correct.
 The only path you need to concern yourself with is located in the *R Sweave* entry.
 Check that the path to "R.exe" is correct, change as needed.
 In addition, configure the *R Sweave* entry to use the **knitr** R package,
-it should look something like:
+it should look something like this
 
 ```{r, engine="bash", eval=FALSE}
 "C:/Users/jfisher/Documents/R/R-3.3.1/bin/R.exe" CMD Rscript -e "knitr::knit('%.Rnw')"
@@ -189,6 +189,6 @@ software development and other version control tasks.
 Once the installer downloads, right-click on it and select *Run as administrator*.
 Accept default options on all dialogs.
 Once installed, Git should be accessible from the start menu.
-Startup a *Git Bash* session, it should look something like:
+Startup a *Git Bash* session, it should look something like this
 
 | ![](images/software-git_01.png)

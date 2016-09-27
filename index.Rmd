@@ -48,8 +48,7 @@ Advantages:
 
 * It has an extremely active community dedicated to helping each other.
   There are a variety of forums for asking questions, such as the
-  [R mailing lists](https://www.r-project.org/mail.html) and
-  [stackoverflow](http://stackoverflow.com/questions/tagged/r).
+  [R mailing lists](https://www.r-project.org/mail.html).
 
 * Provides tools for communicating your research using dynamic
   [report](http://yihui.name/knitr/) and
@@ -83,7 +82,7 @@ Assuming you installed R on a 64-bit OS, two versions of R are made available, t
 The 64-bit version of R (R x64) is preferred.
 Startup an R session.
 For Windows users you will be opening a GUI for R called the "R Console".
-You will notice a number of pull-down menus that look something like:
+You will notice a number of pull-down menus that look something like this
 
 | ![](images/intro-r_01.png)
 
@@ -211,14 +210,20 @@ used by File Explorer (previously known as Windows Explorer).
 
 #### Exercise
 
-Copy the example function from above and paste it into a *New File* in your text editor (Notepad++).
-Save the file to your working directory and name it "function.R";
-the ".R" file extension indicates that it's an R source file.
-Next, load the function into your current R session using the `source` function.
-Type `ls()` to confirm that the function is in your working directory.
-Run the function passing what you think are appropriate arguments.
-Repeat the process by refining the function, loading it into the R session, and using the function.
-One trick in the R Console is to use the up and down arrows to recall previously used commands.
+This exercise will test your ability to define and load a function into R.
+
+1. Copy (CTRL+C) the example function from above and paste (CTRL+V) it into
+   a *New File* in your text editor, such as Notepad++.
+2. Save the file to a folder of your choosing and name it "function.R"---the
+   ".R" file extension indicates an R-source (script) file.
+3. Set the working directory to the folder containing your R-source file.
+4. Load the function into your current R session using the `source` function.
+5. Confirm that your function is available for use by typing `ls()` to
+   list all R objects you've created or loaded during your R session.
+6. Run the function passing what you think are appropriate arguments.
+7. Repeat the process by refining the function, loading it into the R session, and using it.
+
+One trick for working in a console is to use the up and down arrows to recall previously used commands.
 
 #### Ellipsis argument
 
@@ -257,7 +262,11 @@ Something
 
 ### Help
 
-Something
+Being able to find help and interpret that help is one of the most important skills for learning a programming language.
+
+#### Getting help from the console
+
+To start R's online documentation in a web browser, the command is
 
 ```{r, eval=FALSE}
 help.start()
@@ -265,9 +274,7 @@ help.start()
 
 | ![](images/intro-help_01.png)
 
-
-
-Something
+To get more information on any specific package, for example **sp**, the command is
 
 ```{r, eval=FALSE}
 help(package = "sp")
@@ -275,29 +282,86 @@ help(package = "sp")
 
 | ![](images/intro-help_02.png)
 
+And to open the help documentation for a specific function, for example `bbox`, the command is
 
+```{r}
+?bbox
+```
 
-Something
+Wait a gosh-darn minute, that didn't work!
+It appears R is unable to find the help documentation for `bbox` because it belongs to the **sp** package,
+and the **sp** package is not loaded in our current R session.
+At this point, you can either do a fuzzy match of the function name using the `??bbox` command
+(as recommended in the error message and appropriate when you don't know the package name),
+load the **sp** package using the `library` function and rerun `?bbox`,
+or alternatively run
 
 ```{r, eval=FALSE}
-help(bbox, package = "sp")  # ?sp::bbox is the short-hand notation
+?sp::bbox
 ```
 
 | ![](images/intro-help_03.png)
 
 
+#### Task views
+
+[CRAN Task Views](http://cran.r-project.org/web/views/)
+are guides to the packages and functions useful for certain disciplines and methodologies.
+These guides are maintained by volunteers with expertise in a specified area.
+The maintainers provide annotated guidance to routines and packages.
+This is particularly helpful to track new packages or functionality.
+
+#### Other resources
+
+There are endless resources online, here's just a few
+
+* [R for cats](http://rforcats.net/) is a lighthearted introduction to
+  the R-programming language.
+
+* [R-bloggers](https://www.r-bloggers.com/) is a blog aggregator of content contributed by
+  bloggers who write about R.
+
+* [StackOverflow](http://stackoverflow.com/questions/tagged/r) is a discussion forum for
+  all things related to programming.
+
+* [Advanced R](http://adv-r.had.co.nz/) and [R for Data Science](http://r4ds.had.co.nz/index.html),
+  books by Hadley Wickham.
+
+#### Exercise
+
+1. Spend a little time exploring R's online documentation.
+
+2. Find a function in the **stats** package that can be used for fitting linear models.
+
+3. Open the functions help documentation and run its example code.
+
+4. Open a task view of your choosing and explore available packages.
 
 ### Closing R
 
-Something
+Every time you terminate an R session,
+by either typing `q()` at the command prompt or manually shutting down the R Console by point and click,
+you are prompted as to whether to save the workspace image, it may look something like this
 
 | ![](images/intro-closingr_01.png)
 
+Your workspace image consists of all R objects you've created or loaded during your R session.
+Recall that you can use the `ls` function to list these R objects.
+When R asks if you want to save your workspace image, and you respond *No*,
+all of the new objects you've created during the current R session are deleted forever.
+If you say *Yes*, the `save.image` and `savehistory` functions are run,
+resulting in files called ".RData" and ".Rhistory" being written to your working directory.
+The ".RData" file stores your R objects and
+the ".Rhistory" file stores a transcript of your previous commands entered at the command prompt.
+The next time you start an R session in this directory,
+your workspace image is restored and all objects and commands will be made available for use.
 
-
-
-
-
+My recommendation to you is to **never save your workspace image**.
+This is because your code should almost always be typed in a script file and not directly in the console.
+In other words, save your R-source code in a text file
+(adhering to a [style guide](https://google.github.io/styleguide/Rguide.xml)),
+and then just load the code into a new R session to re-create the previous workspace.
+In my opinion, this is the key behind making your work reproducible.
 
 ## Acknowledgements
 
@@ -310,6 +374,11 @@ Sources of material include:
 * Hadley Wickham's book -- [Advanced R](http://adv-r.had.co.nz/)
 
 * Nice R Code blog -- [The Nice R code guides to...](https://nicercode.github.io/guides/functions/)
+
+* Tutorials by William B. King -- [Saving and Loading Objects in R](https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html)
+
+* SAS and R blog -- [another look at CRAN Task Views](http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
+
 
 ## Website Information
 
