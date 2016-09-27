@@ -246,7 +246,7 @@ The arguments `type` and `col` describe the plot type and color, respectively.
 set.seed(1)
 ```
 
-```{r}
+```{r intro-ellipsis}
 PlotNoisyData(x = 1:50, y = rep(0, 50), type = "b", col = "red")
 ```
 
