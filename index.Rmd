@@ -242,6 +242,10 @@ Now run the function passing additonal arguments that will be
 automatically passed to the `plot` function called within the function body.
 The arguments `type` and `col` describe the plot type and color, respectively.
 
+```{r, echo=FALSE}
+set.seed(1)
+```
+
 ```{r}
 PlotNoisyData(x = 1:50, y = rep(0, 50), type = "b", col = "red")
 ```
