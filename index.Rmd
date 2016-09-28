@@ -261,9 +261,10 @@ As Hadley Wickham ([2015](http://r-pkgs.had.co.nz/intro.html)) states:
 > In R, the fundamental unit of shareable code is the package.
 > A package bundles together code, data, documentation, and tests, and is easy to share with others.
 
-There are a standard set of packages included with an installation of R and many more are available through the
+There are a core set of "standard" packages included with an installation of R,
+and many more available through the
 **C**omprehensive **R** **A**rchive **N**etwork (CRAN) and other repositories.
-Of the thousands of contributed packages, written by many different authors,
+Of the thousands of "contributed" packages, written by many different authors,
 their primary purpose is to extend the capabilities or R.
 For example, the **knitr** package provides a general-purpose tool for dynamic report generation in R.
 To see which packages are installed on your computer, the command is
@@ -281,37 +282,39 @@ search()
 #### Installing packages
 
 R packages only need to be installed once on your computer.
-Use the `install.packages` function to install packages from CRAN-like repositories.
-To install the **inlmisc** package from CRAN, use the command
+Use the `install.packages` function to install packages from a CRAN-like repository.
+For example, to install the **inlmisc** package from CRAN, use the command
 
 ```{r, eval=FALSE}
 install.packages("inlmisc")
 ```
 
-By default `install.packages` also installs packages which **inlmisc** depend on/link to/import,
+By default, `install.packages` also installs the packages which **inlmisc** depends on, links to, or imports;
 see the [package description](https://CRAN.R-project.org/package=inlmisc) for its dependencies.
-Installing packages from a different CRAN-like repository,
+If you wish to install a package from a different CRAN-like repository,
 such as the **G**eological survey **R** **A**rchive **N**etwork ([GRAN](https://owi.usgs.gov/R/gran.html)),
-requires a `repos` argument be specified.
+the `repos` argument must be specified.
 For example, to install the **smwrData** package from GRAN, use
 
 ```{r, eval=FALSE}
 install.packages("smwrData", repos = c(GRAN="https://owi.usgs.gov/R", CRAN="https://cran.r-project.org/"))
 ```
 
-Notice that a CRAN repository was also included, this ensures that
-package dependencies residing on CRAN will also be installed.
+Notice that a CRAN repository was also included in the command,
+this ensures that any package dependencies residing on CRAN will also be installed.
 To install a package from a locally stored ZIP file, use
 
 ```{r, eval=FALSE}
 install.packages(file.choose(), repos = NULL)
 ```
 
-The `file.choose` function will allow you choose the ".zip" file interactively.
+Notice that the `file.choose()` command was used in place of a package name,
+this will allow you choose the ".zip" file interactively.
 
 Sometimes a package of interest is only available on [GitHub](https://github.com/).
 To install a package directly from a GitHub repository, use the `install_github` function in the **devtools** package.
-Let's install the **AnomalyDetection** package from its GitHub [repository](https://github.com/twitter/AnomalyDetection).
+For example, to install the **AnomalyDetection** package from its
+GitHub [repository](https://github.com/twitter/AnomalyDetection), use the command
 
 ```{r, eval=FALSE}
 devtools::install_github("twitter/AnomalyDetection")
@@ -321,8 +324,7 @@ devtools::install_github("twitter/AnomalyDetection")
 
 Run the `update.packages()` command to ensure that all the packages in your local R library are up to date.
 It downloads the list of available packages and their current versions,
-compares it with those installed and offers to fetch and install any that have later versions on the repositories.
-
+compares it with those installed and offers to download and install any that have later versions on the repositories.
 
 #### Load a package
 
@@ -348,7 +350,7 @@ help.start()
 
 | ![](images/intro-help_01.png)
 
-To get more information on any specific package, for example **sp**, the command is
+To get more information on any specific package, such as the **sp** package, the command is
 
 ```{r, eval=FALSE}
 help(package = "sp")
@@ -356,19 +358,20 @@ help(package = "sp")
 
 | ![](images/intro-help_02.png)
 
-And to open the help documentation for a specific function, for example `bbox`, the command is
+And to open the help documentation for a specific function, such as the `bbox` function, the command is
 
 ```{r}
 ?bbox
 ```
 
 Wait a gosh-darn minute, that didn't work!
-It appears R is unable to find the help documentation for `bbox` because it belongs to the **sp** package,
-and the **sp** package is not loaded in our current R session.
-At this point, you can either do a fuzzy match of the function name using the `??bbox` command
-(as recommended in the error message and appropriate when you don't know the package name),
-load the **sp** package using the `library` function and rerun `?bbox`,
-or alternatively run
+It appears that R is unable to find the help documentation for `bbox` because it belongs to the **sp** package.
+We never loaded the **sp** package, so it should come as no suprise that its documentation is unavailable for use.
+At this point, you can either
+(1) do a fuzzy match of the function name using the `??bbox` command,
+    as recommended in the error message and appropriate when you don't know the package name;
+(2) load the **sp** package using the `library` function and rerun `?bbox`; or
+(3) bypass the package loading step by running the command
 
 ```{r, eval=FALSE}
 ?sp::bbox
@@ -407,22 +410,24 @@ There are endless resources online, here's just a few
 
 3. Open the functions help documentation and run its example code.
 
-4. Open a task view of your choosing and explore available packages.
+4. Open the help documentation for Edgar Anderson's `iris` dataset and run its example code.
+
+5. Open a task view of your choosing and explore available packages.
 
 ### Closing R
 
 Every time you terminate an R session,
-by either typing `q()` at the command prompt or manually shutting down the R Console by point and click,
+by either typing `q()` at the command prompt or manually shutting down the R Console via point-and-click,
 you are prompted as to whether to save the workspace image, it may look something like this
 
 | ![](images/intro-closingr_01.png)
 
 Your workspace image consists of all R objects you've created or loaded during your R session.
-Recall that you can use the `ls` function to list these R objects.
+Recall that you can use the `ls()` command to list these objects.
 When R asks if you want to save your workspace image, and you respond *No*,
 all of the new objects you've created during the current R session are deleted forever.
-If you say *Yes*, the `save.image` and `savehistory` functions are run,
-resulting in files called ".RData" and ".Rhistory" being written to your working directory.
+If you say *Yes*, the `save.image` and `savehistory` functions are run and
+result in files ".RData" and ".Rhistory" being written to (updated in) your working directory.
 The ".RData" file stores your R objects and
 the ".Rhistory" file stores a transcript of your previous commands entered at the command prompt.
 The next time you start an R session in this directory,
@@ -437,8 +442,8 @@ In my opinion, this is the key behind making your work reproducible.
 
 ## Acknowledgements
 
-I'd like to acknowledge that certain material has been borrowed for the workshop and
-thank them for openly sharing their materials.
+I'd like to acknowledge that certain material has been borrowed for the workshop,
+and thank them for openly sharing their materials.
 Sources of material include:
 
 * USGS R training course -- [Introduction to R](https://owi.usgs.gov/R/training-curriculum/intro-curriculum/)
@@ -450,8 +455,6 @@ Sources of material include:
 * Tutorials by William B. King -- [Saving and Loading Objects in R](https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html)
 
 * SAS and R blog -- [another look at CRAN Task Views](http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
-
-* Ohio Supercomputer Center website -- [HOWTO: Install Local R Packages](https://www.osc.edu/documentation/howto/install-local-R-packages)
 
 ## Website Information
 

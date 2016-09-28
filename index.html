@@ -440,25 +440,25 @@ div.tocify {
 <blockquote>
 <p>In R, the fundamental unit of shareable code is the package. A package bundles together code, data, documentation, and tests, and is easy to share with others.</p>
 </blockquote>
-<p>There are a standard set of packages included with an installation of R and many more are available through the <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (CRAN) and other repositories. Of the thousands of contributed packages, written by many different authors, their primary purpose is to extend the capabilities or R. For example, the <strong>knitr</strong> package provides a general-purpose tool for dynamic report generation in R. To see which packages are installed on your computer, the command is</p>
+<p>There are a core set of “standard” packages included with an installation of R, and many more available through the <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (CRAN) and other repositories. Of the thousands of “contributed” packages, written by many different authors, their primary purpose is to extend the capabilities or R. For example, the <strong>knitr</strong> package provides a general-purpose tool for dynamic report generation in R. To see which packages are installed on your computer, the command is</p>
 <pre class="r"><code>library()</code></pre>
 <p>And to see which packages are currently loaded in your R session, use</p>
 <pre class="r"><code>search()</code></pre>
 <div id="installing-packages" class="section level4">
 <h4>Installing packages</h4>
-<p>R packages only need to be installed once on your computer. Use the <code>install.packages</code> function to install packages from CRAN-like repositories. To install the <strong>inlmisc</strong> package from CRAN, use the command</p>
+<p>R packages only need to be installed once on your computer. Use the <code>install.packages</code> function to install packages from a CRAN-like repository. For example, to install the <strong>inlmisc</strong> package from CRAN, use the command</p>
 <pre class="r"><code>install.packages(&quot;inlmisc&quot;)</code></pre>
-<p>By default <code>install.packages</code> also installs packages which <strong>inlmisc</strong> depend on/link to/import, see the <a href="https://CRAN.R-project.org/package=inlmisc">package description</a> for its dependencies. Installing packages from a different CRAN-like repository, such as the <strong>G</strong>eological survey <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (<a href="https://owi.usgs.gov/R/gran.html">GRAN</a>), requires a <code>repos</code> argument be specified. For example, to install the <strong>smwrData</strong> package from GRAN, use</p>
+<p>By default, <code>install.packages</code> also installs the packages which <strong>inlmisc</strong> depends on, links to, or imports; see the <a href="https://CRAN.R-project.org/package=inlmisc">package description</a> for its dependencies. If you wish to install a package from a different CRAN-like repository, such as the <strong>G</strong>eological survey <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (<a href="https://owi.usgs.gov/R/gran.html">GRAN</a>), the <code>repos</code> argument must be specified. For example, to install the <strong>smwrData</strong> package from GRAN, use</p>
 <pre class="r"><code>install.packages(&quot;smwrData&quot;, repos = c(GRAN=&quot;https://owi.usgs.gov/R&quot;, CRAN=&quot;https://cran.r-project.org/&quot;))</code></pre>
-<p>Notice that a CRAN repository was also included, this ensures that package dependencies residing on CRAN will also be installed. To install a package from a locally stored ZIP file, use</p>
+<p>Notice that a CRAN repository was also included in the command, this ensures that any package dependencies residing on CRAN will also be installed. To install a package from a locally stored ZIP file, use</p>
 <pre class="r"><code>install.packages(file.choose(), repos = NULL)</code></pre>
-<p>The <code>file.choose</code> function will allow you choose the “.zip” file interactively.</p>
-<p>Sometimes a package of interest is only available on <a href="https://github.com/">GitHub</a>. To install a package directly from a GitHub repository, use the <code>install_github</code> function in the <strong>devtools</strong> package. Let’s install the <strong>AnomalyDetection</strong> package from its GitHub <a href="https://github.com/twitter/AnomalyDetection">repository</a>.</p>
+<p>Notice that the <code>file.choose()</code> command was used in place of a package name, this will allow you choose the “.zip” file interactively.</p>
+<p>Sometimes a package of interest is only available on <a href="https://github.com/">GitHub</a>. To install a package directly from a GitHub repository, use the <code>install_github</code> function in the <strong>devtools</strong> package. For example, to install the <strong>AnomalyDetection</strong> package from its GitHub <a href="https://github.com/twitter/AnomalyDetection">repository</a>, use the command</p>
 <pre class="r"><code>devtools::install_github(&quot;twitter/AnomalyDetection&quot;)</code></pre>
 </div>
 <div id="updating-packages" class="section level4">
 <h4>Updating packages</h4>
-<p>Run the <code>update.packages()</code> command to ensure that all the packages in your local R library are up to date. It downloads the list of available packages and their current versions, compares it with those installed and offers to fetch and install any that have later versions on the repositories.</p>
+<p>Run the <code>update.packages()</code> command to ensure that all the packages in your local R library are up to date. It downloads the list of available packages and their current versions, compares it with those installed and offers to download and install any that have later versions on the repositories.</p>
 </div>
 <div id="load-a-package" class="section level4">
 <h4>Load a package</h4>
@@ -474,14 +474,14 @@ div.tocify {
 <p>To start R’s online documentation in a web browser, the command is</p>
 <pre class="r"><code>help.start()</code></pre>
 <p><img src="images/intro-help_01.png" /></p>
-<p>To get more information on any specific package, for example <strong>sp</strong>, the command is</p>
+<p>To get more information on any specific package, such as the <strong>sp</strong> package, the command is</p>
 <pre class="r"><code>help(package = &quot;sp&quot;)</code></pre>
 <p><img src="images/intro-help_02.png" /></p>
-<p>And to open the help documentation for a specific function, for example <code>bbox</code>, the command is</p>
+<p>And to open the help documentation for a specific function, such as the <code>bbox</code> function, the command is</p>
 <pre class="r"><code>?bbox</code></pre>
 <pre><code>## No documentation for &#39;bbox&#39; in specified packages and libraries:
 ## you could try &#39;??bbox&#39;</code></pre>
-<p>Wait a gosh-darn minute, that didn’t work! It appears R is unable to find the help documentation for <code>bbox</code> because it belongs to the <strong>sp</strong> package, and the <strong>sp</strong> package is not loaded in our current R session. At this point, you can either do a fuzzy match of the function name using the <code>??bbox</code> command (as recommended in the error message and appropriate when you don’t know the package name), load the <strong>sp</strong> package using the <code>library</code> function and rerun <code>?bbox</code>, or alternatively run</p>
+<p>Wait a gosh-darn minute, that didn’t work! It appears that R is unable to find the help documentation for <code>bbox</code> because it belongs to the <strong>sp</strong> package. We never loaded the <strong>sp</strong> package, so it should come as no suprise that its documentation is unavailable for use. At this point, you can either (1) do a fuzzy match of the function name using the <code>??bbox</code> command, as recommended in the error message and appropriate when you don’t know the package name; (2) load the <strong>sp</strong> package using the <code>library</code> function and rerun <code>?bbox</code>; or (3) bypass the package loading step by running the command</p>
 <pre class="r"><code>?sp::bbox</code></pre>
 <p><img src="images/intro-help_03.png" /></p>
 </div>
@@ -505,28 +505,28 @@ div.tocify {
 <li><p>Spend a little time exploring R’s online documentation.</p></li>
 <li><p>Find a function in the <strong>stats</strong> package that can be used for fitting linear models.</p></li>
 <li><p>Open the functions help documentation and run its example code.</p></li>
+<li><p>Open the help documentation for Edgar Anderson’s <code>iris</code> dataset and run its example code.</p></li>
 <li><p>Open a task view of your choosing and explore available packages.</p></li>
 </ol>
 </div>
 </div>
 <div id="closing-r" class="section level3">
 <h3>Closing R</h3>
-<p>Every time you terminate an R session, by either typing <code>q()</code> at the command prompt or manually shutting down the R Console by point and click, you are prompted as to whether to save the workspace image, it may look something like this</p>
+<p>Every time you terminate an R session, by either typing <code>q()</code> at the command prompt or manually shutting down the R Console via point-and-click, you are prompted as to whether to save the workspace image, it may look something like this</p>
 <p><img src="images/intro-closingr_01.png" /></p>
-<p>Your workspace image consists of all R objects you’ve created or loaded during your R session. Recall that you can use the <code>ls</code> function to list these R objects. When R asks if you want to save your workspace image, and you respond <em>No</em>, all of the new objects you’ve created during the current R session are deleted forever. If you say <em>Yes</em>, the <code>save.image</code> and <code>savehistory</code> functions are run, resulting in files called “.RData” and “.Rhistory” being written to your working directory. The “.RData” file stores your R objects and the “.Rhistory” file stores a transcript of your previous commands entered at the command prompt. The next time you start an R session in this directory, your workspace image is restored and all objects and commands will be made available for use.</p>
+<p>Your workspace image consists of all R objects you’ve created or loaded during your R session. Recall that you can use the <code>ls()</code> command to list these objects. When R asks if you want to save your workspace image, and you respond <em>No</em>, all of the new objects you’ve created during the current R session are deleted forever. If you say <em>Yes</em>, the <code>save.image</code> and <code>savehistory</code> functions are run and result in files “.RData” and “.Rhistory” being written to (updated in) your working directory. The “.RData” file stores your R objects and the “.Rhistory” file stores a transcript of your previous commands entered at the command prompt. The next time you start an R session in this directory, your workspace image is restored and all objects and commands will be made available for use.</p>
 <p>My recommendation to you is to <strong>never save your workspace image</strong>. This is because your code should almost always be typed in a script file and not directly in the console. In other words, save your R-source code in a text file (adhering to a <a href="https://google.github.io/styleguide/Rguide.xml">style guide</a>), and then just load the code into a new R session to re-create the previous workspace. In my opinion, this is the key behind making your work reproducible.</p>
 </div>
 </div>
 <div id="acknowledgements" class="section level2">
 <h2>Acknowledgements</h2>
-<p>I’d like to acknowledge that certain material has been borrowed for the workshop and thank them for openly sharing their materials. Sources of material include:</p>
+<p>I’d like to acknowledge that certain material has been borrowed for the workshop, and thank them for openly sharing their materials. Sources of material include:</p>
 <ul>
 <li><p>USGS R training course – <a href="https://owi.usgs.gov/R/training-curriculum/intro-curriculum/">Introduction to R</a></p></li>
 <li><p>Hadley Wickham’s book – <a href="http://adv-r.had.co.nz/">Advanced R</a></p></li>
 <li><p>Nice R Code blog – <a href="https://nicercode.github.io/guides/functions/">The Nice R code guides to…</a></p></li>
 <li><p>Tutorials by William B. King – <a href="https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html">Saving and Loading Objects in R</a></p></li>
 <li><p>SAS and R blog – <a href="http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html">another look at CRAN Task Views</a></p></li>
-<li><p>Ohio Supercomputer Center website – <a href="https://www.osc.edu/documentation/howto/install-local-R-packages">HOWTO: Install Local R Packages</a></p></li>
 </ul>
 </div>
 <div id="website-information" class="section level2">
