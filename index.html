@@ -353,11 +353,15 @@ div.tocify {
 <p>Because everything in R can be done from the command line, these pull-down menus are unnecessary for working in R. That said, they do provide a convenient way to execute common tasks in R, such as updating packages, installing package(s) from local files, or opening help documentation.</p>
 <div id="exercise" class="section level4">
 <h4>Exercise</h4>
-<p>Spend a little time getting familiar with the R Console. Please refrain from running <em>Update packages…</em> under the <em>Packages</em> menu during the workshop because of the burden it would place on our centers internet bandwidth. Let me know if anyone is having trouble opening an R session.</p>
+<ol style="list-style-type: decimal">
+<li><p>Spend a little time getting familiar with the R Console.</p></li>
+<li><p>Type <code>pi + 10</code> into the console at the command prompt <code>&gt;</code> and press Enter.</p></li>
+<li><p>How many significant figures are displayed?</p></li>
+</ol>
 </div>
 <div id="functions" class="section level3">
 <h3>Functions</h3>
-<p>As John Chambers (<a href="http://www.springer.com/gp/book/9780387759357">2008</a>) said:</p>
+<p>As John Chambers (<a href="http://www.springer.com/gp/book/9780387759357">2008</a>) states:</p>
 <blockquote>
 <p>Nearly everything that happens in R results from a function call. Therefore, basic programming centers on creating and refining functions.</p>
 </blockquote>
@@ -365,7 +369,7 @@ div.tocify {
 <blockquote>
 <p>everything is an object—the arguments, the value, and in fact the function and the call itself: All of these are defined as objects.</p>
 </blockquote>
-<p>To better understand functions, let’s write our own. Paste the following code into your R session at the command prompt (<code>&gt;</code>).</p>
+<p>To better understand functions, let’s write our own. Paste the following code into your console:</p>
 <pre class="r"><code>sum.of.squares &lt;- function(x, y) {
   return(x^2 + y^2)
 }</code></pre>
@@ -420,7 +424,7 @@ div.tocify {
 </div>
 <div id="ellipsis-argument" class="section level4">
 <h4>Ellipsis argument</h4>
-<p>The ellipsis argument <code>...</code> is a way of passing an arbitrary number of arguments to a function inside another function. For example, suppose you wanted to define a function that adds noise to your data and plots the results. You can define the function as:</p>
+<p>The ellipsis argument <code>...</code> is a way of passing an arbitrary number of arguments to a function inside another function. For example, suppose you wanted to define a function that adds noise to your data and plots the results. You can define the function as</p>
 <pre class="r"><code>PlotNoisyData &lt;- function(x, y, ...) {
   new.y &lt;- y + rnorm(length(y), 0, 5)
   plot(x, new.y, ...)
@@ -432,7 +436,35 @@ div.tocify {
 </div>
 <div id="packages" class="section level3">
 <h3>Packages</h3>
-<p>Something</p>
+<p>As Hadley Wickham (<a href="http://r-pkgs.had.co.nz/intro.html">2015</a>) states:</p>
+<blockquote>
+<p>In R, the fundamental unit of shareable code is the package. A package bundles together code, data, documentation, and tests, and is easy to share with others.</p>
+</blockquote>
+<p>There are a standard set of packages included with an installation of R and many more are available through the <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (CRAN) and other repositories. Of the thousands of contributed packages, written by many different authors, their primary purpose is to extend the capabilities or R. For example, the <strong>knitr</strong> package provides a general-purpose tool for dynamic report generation in R. To see which packages are installed on your computer, the command is</p>
+<pre class="r"><code>library()</code></pre>
+<p>And to see which packages are currently loaded in your R session, use</p>
+<pre class="r"><code>search()</code></pre>
+<div id="installing-packages" class="section level4">
+<h4>Installing packages</h4>
+<p>R packages only need to be installed once on your computer. Use the <code>install.packages</code> function to install packages from CRAN-like repositories. To install the <strong>inlmisc</strong> package from CRAN, use the command</p>
+<pre class="r"><code>install.packages(&quot;inlmisc&quot;)</code></pre>
+<p>By default <code>install.packages</code> also installs packages which <strong>inlmisc</strong> depend on/link to/import, see the <a href="https://CRAN.R-project.org/package=inlmisc">package description</a> for its dependencies. Installing packages from a different CRAN-like repository, such as the <strong>G</strong>eological survey <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (<a href="https://owi.usgs.gov/R/gran.html">GRAN</a>), requires a <code>repos</code> argument be specified. For example, to install the <strong>smwrData</strong> package from GRAN, use</p>
+<pre class="r"><code>install.packages(&quot;smwrData&quot;, repos = c(GRAN=&quot;https://owi.usgs.gov/R&quot;, CRAN=&quot;https://cran.r-project.org/&quot;))</code></pre>
+<p>Notice that a CRAN repository was also included, this ensures that package dependencies residing on CRAN will also be installed. To install a package from a locally stored ZIP file, use</p>
+<pre class="r"><code>install.packages(file.choose(), repos = NULL)</code></pre>
+<p>The <code>file.choose</code> function will allow you choose the “.zip” file interactively.</p>
+<p>Sometimes a package of interest is only available on <a href="https://github.com/">GitHub</a>. To install a package directly from a GitHub repository, use the <code>install_github</code> function in the <strong>devtools</strong> package. Let’s install the <strong>AnomalyDetection</strong> package from its GitHub <a href="https://github.com/twitter/AnomalyDetection">repository</a>.</p>
+<pre class="r"><code>devtools::install_github(&quot;twitter/AnomalyDetection&quot;)</code></pre>
+</div>
+<div id="updating-packages" class="section level4">
+<h4>Updating packages</h4>
+<p>Run the <code>update.packages()</code> command to ensure that all the packages in your local R library are up to date. It downloads the list of available packages and their current versions, compares it with those installed and offers to fetch and install any that have later versions on the repositories.</p>
+</div>
+<div id="load-a-package" class="section level4">
+<h4>Load a package</h4>
+<p>Only when a package is loaded are its contents (functions, datasets, and documentation) available in your R session. The <code>library</code> function is used to load a package into the current R session. For example, to load the <strong>viridis</strong> package use the command</p>
+<pre class="r"><code>library(viridis)</code></pre>
+</div>
 </div>
 <div id="help" class="section level3">
 <h3>Help</h3>
@@ -464,7 +496,7 @@ div.tocify {
 <li><p><a href="http://rforcats.net/">R for cats</a> is a lighthearted introduction to the R-programming language.</p></li>
 <li><p><a href="https://www.r-bloggers.com/">R-bloggers</a> is a blog aggregator of content contributed by bloggers who write about R.</p></li>
 <li><p><a href="http://stackoverflow.com/questions/tagged/r">StackOverflow</a> is a discussion forum for all things related to programming.</p></li>
-<li><p><a href="http://adv-r.had.co.nz/">Advanced R</a> and <a href="http://r4ds.had.co.nz/index.html">R for Data Science</a>, books by Hadley Wickham.</p></li>
+<li><p><a href="http://r4ds.had.co.nz/index.html">R for Data Science</a>, a book by Hadley Wickham.</p></li>
 </ul>
 </div>
 <div id="exercise-2" class="section level4">
@@ -494,6 +526,7 @@ div.tocify {
 <li><p>Nice R Code blog – <a href="https://nicercode.github.io/guides/functions/">The Nice R code guides to…</a></p></li>
 <li><p>Tutorials by William B. King – <a href="https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html">Saving and Loading Objects in R</a></p></li>
 <li><p>SAS and R blog – <a href="http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html">another look at CRAN Task Views</a></p></li>
+<li><p>Ohio Supercomputer Center website – <a href="https://www.osc.edu/documentation/howto/install-local-R-packages">HOWTO: Install Local R Packages</a></p></li>
 </ul>
 </div>
 <div id="website-information" class="section level2">

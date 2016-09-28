@@ -93,14 +93,15 @@ such as updating packages, installing package(s) from local files, or opening he
 
 #### Exercise
 
-Spend a little time getting familiar with the R Console.
-Please refrain from running *Update packages...* under the *Packages* menu during the workshop
-because of the burden it would place on our centers internet bandwidth.
-Let me know if anyone is having trouble opening an R session.
+1. Spend a little time getting familiar with the R Console.
+
+2. Type `pi + 10` into the console at the command prompt `>` and press Enter.
+
+3. How many significant figures are displayed?
 
 ### Functions
 
-As John Chambers ([2008](http://www.springer.com/gp/book/9780387759357)) said:
+As John Chambers ([2008](http://www.springer.com/gp/book/9780387759357)) states:
 
 > Nearly everything that happens in R results from a function call.
 > Therefore, basic programming centers on creating and refining functions.
@@ -111,7 +112,7 @@ He goes on to explain that
 > the call itself: All of these are defined as objects.
 
 To better understand functions, let's write our own.
-Paste the following code into your R session at the command prompt (`>`).
+Paste the following code into your console:
 
 ```{r, eval=FALSE}
 sum.of.squares <- function(x, y) {
@@ -229,7 +230,7 @@ One trick for working in a console is to use the up and down arrows to recall pr
 
 The ellipsis argument `...` is a way of passing an arbitrary number of arguments to a function inside another function.
 For example, suppose you wanted to define a function that adds noise to your data and plots the results.
-You can define the function as:
+You can define the function as
 
 ```{r}
 PlotNoisyData <- function(x, y, ...) {
@@ -255,10 +256,83 @@ PlotNoisyData(x = 1:50, y = rep(0, 50), type = "b", col = "red")
 
 ### Packages
 
-Something
+As Hadley Wickham ([2015](http://r-pkgs.had.co.nz/intro.html)) states:
+
+> In R, the fundamental unit of shareable code is the package.
+> A package bundles together code, data, documentation, and tests, and is easy to share with others.
+
+There are a standard set of packages included with an installation of R and many more are available through the
+**C**omprehensive **R** **A**rchive **N**etwork (CRAN) and other repositories.
+Of the thousands of contributed packages, written by many different authors,
+their primary purpose is to extend the capabilities or R.
+For example, the **knitr** package provides a general-purpose tool for dynamic report generation in R.
+To see which packages are installed on your computer, the command is
+
+```{r, eval=FALSE}
+library()
+```
+
+And to see which packages are currently loaded in your R session, use
+
+```{r, eval=FALSE}
+search()
+```
+
+#### Installing packages
+
+R packages only need to be installed once on your computer.
+Use the `install.packages` function to install packages from CRAN-like repositories.
+To install the **inlmisc** package from CRAN, use the command
+
+```{r, eval=FALSE}
+install.packages("inlmisc")
+```
+
+By default `install.packages` also installs packages which **inlmisc** depend on/link to/import,
+see the [package description](https://CRAN.R-project.org/package=inlmisc) for its dependencies.
+Installing packages from a different CRAN-like repository,
+such as the **G**eological survey **R** **A**rchive **N**etwork ([GRAN](https://owi.usgs.gov/R/gran.html)),
+requires a `repos` argument be specified.
+For example, to install the **smwrData** package from GRAN, use
+
+```{r, eval=FALSE}
+install.packages("smwrData", repos = c(GRAN="https://owi.usgs.gov/R", CRAN="https://cran.r-project.org/"))
+```
+
+Notice that a CRAN repository was also included, this ensures that
+package dependencies residing on CRAN will also be installed.
+To install a package from a locally stored ZIP file, use
+
+```{r, eval=FALSE}
+install.packages(file.choose(), repos = NULL)
+```
+
+The `file.choose` function will allow you choose the ".zip" file interactively.
+
+Sometimes a package of interest is only available on [GitHub](https://github.com/).
+To install a package directly from a GitHub repository, use the `install_github` function in the **devtools** package.
+Let's install the **AnomalyDetection** package from its GitHub [repository](https://github.com/twitter/AnomalyDetection).
+
+```{r, eval=FALSE}
+devtools::install_github("twitter/AnomalyDetection")
+```
+
+#### Updating packages
+
+Run the `update.packages()` command to ensure that all the packages in your local R library are up to date.
+It downloads the list of available packages and their current versions,
+compares it with those installed and offers to fetch and install any that have later versions on the repositories.
 
 
+#### Load a package
 
+Only when a package is loaded are its contents (functions, datasets, and documentation) available in your R session.
+The `library` function is used to load a package into the current R session.
+For example, to load the **viridis** package use the command
+
+```{r}
+library(viridis)
+```
 
 ### Help
 
@@ -302,7 +376,6 @@ or alternatively run
 
 | ![](images/intro-help_03.png)
 
-
 #### Task views
 
 [CRAN Task Views](http://cran.r-project.org/web/views/)
@@ -324,8 +397,7 @@ There are endless resources online, here's just a few
 * [StackOverflow](http://stackoverflow.com/questions/tagged/r) is a discussion forum for
   all things related to programming.
 
-* [Advanced R](http://adv-r.had.co.nz/) and [R for Data Science](http://r4ds.had.co.nz/index.html),
-  books by Hadley Wickham.
+* [R for Data Science](http://r4ds.had.co.nz/index.html), a book by Hadley Wickham.
 
 #### Exercise
 
@@ -379,6 +451,7 @@ Sources of material include:
 
 * SAS and R blog -- [another look at CRAN Task Views](http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
 
+* Ohio Supercomputer Center website -- [HOWTO: Install Local R Packages](https://www.osc.edu/documentation/howto/install-local-R-packages)
 
 ## Website Information
 
