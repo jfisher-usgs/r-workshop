@@ -158,7 +158,7 @@ In addition, configure the *R Sweave* entry to use the **knitr** R package,
 it should look something like this
 
 ```{r, engine="bash", eval=FALSE}
-"C:/Users/jfisher/Documents/R/R-3.3.1/bin/R.exe" CMD Rscript -e "knitr::knit('%.Rnw')"
+"C:/Users/jfisher/Documents/R/R-3.3.1/bin/Rscript.exe" -e "knitr::knit('%.Rnw')"
 ```
 
 Next, click on the *Quick Build* button located on the left-hand-side of the Configure Texmaker dialog
