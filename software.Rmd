@@ -47,9 +47,9 @@ Install the following packages available from [CRAN](https://cloud.r-project.org
 by pasting the following code in the R console and pressing Enter.
 
 ```{r, eval=FALSE}
-install.packages(c("raster", "rgdal", "rgeos", "dplyr", "dataRetrieval", "lattice",
-                   "ggplot2", "colorspace", "viridis", "animation", "sfsmisc",
-                   "devtools", "roxygen2", "knitr", "xtable"))
+install.packages(c("inlmisc", "dataRetrieval", "lattice", "ggplot2", "colorspace",
+                   "viridis", "animation", "sfsmisc", "devtools", "roxygen2",
+                   "knitr", "xtable", "git2r"))
 ```
 
 ## Notepad++
