@@ -49,7 +49,7 @@ by pasting the following code in the R console and pressing Enter.
 ```{r, eval=FALSE}
 install.packages(c("inlmisc", "dataRetrieval", "lattice", "ggplot2", "colorspace",
                    "viridis", "animation", "sfsmisc", "devtools", "roxygen2",
-                   "knitr", "xtable", "git2r"))
+                   "knitr", "xtable", "git2r", "rmarkdown"))
 ```
 
 ## Notepad++
