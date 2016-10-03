@@ -192,3 +192,10 @@ Once installed, Git should be accessible from the start menu.
 Startup a *Git Bash* session, it should look something like this
 
 | ![](images/software-git_01.png)
+
+# Pandoc
+
+<span style="color:red;">Optional</span>:
+[Git](http://pandoc.org/) is a universal document converter.
+[Download](http://pandoc.org/installing.html) the latest version of Pandoc for Windows.
+Once the installer downloads, double left-click the installation file.
