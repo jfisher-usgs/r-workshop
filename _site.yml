@@ -7,10 +7,10 @@ navbar:
       href: index.html
     - text: "Software"
       href: software.html
-    - text: "R Lessons"
-      href: r-lessons.html
     - text: "Git Lessons"
       href: git-lessons.html
+    - text: "R Lessons"
+      href: r-lessons.html
 
 output_dir: "."
 output:

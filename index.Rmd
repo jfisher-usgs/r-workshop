@@ -17,10 +17,10 @@ Software used in the workshop should be installed on your computer prior to inst
 
 * [Software](software.html) installation instructions for R and its development environment.
 
+* [Git lessons](git-lessons.html) covering the basics of using a version control system.
+
 * [R lessons](r-lessons.html) covering data structures, subsetting, reading data,
   temporal and spatial analysis.
-
-* [Git lessons](git-lessons.html) covering the basics of using a version control system.
 
 * Questions/Final thoughts
 

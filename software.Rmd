@@ -47,9 +47,10 @@ Install the following packages available from [CRAN](https://cloud.r-project.org
 by pasting the following code in the R console and pressing Enter.
 
 ```{r, eval=FALSE}
-install.packages(c("inlmisc", "dataRetrieval", "lattice", "ggplot2", "colorspace",
-                   "viridis", "animation", "sfsmisc", "devtools", "roxygen2",
-                   "knitr", "xtable", "git2r", "rmarkdown"))
+install.packages(c("inlmisc", "dataRetrieval", "lattice", "ggplot2",
+                   "colorspace", "viridis", "animation", "sfsmisc",
+                   "devtools", "roxygen2", "knitr", "xtable", "git2r",
+                   "rmarkdown"))
 ```
 
 ## Notepad++
@@ -193,9 +194,9 @@ Startup a *Git Bash* session, it should look something like this
 
 | ![](images/software-git_01.png)
 
-# Pandoc
+## Pandoc
 
 <span style="color:red;">Optional</span>:
-[Git](http://pandoc.org/) is a universal document converter.
-[Download](http://pandoc.org/installing.html) the latest version of Pandoc for Windows.
+[Pandoc](http://pandoc.org/) is a universal document converter.
+[Download](http://pandoc.org/installing.html) the latest version of pandoc for Windows.
 Once the installer downloads, double left-click the installation file.

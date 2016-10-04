@@ -2,23 +2,138 @@
 title: "Git Lessons"
 ---
 
-Something
+Git is an open source version control system (VCS).
 
-## Something
+## Set Up Git
 
-Something
-
+Startup the **Git Bash** application.
 
 Tell Git your name so your commits will be properly labeled by typing the following command
-(edit name, for example, "Jason Fisher"):
+(for example, replace `"<YOUR NAME>"` with `"Jason Fisher"`):
 
 ```{r, engine="bash", eval=FALSE}
 git config --global user.name "<YOUR NAME>"
 ```
 
-Tell Git the *email address* that will be associated with your Git commits.
+Tell Git the *email address* that will be associated with your *git commits*.
+(for example, replace `<YOUR EMAIL ADDRESS>` with `jfisher@usgs.gov`):
 
 ```{r, engine="bash", eval=FALSE}
-git config --global user.name <YOUR EMAIL ADDRESS>
+git config --global user.email <YOUR EMAIL ADDRESS>
 ```
 
+## Create a New Repository
+
+Let's assume you have an existing working directory (such as "repo-example")
+that contains files and folders.
+Again startup **Git Bash**, but this time open the application through File Explorer
+by right clicking the folder of interest and selecting *Git Bash Here*.
+To create the git repository, use the following command:
+
+```{r, engine="bash", eval=FALSE}
+git init
+```
+Notice that a `.git` file was written to your working directory.
+This file stores the future history of any edits made to file content in the repository.
+
+There is, however, an additional command need to start tracking changes.
+Files must be added to the repository in order for them to be tracked.
+The following command tells git to start tracking all files within your repository.
+
+```{r, engine="bash", eval=FALSE}
+git add .
+```
+
+Any future files that may be added to your working directory need to be added.
+For example, if you want to add a single text file located in
+"repo-example/test/file.txt", use
+
+```{r, engine="bash", eval=FALSE}
+git add repo-example/test/file2.txt
+```
+The `status` command can be used to check the current state of your repository.
+
+```{r, engine="bash", eval=FALSE}
+git state
+```
+
+| ![](images/git-bash_01.png)
+
+At what seems like a good stopping point in your workflow,
+say after completing some interesting function in R.
+Commit all your changes using the following command and leave
+a message to help you find these changes in the future.
+To commit changes, use:
+
+```{r, engine="bash", eval=FALSE}
+git commit -m "Commit message"
+```
+
+| ![](images/git-bash_02.png)
+
+## Set Up Remote Repository
+
+Now that the files are committed, set up your remote repository.
+[GitHub](https://github.com/) is probably the most popular git repository hosting service out there.
+And the USGS has a presence on GitHub, see its organization page at https://github.com/usgs/.
+
+Sign up for a GitHub account at [github.com](https://github.com/join):
+
+1. The account name will be in the following format: "AD shortname"-usgs.
+   Example: jfisher-usgs.
+   If you have a special character such as an underscore in your username,
+   replace it with a dash.
+
+2. The account will use the user's official USGS email address.
+
+3. The account will use the user's real name.
+
+4. This password should not be used for any other account.
+
+Notify the "gs_github_admin@usgs.gov" email group of your new username,
+and they will add you to the list of users on https://github.com/usgs/,
+and add you to the "gs_github@usgs.gov" email discussion and announcements group.
+
+Once we add you to the USGS org (https://github.com/usgs),
+click the "publicize" option in your account settings.
+Once you do this, GitHub will publicly list you as a member of the USGS organization.
+
+### Create a new repository on GitHub
+
+In the upper-right corner of any of your GitHub pages,
+click **+**, and then click *New repository*.
+
+Create a short, memorable name for your repository. For example, "repo-example".
+Leave everything else with default values, and click the Create repository button.
+
+Head back over to your **Git Bash** and establish a connection to the GitHub repository,
+use the following commands (and change URL as needed):
+
+```{r, engine="bash", eval=FALSE}
+git remote add origin https://github.com/jfisher-usgs/repo-example.git
+git push -u origin master
+```
+
+From here on out, all that is need to push your commits to your online repository is
+
+```{r, engine="bash", eval=FALSE}
+git push
+```
+
+#### Exercise
+
+1. Initiate your own repsitory, you can use "repo-example" as a starting point.
+
+2. Add and commit your file content to your new local repository.
+
+3. Sign-up for a GitHub account and create a new remote repository.
+
+4. Establish a connection between your local and remote repository.
+
+5. Push commits to GitHub.
+
+6. Make changes to file content locally.
+
+7. Repeat steps 2 and 5.
+
+5. Can you find a graphical reprentation of your commits on GitHub.

@@ -2,8 +2,6 @@
 title: "R Lessons"
 ---
 
-Something
+## USGS-R
 
-## Something
-
-Something
+https://owi.usgs.gov/R/training-curriculum/intro-curriculum/
