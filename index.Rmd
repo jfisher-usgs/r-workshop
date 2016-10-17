@@ -297,7 +297,8 @@ the `repos` argument must be specified.
 For example, to install the **smwrData** package from GRAN, use
 
 ```{r, eval=FALSE}
-install.packages("smwrData", repos = c(GRAN="https://owi.usgs.gov/R", CRAN="https://cran.r-project.org/"))
+install.packages("smwrData", repos = c(GRAN = "https://owi.usgs.gov/R",
+                                       CRAN = "https://cran.r-project.org/"))
 ```
 
 Notice that a CRAN repository was also included in the command,

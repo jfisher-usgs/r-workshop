@@ -22,7 +22,7 @@ Tell Git the *email address* that will be associated with your *git commits*.
 git config --global user.email <YOUR EMAIL ADDRESS>
 ```
 
-## Create a New Repository
+## Create a Local Repository
 
 Let's assume you have an existing working directory (such as "repo-example")
 that contains files and folders.
@@ -98,7 +98,7 @@ Once we add you to the USGS org (https://github.com/usgs),
 click the "publicize" option in your account settings.
 Once you do this, GitHub will publicly list you as a member of the USGS organization.
 
-### Create a new repository on GitHub
+### Create a repository on GitHub
 
 In the upper-right corner of any of your GitHub pages,
 click **+**, and then click *New repository*.
