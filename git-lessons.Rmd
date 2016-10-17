@@ -22,7 +22,7 @@ Tell Git the *email address* that will be associated with your *git commits*.
 git config --global user.email <YOUR EMAIL ADDRESS>
 ```
 
-## Create a Local Repository
+## Create Local Repository
 
 Let's assume you have an existing working directory (such as "repo-example")
 that contains files and folders.
@@ -71,7 +71,7 @@ git commit -m "Commit message"
 
 | ![](images/git-bash_02.png)
 
-## Set Up Remote Repository
+## Set Up GitHub
 
 Now that the files are committed, set up your remote repository.
 [GitHub](https://github.com/) is probably the most popular git repository hosting service out there.
@@ -79,16 +79,16 @@ And the USGS has a presence on GitHub, see its organization page at https://gith
 
 Sign up for a GitHub account at [github.com](https://github.com/join):
 
-1. The account name will be in the following format: "AD shortname"-usgs.
-   Example: jfisher-usgs.
-   If you have a special character such as an underscore in your username,
-   replace it with a dash.
+- Account name should be in the following format: "AD shortname"-usgs.
+  Example: jfisher-usgs.
+  If you have a special character such as an underscore in your username,
+  replace it with a dash.
 
-2. The account will use the user's official USGS email address.
+- Account should use the user's official USGS email address.
 
-3. The account will use the user's real name.
+- Account should use the user's real name.
 
-4. This password should not be used for any other account.
+- Password should not be used for any other account.
 
 Notify the "gs_github_admin@usgs.gov" email group of your new username,
 and they will add you to the list of users on https://github.com/usgs/,
@@ -98,10 +98,12 @@ Once we add you to the USGS org (https://github.com/usgs),
 click the "publicize" option in your account settings.
 Once you do this, GitHub will publicly list you as a member of the USGS organization.
 
-### Create a repository on GitHub
+### Create remote repository
 
 In the upper-right corner of any of your GitHub pages,
-click **+**, and then click *New repository*.
+click **+**, and then select *New repository*.
+
+| ![](images/git-github_01.png)
 
 Create a short, memorable name for your repository. For example, "repo-example".
 Leave everything else with default values, and click the Create repository button.

@@ -320,8 +320,8 @@ div.tocify {
 <p>Tell Git the <em>email address</em> that will be associated with your <em>git commits</em>. (for example, replace <code>&lt;YOUR EMAIL ADDRESS&gt;</code> with <code>jfisher@usgs.gov</code>):</p>
 <pre class="bash"><code>git config --global user.email &lt;YOUR EMAIL ADDRESS&gt;</code></pre>
 </div>
-<div id="create-a-local-repository" class="section level2">
-<h2>Create a Local Repository</h2>
+<div id="create-local-repository" class="section level2">
+<h2>Create Local Repository</h2>
 <p>Let’s assume you have an existing working directory (such as “repo-example”) that contains files and folders. Again startup <strong>Git Bash</strong>, but this time open the application through File Explorer by right clicking the folder of interest and selecting <em>Git Bash Here</em>. To create the git repository, use the following command:</p>
 <pre class="bash"><code>git init</code></pre>
 <p>Notice that a <code>.git</code> file was written to your working directory. This file stores the future history of any edits made to file content in the repository.</p>
@@ -336,21 +336,22 @@ div.tocify {
 <pre class="bash"><code>git commit -m &quot;Commit message&quot;</code></pre>
 <p><img src="images/git-bash_02.png" /></p>
 </div>
-<div id="set-up-remote-repository" class="section level2">
-<h2>Set Up Remote Repository</h2>
+<div id="set-up-github" class="section level2">
+<h2>Set Up GitHub</h2>
 <p>Now that the files are committed, set up your remote repository. <a href="https://github.com/">GitHub</a> is probably the most popular git repository hosting service out there. And the USGS has a presence on GitHub, see its organization page at <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>.</p>
 <p>Sign up for a GitHub account at <a href="https://github.com/join">github.com</a>:</p>
-<ol style="list-style-type: decimal">
-<li><p>The account name will be in the following format: “AD shortname”-usgs. Example: jfisher-usgs. If you have a special character such as an underscore in your username, replace it with a dash.</p></li>
-<li><p>The account will use the user’s official USGS email address.</p></li>
-<li><p>The account will use the user’s real name.</p></li>
-<li><p>This password should not be used for any other account.</p></li>
-</ol>
+<ul>
+<li><p>Account name should be in the following format: “AD shortname”-usgs. Example: jfisher-usgs. If you have a special character such as an underscore in your username, replace it with a dash.</p></li>
+<li><p>Account should use the user’s official USGS email address.</p></li>
+<li><p>Account should use the user’s real name.</p></li>
+<li><p>Password should not be used for any other account.</p></li>
+</ul>
 <p>Notify the <a href="mailto:%22gs_github_admin@usgs.gov">&quot;gs_github_admin@usgs.gov</a>&quot; email group of your new username, and they will add you to the list of users on <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>, and add you to the <a href="mailto:%22gs_github@usgs.gov">&quot;gs_github@usgs.gov</a>&quot; email discussion and announcements group.</p>
 <p>Once we add you to the USGS org (<a href="https://github.com/usgs" class="uri">https://github.com/usgs</a>), click the “publicize” option in your account settings. Once you do this, GitHub will publicly list you as a member of the USGS organization.</p>
-<div id="create-a-repository-on-github" class="section level3">
-<h3>Create a repository on GitHub</h3>
-<p>In the upper-right corner of any of your GitHub pages, click <strong>+</strong>, and then click <em>New repository</em>.</p>
+<div id="create-remote-repository" class="section level3">
+<h3>Create remote repository</h3>
+<p>In the upper-right corner of any of your GitHub pages, click <strong>+</strong>, and then select <em>New repository</em>.</p>
+<p><img src="images/git-github_01.png" /></p>
 <p>Create a short, memorable name for your repository. For example, “repo-example”. Leave everything else with default values, and click the Create repository button.</p>
 <p>Head back over to your <strong>Git Bash</strong> and establish a connection to the GitHub repository, use the following commands (and change URL as needed):</p>
 <pre class="bash"><code>git remote add origin https://github.com/jfisher-usgs/repo-example.git

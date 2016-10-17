@@ -13,16 +13,16 @@ Software used in the workshop should be installed on your computer prior to inst
 
 ## Tentative Schedule
 
-* Introduction to R
+- Introduction to R
 
-* [Software](software.html) installation instructions for R and its development environment.
+- [Software](software.html) installation instructions for R and its development environment.
 
-* [Git lessons](git-lessons.html) covering the basics of using a version control system.
+- [Git lessons](git-lessons.html) covering the basics of using a version control system.
 
-* [R lessons](r-lessons.html) covering data structures, subsetting, reading data,
+- [R lessons](r-lessons.html) covering data structures, subsetting, reading data,
   temporal and spatial analysis.
 
-* Questions/Final thoughts
+- Questions/Final thoughts
 
 ## What is R?
 
@@ -33,47 +33,47 @@ data analysis, statistical computing, and graphics.
 
 **Advantages:**
 
-* It's free and open-source software that is available for most operating system's (OS's)
+- It's free and open-source software that is available for most operating system's (OS's)
   (such as Windows, OS X, and Linux).
 
-* Because your work is stored in scripts, and the software is freely available, anyone can easily replicate it.
+- Because your work is stored in scripts, and the software is freely available, anyone can easily replicate it.
   This is often not the case for graphical user interface (GUI)-driven workflows, such as those relying on Excel or ArcGIS.
 
-* It is extensible and offers robust tools for developers to build their own packages,
+- It is extensible and offers robust tools for developers to build their own packages,
   these are collections of functions, data, and compiled code in a well-defined format.
   There are many packages available for download that address almost all of your data science needs,
   everything from statistical modelling to machine learning.
 
-* Provides immediate access to the very latest statistical techniques and implementations.
+- Provides immediate access to the very latest statistical techniques and implementations.
 
-* It has an extremely active community dedicated to helping each other.
+- It has an extremely active community dedicated to helping each other.
   There are a variety of forums for asking questions, such as the
   [R mailing lists](https://www.r-project.org/mail.html).
 
-* Provides tools for communicating your research using dynamic
+- Provides tools for communicating your research using dynamic
   [report](http://yihui.name/knitr/) and
   [website](http://rmarkdown.rstudio.com/rmarkdown_websites.html) generation.
 
-* Designed to connect to other programming languages such as
+- Designed to connect to other programming languages such as
   C, Fortran, C++, SQL, and tcl/tk.
 
-* Includes many functions that can be used for reading, visualizing, and analyzing
+- Includes many functions that can be used for reading, visualizing, and analyzing
   geographical [spatial data](https://CRAN.R-project.org/view=Spatial).
 
 **Disadvantages:**
 
-* Scientists without programming experience are often frustrated by R's steep learning curve.
+- Scientists without programming experience are often frustrated by R's steep learning curve.
   It can be difficult to remember R syntax and function names,
   especially if you don't code on a regular basis.
 
-* The quality of contributed packages can vary from awful to excellent.
+- The quality of contributed packages can vary from awful to excellent.
   Therefore, determining which package to apply to a given problem can be a little overwhelming.
 
-* R is not a high-performance programming language like C and Fortran,
+- R is not a high-performance programming language like C and Fortran,
   and it's not uncommon to run into memory limitations.
   These issues are partly attributed to poorly written R code.
 
-* Documentation is sometimes patchy and terse.
+- Documentation is sometimes patchy and terse.
 
 ## Using R
 
@@ -144,17 +144,17 @@ FunctionName <- function(arg.1, arg.2, arg.3 = 2, ...) {
 
 where
 
-* `FunctionName` is the name of the function.
+- `FunctionName` is the name of the function.
   This can be any valid variable name, but you should avoid using names that are used elsewhere in R,
   such as dir, function, plot, etc.
 
-* `function` is a reserved word in R that is used to provide a mechanism for defining new functions in R.
+- `function` is a reserved word in R that is used to provide a mechanism for defining new functions in R.
 
-* `( )` is used to contain function arguments.
+- `( )` is used to contain function arguments.
   Parenthesis can also be used in mathematical expressions to denote
   modifications to normal order of operations (precedence rules).
 
-* `arg.1`, `arg.2`, `arg.3` are the arguments of the function.
+- `arg.1`, `arg.2`, `arg.3` are the arguments of the function.
   You can write a function with any number of arguments.
   These can be R objects: numbers, strings, arrays, data tables, or even pointers to other functions;
   anything that is needed for the function to run.
@@ -163,21 +163,21 @@ where
   You are not required to provide a value for those arguments with a default,
   as the function will use the default value.
 
-* `...` is a special argument called the ellipsis.
+- `...` is a special argument called the ellipsis.
   This argument will match any arguments not otherwise matched, and can be easily passed on to other functions.
   This technique is often used in plotting, but also has uses in many other places.
   For this example function it was not used, but included in order to make you aware of its existence.
   An example of a function that uses the ellipsis argument is given in the "Ellipsis argument" section.
 
-* `{ }` is used to contain the function body, code that is run every time the function is called.
+- `{ }` is used to contain the function body, code that is run every time the function is called.
 
-* `<-` is an assignment operator.
+- `<-` is an assignment operator.
   In the example function, the first and second arguments are summed (`arg.1 + arg.2`) and
   the result is assigned to a new variable (`new.var`).
 
-* `#` is the character defining comments, the rest of the line after this character is ignored.
+- `#` is the character defining comments, the rest of the line after this character is ignored.
 
-* `return` is a function in R.
+- `return` is a function in R.
   If the end of a function is reached without calling this function, the value of the last evaluated expression is returned.
   Therefore, it was not needed in the example function.
 
@@ -392,16 +392,16 @@ This is particularly helpful to track new packages or functionality.
 
 There are endless resources online, here's just a few
 
-* [R for cats](http://rforcats.net/) is a lighthearted introduction to
+- [R for cats](http://rforcats.net/) is a lighthearted introduction to
   the R-programming language.
 
-* [R-bloggers](https://www.r-bloggers.com/) is a blog aggregator of content contributed by
+- [R-bloggers](https://www.r-bloggers.com/) is a blog aggregator of content contributed by
   bloggers who write about R.
 
-* [StackOverflow](http://stackoverflow.com/questions/tagged/r) is a discussion forum for
+- [StackOverflow](http://stackoverflow.com/questions/tagged/r) is a discussion forum for
   all things related to programming.
 
-* [R for Data Science](http://r4ds.had.co.nz/index.html), a book by Hadley Wickham.
+- [R for Data Science](http://r4ds.had.co.nz/index.html), a book by Hadley Wickham.
 
 #### Exercise
 
@@ -447,15 +447,15 @@ I'd like to acknowledge that certain material has been borrowed for the workshop
 and thank them for openly sharing their materials.
 Sources of material include:
 
-* USGS R training course -- [Introduction to R](https://owi.usgs.gov/R/training-curriculum/intro-curriculum/)
+- USGS R training course -- [Introduction to R](https://owi.usgs.gov/R/training-curriculum/intro-curriculum/)
 
-* Hadley Wickham's book -- [Advanced R](http://adv-r.had.co.nz/)
+- Hadley Wickham's book -- [Advanced R](http://adv-r.had.co.nz/)
 
-* Nice R Code blog -- [The Nice R code guides to...](https://nicercode.github.io/guides/functions/)
+- Nice R Code blog -- [The Nice R code guides to...](https://nicercode.github.io/guides/functions/)
 
-* Tutorials by William B. King -- [Saving and Loading Objects in R](https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html)
+- Tutorials by William B. King -- [Saving and Loading Objects in R](https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html)
 
-* SAS and R blog -- [another look at CRAN Task Views](http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
+- SAS and R blog -- [another look at CRAN Task Views](http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
 
 ## Website Information
 
