@@ -14,14 +14,14 @@
 <title>Introduction</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <link rel="stylesheet"
@@ -97,6 +97,7 @@ button.code-folding-btn:focus {
   outline: none;
 }
 </style>
+
 
 <style type="text/css">
 /* padding for bootstrap navbar */
@@ -327,7 +328,7 @@ div.tocify {
 </div>
 <div id="assessment-of-r" class="section level2">
 <h2>Assessment of R</h2>
-<p>Advantages:</p>
+<p><strong>Advantages:</strong></p>
 <ul>
 <li><p>It’s free and open-source software that is available for most operating system’s (OS’s) (such as Windows, OS X, and Linux).</p></li>
 <li><p>Because your work is stored in scripts, and the software is freely available, anyone can easily replicate it. This is often not the case for graphical user interface (GUI)-driven workflows, such as those relying on Excel or ArcGIS.</p></li>
@@ -338,7 +339,7 @@ div.tocify {
 <li><p>Designed to connect to other programming languages such as C, Fortran, C++, SQL, and tcl/tk.</p></li>
 <li><p>Includes many functions that can be used for reading, visualizing, and analyzing geographical <a href="https://CRAN.R-project.org/view=Spatial">spatial data</a>.</p></li>
 </ul>
-<p>Disadvantages:</p>
+<p><strong>Disadvantages:</strong></p>
 <ul>
 <li><p>Scientists without programming experience are often frustrated by R’s steep learning curve. It can be difficult to remember R syntax and function names, especially if you don’t code on a regular basis.</p></li>
 <li><p>The quality of contributed packages can vary from awful to excellent. Therefore, determining which package to apply to a given problem can be a little overwhelming.</p></li>
@@ -405,7 +406,7 @@ div.tocify {
 <p>The <code>file</code> argument in the <code>source</code> function is typically specified as a character string giving the pathname of the file or URL to read from. One could also specify the name of the file and the <code>source</code> function will assume the file is located in the <em>working directory</em>. Every R session has a default location on your OS’s file structure called the working directory. You need to keep track and deliberately set your working directory in each R session.</p>
 <p>The <code>getwd</code> function tells you what the current working directory is. For my current R session the working directory is:</p>
 <pre class="r"><code>getwd()</code></pre>
-<pre><code>## [1] &quot;C:/Users/jfisher/Documents/Software/r-workshop&quot;</code></pre>
+<pre><code>## [1] &quot;I:/Software/r-workshop&quot;</code></pre>
 <p>To change the working directory, use the <code>setwd(dir)</code> function, where <code>dir</code> is the pathname of the new working directory. Be sure to enter the new working directory as a character string (enclose it in quotes) and specify the separator between folders using a forward slash (/). For Windows users, the forward slash will look strange because you’re used to the backslash (\) separator used by File Explorer (previously known as Windows Explorer).</p>
 </div>
 <div id="exercise-1" class="section level4">
@@ -559,6 +560,7 @@ div.tocify {
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 

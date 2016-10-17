@@ -46,13 +46,6 @@ Other user-contributed packages are available for download and installation.
 Install the following packages available from [CRAN](https://cloud.r-project.org/web/packages/)
 by pasting the following code in the R console and pressing Enter.
 
-```{r, eval=FALSE}
-install.packages(c("inlmisc", "dataRetrieval", "lattice", "ggplot2",
-                   "colorspace", "viridis", "animation", "sfsmisc",
-                   "devtools", "roxygen2", "knitr", "xtable", "git2r",
-                   "rmarkdown"))
-```
-
 ## Notepad++
 
 If you don't already have a favorite text editor
@@ -137,37 +130,6 @@ Your looking for the "texmf" folder within the R installation directory structur
 
 R functions that let you write LaTeX documents are included in the
 [knitr](https://CRAN.R-project.org/package=knitr) package.
-
-## Texmaker
-
-<span style="color:red;">Optional</span>:
-[Texmaker](http://www.xm1math.net/texmaker/) is a tool for developing documents with LaTeX.
-[Download](http://www.xm1math.net/texmaker/download.html) the latest 32-bit version of Texmaker for Windows.
-Once the installer downloads, right-click on it and select *Run as administrator*.
-Accept default options on all dialogs.
-Once installed, Texmaker should be accessible from the start menu or desktop shortcut.
-Startup a Texmaker session, it should look something like this
-
-| ![](images/software-texmaker_01.png)
-
-Select *Configure Texmaker* under the *Options* pull-down menu.
-For better or worse Texmaker commands are configured using best guesses for default paths.
-That is, no checks are made to ensure that these paths are correct.
-The only path you need to concern yourself with is located in the *R Sweave* entry.
-Check that the path to "R.exe" is correct, change as needed.
-In addition, configure the *R Sweave* entry to use the **knitr** R package,
-it should look something like this
-
-```{r, engine="bash", eval=FALSE}
-"C:/Users/jfisher/Documents/R/R-3.3.1/bin/Rscript.exe" -e "knitr::knit('%.Rnw')"
-```
-
-Next, click on the *Quick Build* button located on the left-hand-side of the Configure Texmaker dialog
-and specify to use the *PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf* command.
-
-The basic workflow is to open an R Sweave document (\*.Rda) in Texmaker.
-Select *R Sweave* under the *Tools* pull-down menu;
-and if the process exits normally, press the *Quick Build* button to complete the conversion to a PDF document.
 
 ## Ghostscript
 

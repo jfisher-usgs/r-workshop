@@ -14,14 +14,14 @@
 <title>Software</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <link rel="stylesheet"
@@ -97,6 +97,7 @@ button.code-folding-btn:focus {
   outline: none;
 }
 </style>
+
 
 <style type="text/css">
 /* padding for bootstrap navbar */
@@ -323,10 +324,6 @@ div.tocify {
 <p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R Console should look something like this</p>
 <p><img src="images/software-r_04.png" /></p>
 <p>R comes with a standard set of packages, these are collections of R functions, data, and compiled code in a well-defined format. Other user-contributed packages are available for download and installation. Install the following packages available from <a href="https://cloud.r-project.org/web/packages/">CRAN</a> by pasting the following code in the R console and pressing Enter.</p>
-<pre class="r"><code>install.packages(c(&quot;inlmisc&quot;, &quot;dataRetrieval&quot;, &quot;lattice&quot;, &quot;ggplot2&quot;,
-                   &quot;colorspace&quot;, &quot;viridis&quot;, &quot;animation&quot;, &quot;sfsmisc&quot;,
-                   &quot;devtools&quot;, &quot;roxygen2&quot;, &quot;knitr&quot;, &quot;xtable&quot;, &quot;git2r&quot;,
-                   &quot;rmarkdown&quot;))</code></pre>
 </div>
 <div id="notepad" class="section level2">
 <h2>Notepad++</h2>
@@ -361,15 +358,6 @@ div.tocify {
 <p><img src="images/software-miktex_03.png" /></p>
 <p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the “texmf” folder within the R installation directory structure, mine is located here: “C:\Users\jfisher\Documents\R\R-3.3.1\share\texmf”.</p>
 <p>R functions that let you write LaTeX documents are included in the <a href="https://CRAN.R-project.org/package=knitr">knitr</a> package.</p>
-</div>
-<div id="texmaker" class="section level2">
-<h2>Texmaker</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://www.xm1math.net/texmaker/">Texmaker</a> is a tool for developing documents with LaTeX. <a href="http://www.xm1math.net/texmaker/download.html">Download</a> the latest 32-bit version of Texmaker for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Texmaker should be accessible from the start menu or desktop shortcut. Startup a Texmaker session, it should look something like this</p>
-<p><img src="images/software-texmaker_01.png" /></p>
-<p>Select <em>Configure Texmaker</em> under the <em>Options</em> pull-down menu. For better or worse Texmaker commands are configured using best guesses for default paths. That is, no checks are made to ensure that these paths are correct. The only path you need to concern yourself with is located in the <em>R Sweave</em> entry. Check that the path to “R.exe” is correct, change as needed. In addition, configure the <em>R Sweave</em> entry to use the <strong>knitr</strong> R package, it should look something like this</p>
-<pre class="bash"><code>&quot;C:/Users/jfisher/Documents/R/R-3.3.1/bin/Rscript.exe&quot; -e &quot;knitr::knit(&#39;%.Rnw&#39;)&quot;</code></pre>
-<p>Next, click on the <em>Quick Build</em> button located on the left-hand-side of the Configure Texmaker dialog and specify to use the <em>PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + View Pdf</em> command.</p>
-<p>The basic workflow is to open an R Sweave document (*.Rda) in Texmaker. Select <em>R Sweave</em> under the <em>Tools</em> pull-down menu; and if the process exits normally, press the <em>Quick Build</em> button to complete the conversion to a PDF document.</p>
 </div>
 <div id="ghostscript" class="section level2">
 <h2>Ghostscript</h2>
@@ -410,6 +398,7 @@ div.tocify {
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 

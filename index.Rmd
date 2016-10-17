@@ -31,7 +31,7 @@ data analysis, statistical computing, and graphics.
 
 ## Assessment of R
 
-Advantages:
+**Advantages:**
 
 * It's free and open-source software that is available for most operating system's (OS's)
   (such as Windows, OS X, and Linux).
@@ -60,7 +60,7 @@ Advantages:
 * Includes many functions that can be used for reading, visualizing, and analyzing
   geographical [spatial data](https://CRAN.R-project.org/view=Spatial).
 
-Disadvantages:
+**Disadvantages:**
 
 * Scientists without programming experience are often frustrated by R's steep learning curve.
   It can be difficult to remember R syntax and function names,
