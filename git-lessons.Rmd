@@ -98,7 +98,7 @@ Once we add you to the USGS org (https://github.com/usgs),
 click the "publicize" option in your account settings.
 Once you do this, GitHub will publicly list you as a member of the USGS organization.
 
-## Create remote repository
+## Create Remote Repository
 
 In the upper-right corner of any of your GitHub pages,
 click **+**, and then select *New repository*.
