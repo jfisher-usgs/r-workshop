@@ -450,8 +450,8 @@ div.tocify {
 <p>R packages only need to be installed once on your computer. Use the <code>install.packages</code> function to install packages from a CRAN-like repository. For example, to install the <strong>inlmisc</strong> package from CRAN, use the command</p>
 <pre class="r"><code>install.packages(&quot;inlmisc&quot;)</code></pre>
 <p>By default, <code>install.packages</code> also installs the packages which <strong>inlmisc</strong> depends on, links to, or imports; see the <a href="https://CRAN.R-project.org/package=inlmisc">package description</a> for its dependencies. If you wish to install a package from a different CRAN-like repository, such as the <strong>G</strong>eological survey <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (<a href="https://owi.usgs.gov/R/gran.html">GRAN</a>), the <code>repos</code> argument must be specified. For example, to install the <strong>smwrData</strong> package from GRAN, use</p>
-<pre class="r"><code>install.packages(&quot;smwrData&quot;, repos = c(GRAN = &quot;https://owi.usgs.gov/R&quot;,
-                                       CRAN = &quot;https://cran.r-project.org/&quot;))</code></pre>
+<pre class="r"><code>repos &lt;- c(GRAN = &quot;https://owi.usgs.gov/R&quot;, CRAN = &quot;https://cran.r-project.org/&quot;)
+install.packages(&quot;smwrData&quot;, repos = repos)</code></pre>
 <p>Notice that a CRAN repository was also included in the command, this ensures that any package dependencies residing on CRAN will also be installed. To install a package from a locally stored ZIP file, use</p>
 <pre class="r"><code>install.packages(file.choose(), repos = NULL)</code></pre>
 <p>Notice that the <code>file.choose()</code> command was used in place of a package name, this will allow you choose the “.zip” file interactively.</p>

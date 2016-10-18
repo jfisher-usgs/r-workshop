@@ -34,8 +34,8 @@ PlotNoisyData(x = 1:50, y = rep(0, 50), type = "b", col = "red")
 ## install.packages("inlmisc")
 
 ## ---- eval=FALSE---------------------------------------------------------
-## install.packages("smwrData", repos = c(GRAN = "https://owi.usgs.gov/R",
-##                                        CRAN = "https://cran.r-project.org/"))
+## repos <- c(GRAN = "https://owi.usgs.gov/R", CRAN = "https://cran.r-project.org/")
+## install.packages("smwrData", repos = repos)
 
 ## ---- eval=FALSE---------------------------------------------------------
 ## install.packages(file.choose(), repos = NULL)
