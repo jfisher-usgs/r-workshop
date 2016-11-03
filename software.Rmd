@@ -100,7 +100,7 @@ Sys.getenv("PATH")
 You should see "c:\\\\Rtools\\\\bin;c:\\\\Rtools\\\\gcc-4.6.3\\\\bin;..." in the output.
 
 R functions that simplify common package development tasks are included in the
-[devtools](https://CRAN.R-project.org/package=devtools) package.
+[**devtools**](https://CRAN.R-project.org/package=devtools) package.
 
 ## MiKTeX
 
@@ -131,15 +131,25 @@ Your looking for the "texmf" folder within the R installation directory structur
 R functions that let you write LaTeX documents are included in the
 [knitr](https://CRAN.R-project.org/package=knitr) package.
 
-## Ghostscript
+## Pandoc
 
 <span style="color:red;">Optional</span>:
-[Ghostscript](http://ghostscript.com/) is a Postscript and PDF interpreter/renderer.
-[Download](http://ghostscript.com/download/gsdnld.html) the latest 64-bit (or 32-bit) version of Ghostscript (AGPL release).
-Once the installer downloads, right-click on it and select *Run as administrator*.
-Manually edit the Windows *system environment variables* to include the Ghostscript bin directory
-(such as "C:\\Program Files\\gs\\gs9.19\\bin") in the *Path*.
-The Ghostscript executable will then be accessible through R using the `compactPDF` function
+[Pandoc](http://pandoc.org/) is a universal document converter.
+[Download](http://pandoc.org/installing.html) the latest version of pandoc for Windows.
+Once the installer downloads, double left-click the installation file.
+Pandoc is used by the [**rmarkdown**](https://CRAN.R-project.org/package=rmarkdown) package to
+convert R Markdown documents into a variety of formats, such as HTML.
+Accept default options on all dialogs.
+
+## QPDF
+
+<span style="color:red;">Optional</span>:
+[QPDF](http://qpdf.sourceforge.net/) does structural, content-preserving transformations on PDF files.
+[Download](https://sourceforge.net/projects/qpdf/files/) the latest 64-bit (or 32-bit) version of QPDF built with mingw.
+Once the distribution file downloads, uncompress it someplace you have write access, such as your "Documents" folder.
+Manually edit the Windows *system environment variables* to include the QPDF bin directory
+(such as "C:\\Users\\jfisher\\Documents\\qpdf-6.0.0\\bin") in the *Path*.
+The QPDF executable will then be accessible through R using the `compactPDF` function
 in the **tools** package (pre-installed with R).
 
 
@@ -155,10 +165,3 @@ Once installed, Git should be accessible from the start menu.
 Startup a *Git Bash* session, it should look something like this
 
 | ![](images/software-git_01.png)
-
-## Pandoc
-
-<span style="color:red;">Optional</span>:
-[Pandoc](http://pandoc.org/) is a universal document converter.
-[Download](http://pandoc.org/installing.html) the latest version of pandoc for Windows.
-Once the installer downloads, double left-click the installation file.

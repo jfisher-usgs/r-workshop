@@ -345,7 +345,7 @@ div.tocify {
 <p>Once installed, check if Rtools can be accessed through R. Close the current R session (assuming you have it open) and open a new R session. Paste the following command into the R Console to see if Rtools is included in the System Path.</p>
 <pre class="r"><code>Sys.getenv(&quot;PATH&quot;)</code></pre>
 <p>You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output.</p>
-<p>R functions that simplify common package development tasks are included in the <a href="https://CRAN.R-project.org/package=devtools">devtools</a> package.</p>
+<p>R functions that simplify common package development tasks are included in the <a href="https://CRAN.R-project.org/package=devtools"><strong>devtools</strong></a> package.</p>
 </div>
 <div id="miktex" class="section level2">
 <h2>MiKTeX</h2>
@@ -359,18 +359,18 @@ div.tocify {
 <p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the “texmf” folder within the R installation directory structure, mine is located here: “C:\Users\jfisher\Documents\R\R-3.3.1\share\texmf”.</p>
 <p>R functions that let you write LaTeX documents are included in the <a href="https://CRAN.R-project.org/package=knitr">knitr</a> package.</p>
 </div>
-<div id="ghostscript" class="section level2">
-<h2>Ghostscript</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://ghostscript.com/">Ghostscript</a> is a Postscript and PDF interpreter/renderer. <a href="http://ghostscript.com/download/gsdnld.html">Download</a> the latest 64-bit (or 32-bit) version of Ghostscript (AGPL release). Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Manually edit the Windows <em>system environment variables</em> to include the Ghostscript bin directory (such as “C:\Program Files\gs\gs9.19\bin”) in the <em>Path</em>. The Ghostscript executable will then be accessible through R using the <code>compactPDF</code> function in the <strong>tools</strong> package (pre-installed with R).</p>
+<div id="pandoc" class="section level2">
+<h2>Pandoc</h2>
+<p><span style="color:red;">Optional</span>: <a href="http://pandoc.org/">Pandoc</a> is a universal document converter. <a href="http://pandoc.org/installing.html">Download</a> the latest version of pandoc for Windows. Once the installer downloads, double left-click the installation file. Pandoc is used by the <a href="https://CRAN.R-project.org/package=rmarkdown"><strong>rmarkdown</strong></a> package to convert R Markdown documents into a variety of formats, such as HTML. Accept default options on all dialogs.</p>
+</div>
+<div id="qpdf" class="section level2">
+<h2>QPDF</h2>
+<p><span style="color:red;">Optional</span>: <a href="http://qpdf.sourceforge.net/">QPDF</a> does structural, content-preserving transformations on PDF files. <a href="https://sourceforge.net/projects/qpdf/files/">Download</a> the latest 64-bit (or 32-bit) version of QPDF built with mingw. Once the distribution file downloads, uncompress it someplace you have write access, such as your “Documents” folder. Manually edit the Windows <em>system environment variables</em> to include the QPDF bin directory (such as “C:\Users\jfisher\Documents\qpdf-6.0.0\bin”) in the <em>Path</em>. The QPDF executable will then be accessible through R using the <code>compactPDF</code> function in the <strong>tools</strong> package (pre-installed with R).</p>
 </div>
 <div id="git" class="section level2">
 <h2>Git</h2>
 <p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/">Git</a> is a version control system that is used for software development and other version control tasks. <a href="https://git-scm.com/download">Download</a> the latest 64-bit (or 32-bit) version of Git for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu. Startup a <em>Git Bash</em> session, it should look something like this</p>
 <p><img src="images/software-git_01.png" /></p>
-</div>
-<div id="pandoc" class="section level2">
-<h2>Pandoc</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://pandoc.org/">Pandoc</a> is a universal document converter. <a href="http://pandoc.org/installing.html">Download</a> the latest version of pandoc for Windows. Once the installer downloads, double left-click the installation file.</p>
 </div>
 
 <div id="page-footer">
