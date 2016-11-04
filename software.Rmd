@@ -18,8 +18,7 @@ from the **C**omprehensive **R** **A**rchive **N**etwork (CRAN).
 Once the installer downloads, double left-click the installation file.
 Accept default options on all but the following dialogs.
 
-Set the location for the R installation to someplace you have write access, such as your "Documents" folder.
-This may already be the default if you're installing as a standard user, without administrative privileges.
+Set the location for the R installation to someplace you have write access (such as "C:\\Users\\\<user\>\\Tools\\R").
 
 | ![](images/software-r_01.png)
 
@@ -99,9 +98,6 @@ Sys.getenv("PATH")
 
 You should see "c:\\\\Rtools\\\\bin;c:\\\\Rtools\\\\gcc-4.6.3\\\\bin;..." in the output.
 
-R functions that simplify common package development tasks are included in the
-[**devtools**](https://CRAN.R-project.org/package=devtools) package.
-
 ## MiKTeX
 
 <span style="color:red;">Optional</span>:
@@ -125,8 +121,8 @@ select the *Roots* tab, it should look something like this
 | ![](images/software-miktex_03.png)
 
 Push the *Add...* button and select the root directory for R's LaTeX supplementary files.
-Your looking for the "texmf" folder within the R installation directory structure, mine is located here:
-"C:\\Users\\jfisher\\Documents\\R\\R-3.3.1\\share\\texmf".
+Your looking for the "texmf" folder within the R installation directory structure, such as
+"C:\\Users\\\<user\>\\Tools\\R\\R-3.3.1\\share\\texmf".
 
 R functions that let you write LaTeX documents are included in the
 [knitr](https://CRAN.R-project.org/package=knitr) package.
@@ -139,16 +135,16 @@ R functions that let you write LaTeX documents are included in the
 Once the installer downloads, double left-click the installation file.
 Pandoc is used by the [**rmarkdown**](https://CRAN.R-project.org/package=rmarkdown) package to
 convert R Markdown documents into a variety of formats, such as HTML.
-Accept default options on all dialogs.
+Accept default options on all dialogs and install for a single user.
 
 ## QPDF
 
 <span style="color:red;">Optional</span>:
 [QPDF](http://qpdf.sourceforge.net/) does structural, content-preserving transformations on PDF files.
 [Download](https://sourceforge.net/projects/qpdf/files/) the latest 64-bit (or 32-bit) version of QPDF built with mingw.
-Once the distribution file downloads, uncompress it someplace you have write access, such as your "Documents" folder.
+Once the distribution file downloads, extract it someplace you have write access  (such asC:\\Users\\\<user\>\\Tools\\QPDF).
 Manually edit the Windows *system environment variables* to include the QPDF bin directory
-(such as "C:\\Users\\jfisher\\Documents\\qpdf-6.0.0\\bin") in the *Path*.
+(such as "C:\\Users\\\<user\>\\Tools\\QPDF\\qpdf-6.0.0\\bin") in the *Path*.
 The QPDF executable will then be accessible through R using the `compactPDF` function
 in the **tools** package (pre-installed with R).
 

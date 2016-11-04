@@ -315,7 +315,7 @@ div.tocify {
 <div id="r" class="section level2">
 <h2>R</h2>
 <p><a href="https://www.r-project.org/">R</a> is a programming language and software environment for statistical computing and graphics. <a href="http://cran.rstudio.com/bin/windows/base/">Download</a> the latest binary distribution of R from the <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (CRAN). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
-<p>Set the location for the R installation to someplace you have write access, such as your “Documents” folder. This may already be the default if you’re installing as a standard user, without administrative privileges.</p>
+<p>Set the location for the R installation to someplace you have write access (such as “C:\Users\&lt;user&gt;\Tools\R”).</p>
 <p><img src="images/software-r_01.png" /></p>
 <p>Customize startup options by specifying <em>Yes (customized startup)</em>.</p>
 <p><img src="images/software-r_02.png" /></p>
@@ -345,7 +345,6 @@ div.tocify {
 <p>Once installed, check if Rtools can be accessed through R. Close the current R session (assuming you have it open) and open a new R session. Paste the following command into the R Console to see if Rtools is included in the System Path.</p>
 <pre class="r"><code>Sys.getenv(&quot;PATH&quot;)</code></pre>
 <p>You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output.</p>
-<p>R functions that simplify common package development tasks are included in the <a href="https://CRAN.R-project.org/package=devtools"><strong>devtools</strong></a> package.</p>
 </div>
 <div id="miktex" class="section level2">
 <h2>MiKTeX</h2>
@@ -356,16 +355,16 @@ div.tocify {
 <p><img src="images/software-miktex_02.png" /></p>
 <p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu, and select the <em>Roots</em> tab, it should look something like this</p>
 <p><img src="images/software-miktex_03.png" /></p>
-<p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the “texmf” folder within the R installation directory structure, mine is located here: “C:\Users\jfisher\Documents\R\R-3.3.1\share\texmf”.</p>
+<p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the “texmf” folder within the R installation directory structure, such as “C:\Users\&lt;user&gt;\Tools\R\R-3.3.1\share\texmf”.</p>
 <p>R functions that let you write LaTeX documents are included in the <a href="https://CRAN.R-project.org/package=knitr">knitr</a> package.</p>
 </div>
 <div id="pandoc" class="section level2">
 <h2>Pandoc</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://pandoc.org/">Pandoc</a> is a universal document converter. <a href="http://pandoc.org/installing.html">Download</a> the latest version of pandoc for Windows. Once the installer downloads, double left-click the installation file. Pandoc is used by the <a href="https://CRAN.R-project.org/package=rmarkdown"><strong>rmarkdown</strong></a> package to convert R Markdown documents into a variety of formats, such as HTML. Accept default options on all dialogs.</p>
+<p><span style="color:red;">Optional</span>: <a href="http://pandoc.org/">Pandoc</a> is a universal document converter. <a href="http://pandoc.org/installing.html">Download</a> the latest version of pandoc for Windows. Once the installer downloads, double left-click the installation file. Pandoc is used by the <a href="https://CRAN.R-project.org/package=rmarkdown"><strong>rmarkdown</strong></a> package to convert R Markdown documents into a variety of formats, such as HTML. Accept default options on all dialogs and install for a single user.</p>
 </div>
 <div id="qpdf" class="section level2">
 <h2>QPDF</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://qpdf.sourceforge.net/">QPDF</a> does structural, content-preserving transformations on PDF files. <a href="https://sourceforge.net/projects/qpdf/files/">Download</a> the latest 64-bit (or 32-bit) version of QPDF built with mingw. Once the distribution file downloads, uncompress it someplace you have write access, such as your “Documents” folder. Manually edit the Windows <em>system environment variables</em> to include the QPDF bin directory (such as “C:\Users\jfisher\Documents\qpdf-6.0.0\bin”) in the <em>Path</em>. The QPDF executable will then be accessible through R using the <code>compactPDF</code> function in the <strong>tools</strong> package (pre-installed with R).</p>
+<p><span style="color:red;">Optional</span>: <a href="http://qpdf.sourceforge.net/">QPDF</a> does structural, content-preserving transformations on PDF files. <a href="https://sourceforge.net/projects/qpdf/files/">Download</a> the latest 64-bit (or 32-bit) version of QPDF built with mingw. Once the distribution file downloads, extract it someplace you have write access (such asC:\Users\&lt;user&gt;\Tools\QPDF). Manually edit the Windows <em>system environment variables</em> to include the QPDF bin directory (such as “C:\Users\&lt;user&gt;\Tools\QPDF\qpdf-6.0.0\bin”) in the <em>Path</em>. The QPDF executable will then be accessible through R using the <code>compactPDF</code> function in the <strong>tools</strong> package (pre-installed with R).</p>
 </div>
 <div id="git" class="section level2">
 <h2>Git</h2>
