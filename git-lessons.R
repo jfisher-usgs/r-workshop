@@ -20,7 +20,7 @@
 ## git commit -m "Commit message"
 
 ## ---- engine="bash", eval=FALSE------------------------------------------
-## git remote add origin https://github.com/jfisher-usgs/repo-example.git
+## git remote add origin git@github.com:jfisher-usgs/repo-example.git
 ## git push -u origin master
 
 ## ---- engine="bash", eval=FALSE------------------------------------------

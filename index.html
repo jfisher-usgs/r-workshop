@@ -406,7 +406,7 @@ div.tocify {
 <p>The <code>file</code> argument in the <code>source</code> function is typically specified as a character string giving the pathname of the file or URL to read from. One could also specify the name of the file and the <code>source</code> function will assume the file is located in the <em>working directory</em>. Every R session has a default location on your OS’s file structure called the working directory. You need to keep track and deliberately set your working directory in each R session.</p>
 <p>The <code>getwd</code> function tells you what the current working directory is. For my current R session the working directory is:</p>
 <pre class="r"><code>getwd()</code></pre>
-<pre><code>## [1] &quot;I:/Repos/r-workshop&quot;</code></pre>
+<pre><code>## [1] &quot;I:/HOME/Repos/r-workshop&quot;</code></pre>
 <p>To change the working directory, use the <code>setwd(dir)</code> function, where <code>dir</code> is the pathname of the new working directory. Be sure to enter the new working directory as a character string (enclose it in quotes) and specify the separator between folders using a forward slash (/). For Windows users, the forward slash will look strange because you’re used to the backslash (\) separator used by File Explorer (previously known as Windows Explorer).</p>
 </div>
 <div id="exercise-1" class="section level4">

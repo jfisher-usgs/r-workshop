@@ -312,8 +312,8 @@ div.tocify {
 
 
 <p>Git is an open source version control system (VCS).</p>
-<div id="set-up-git" class="section level2">
-<h2>Set Up Git</h2>
+<div id="setup-git" class="section level2">
+<h2>Setup Git</h2>
 <p>Startup the <strong>Git Bash</strong> application.</p>
 <p>Tell Git your name so your commits will be properly labeled by typing the following command (for example, replace <code>&quot;&lt;YOUR NAME&gt;&quot;</code> with <code>&quot;Jason Fisher&quot;</code>):</p>
 <pre class="bash"><code>git config --global user.name &quot;&lt;YOUR NAME&gt;&quot;</code></pre>
@@ -336,9 +336,9 @@ div.tocify {
 <pre class="bash"><code>git commit -m &quot;Commit message&quot;</code></pre>
 <p><img src="images/git-bash_02.png" /></p>
 </div>
-<div id="set-up-github" class="section level2">
-<h2>Set Up GitHub</h2>
-<p>Now that the files are committed, set up your remote repository. <a href="https://github.com/">GitHub</a> is probably the most popular git repository hosting service out there. And the USGS has a presence on GitHub, see its organization page at <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>.</p>
+<div id="setup-github" class="section level2">
+<h2>Setup GitHub</h2>
+<p>Now that the files are committed, setup your remote repository. <a href="https://github.com/">GitHub</a> is probably the most popular git repository hosting service out there. And the USGS has a presence on GitHub, see its organization page at <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>.</p>
 <p>Sign up for a GitHub account at <a href="https://github.com/join">github.com</a>:</p>
 <ul>
 <li><p>Account name should be in the following format: “AD shortname”-usgs. Example: jfisher-usgs. If you have a special character such as an underscore in your username, replace it with a dash.</p></li>
@@ -349,27 +349,31 @@ div.tocify {
 <p>Notify the <a href="mailto:%22gs_github_admin@usgs.gov">&quot;gs_github_admin@usgs.gov</a>&quot; email group of your new username, and they will add you to the list of users on <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>, and add you to the <a href="mailto:%22gs_github@usgs.gov">&quot;gs_github@usgs.gov</a>&quot; email discussion and announcements group.</p>
 <p>Once we add you to the USGS org (<a href="https://github.com/usgs" class="uri">https://github.com/usgs</a>), click the “publicize” option in your account settings. Once you do this, GitHub will publicly list you as a member of the USGS organization.</p>
 </div>
+<div id="generate-an-ssh-key" class="section level2">
+<h2>Generate an SSH Key</h2>
+<p>SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined on this <a href="https://help.github.com/articles/generating-an-ssh-key/">website</a>.</p>
+</div>
 <div id="create-remote-repository" class="section level2">
 <h2>Create Remote Repository</h2>
 <p>In the upper-right corner of any of your GitHub pages, click <strong>+</strong>, and then select <em>New repository</em>.</p>
 <p><img src="images/git-github_01.png" /></p>
 <p>Create a short, memorable name for your repository. For example, “repo-example”. Leave everything else with default values, and click the Create repository button.</p>
 <p>Head back over to your <strong>Git Bash</strong> and establish a connection to the GitHub repository, use the following commands (and change URL as needed):</p>
-<pre class="bash"><code>git remote add origin https://github.com/jfisher-usgs/repo-example.git
+<pre class="bash"><code>git remote add origin git@github.com:jfisher-usgs/repo-example.git
 git push -u origin master</code></pre>
 <p>From here on out, all that is need to push your commits to your online repository is</p>
 <pre class="bash"><code>git push</code></pre>
 <div id="exercise" class="section level4">
 <h4>Exercise</h4>
 <ol style="list-style-type: decimal">
-<li><p>Initiate your own repsitory, you can use “repo-example” as a starting point.</p></li>
+<li><p>Initiate your own repository, you can use “repo-example” as a starting point.</p></li>
 <li><p>Add and commit your file content to your new local repository.</p></li>
 <li><p>Sign-up for a GitHub account and create a new remote repository.</p></li>
 <li><p>Establish a connection between your local and remote repository.</p></li>
 <li><p>Push commits to GitHub.</p></li>
 <li><p>Make changes to file content locally.</p></li>
 <li><p>Repeat steps 2 and 5.</p></li>
-<li><p>Can you find a graphical reprentation of your commits on GitHub.</p></li>
+<li><p>Can you find a graphical representation of your commits on GitHub.</p></li>
 </ol>
 </div>
 </div>

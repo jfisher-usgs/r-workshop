@@ -4,7 +4,7 @@ title: "Git Lessons"
 
 Git is an open source version control system (VCS).
 
-## Set Up Git
+## Setup Git
 
 Startup the **Git Bash** application.
 
@@ -71,9 +71,9 @@ git commit -m "Commit message"
 
 | ![](images/git-bash_02.png)
 
-## Set Up GitHub
+## Setup GitHub
 
-Now that the files are committed, set up your remote repository.
+Now that the files are committed, setup your remote repository.
 [GitHub](https://github.com/) is probably the most popular git repository hosting service out there.
 And the USGS has a presence on GitHub, see its organization page at https://github.com/usgs/.
 
@@ -81,8 +81,7 @@ Sign up for a GitHub account at [github.com](https://github.com/join):
 
 - Account name should be in the following format: "AD shortname"-usgs.
   Example: jfisher-usgs.
-  If you have a special character such as an underscore in your username,
-  replace it with a dash.
+  If you have a special character such as an underscore in your username, replace it with a dash.
 
 - Account should use the user's official USGS email address.
 
@@ -98,6 +97,12 @@ Once we add you to the USGS org (https://github.com/usgs),
 click the "publicize" option in your account settings.
 Once you do this, GitHub will publicly list you as a member of the USGS organization.
 
+## Generate an SSH Key
+
+SSH keys are a way to identify trusted computers without involving passwords.
+You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined on this
+[website](https://help.github.com/articles/generating-an-ssh-key/).
+
 ## Create Remote Repository
 
 In the upper-right corner of any of your GitHub pages,
@@ -105,14 +110,15 @@ click **+**, and then select *New repository*.
 
 | ![](images/git-github_01.png)
 
-Create a short, memorable name for your repository. For example, "repo-example".
+Create a short, memorable name for your repository.
+For example, "repo-example".
 Leave everything else with default values, and click the Create repository button.
 
 Head back over to your **Git Bash** and establish a connection to the GitHub repository,
 use the following commands (and change URL as needed):
 
 ```{r, engine="bash", eval=FALSE}
-git remote add origin https://github.com/jfisher-usgs/repo-example.git
+git remote add origin git@github.com:jfisher-usgs/repo-example.git
 git push -u origin master
 ```
 
@@ -124,7 +130,7 @@ git push
 
 #### Exercise
 
-1. Initiate your own repsitory, you can use "repo-example" as a starting point.
+1. Initiate your own repository, you can use "repo-example" as a starting point.
 
 2. Add and commit your file content to your new local repository.
 
@@ -138,4 +144,4 @@ git push
 
 7. Repeat steps 2 and 5.
 
-5. Can you find a graphical reprentation of your commits on GitHub.
+5. Can you find a graphical representation of your commits on GitHub.
