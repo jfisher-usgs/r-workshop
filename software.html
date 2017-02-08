@@ -22,12 +22,11 @@
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="site_libs/highlight/textmate.css"
-      type="text/css" />
-<script src="site_libs/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -155,7 +154,6 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -181,7 +179,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
@@ -240,8 +238,9 @@ div.tocify {
 }
 
 .tocify-subheader .tocify-item {
-  font-size: 0.9em;
-  padding-left: 5px;
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -253,7 +252,6 @@ div.tocify {
 }
 .tocify-subheader .tocify-item {
   font-size: 0.95em;
-  padding-left: 10px;
 }
 
 </style>
@@ -314,53 +312,53 @@ div.tocify {
 <p>Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested. Below are the instructions for installing software used in this workshop. If you do not have install access to your computer, you will need to contact your IT representative to have them install it. You can give them a link to this page for instructions. These instructions are for installing software on a Windows 7 (or higher) operating system (OS).</p>
 <div id="r" class="section level2">
 <h2>R</h2>
-<p><a href="https://www.r-project.org/">R</a> is a programming language and software environment for statistical computing and graphics. <a href="http://cran.rstudio.com/bin/windows/base/">Download</a> the latest binary distribution of R from the <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (CRAN). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
+<p><a href="https://www.r-project.org/">R</a> is a programming language and software environment for statistical computing and graphics. <a href="https://cran.rstudio.com/bin/windows/base/">Download</a> the latest binary distribution of R from the <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (CRAN). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
 <p>Set the location for the R installation to someplace you have write access (such as “C:\Users\&lt;user&gt;\Tools\R”).</p>
-<p><img src="images/software-r_01.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-r_01.png" /></div>
 <p>Customize startup options by specifying <em>Yes (customized startup)</em>.</p>
-<p><img src="images/software-r_02.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-r_02.png" /></div>
 <p>Set the R graphical user interface to operate with multiple top-level windows for the console, graphics and pager, by specifying <em>SDI (separate windows)</em>.</p>
-<p><img src="images/software-r_03.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-r_03.png" /></div>
 <p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R Console should look something like this</p>
-<p><img src="images/software-r_04.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-r_04.png" /></div>
 <p>R comes with a standard set of packages, these are collections of R functions, data, and compiled code in a well-defined format. Other user-contributed packages are available for download and installation. Install the following packages available from <a href="https://cloud.r-project.org/web/packages/">CRAN</a> by pasting the following code in the R console and pressing Enter.</p>
 </div>
 <div id="notepad" class="section level2">
 <h2>Notepad++</h2>
-<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, <a href="http://www.ultraedit.com/">UltraEdit</a> does), <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of <a href="https://notepad-plus-plus.org/">Notepad++</a>. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file [*.R]) and select <em>Edit with Notepad++</em>. Once running the file is opened in the text editor, it should look something like this</p>
-<p><img src="images/software-notepad_01.png" /></p>
+<p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, <a href="https://www.ultraedit.com/">UltraEdit</a> does), <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of <a href="https://notepad-plus-plus.org/">Notepad++</a>. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file [*.R]) and select <em>Edit with Notepad++</em>. Once running the file is opened in the text editor, it should look something like this</p>
+<div style="white-space: pre-line;"><img src="images/software-notepad_01.png" /></div>
 </div>
 <div id="rstudio" class="section level2">
 <h2>RStudio</h2>
-<p><span style="color:red;">Optional</span>: <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> is an integrated development environment (IDE) for R; it requires R to run. <a href="http://www.rstudio.com/products/rstudio/download/">Download</a> the latest free-license version of RStudio Desktop. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, RStudio should be accessible from the start menu. Startup an RStudio session, it should look something like this</p>
-<p><img src="images/software-rstudio_01.png" /></p>
+<p><span style="color:red;">Optional</span>: <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> is an integrated development environment (IDE) for R; it requires R to run. <a href="https://www.rstudio.com/products/rstudio/download/">Download</a> the latest free-license version of RStudio Desktop. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, RStudio should be accessible from the start menu. Startup an RStudio session, it should look something like this</p>
+<div style="white-space: pre-line;"><img src="images/software-rstudio_01.png" /></div>
 </div>
 <div id="rtools" class="section level2">
 <h2>RTools</h2>
 <p><span style="color:red;">Optional</span>: RTools is a collection of resources for building packages for R. <a href="https://cloud.r-project.org/bin/windows/Rtools/">Download</a> the latest “frozen” version of Rtools. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
 <p>Select the additional task to edit the current value of the System Path.</p>
-<p><img src="images/software-rtools_01.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-rtools_01.png" /></div>
 <p>Confirm that “c:\Rtools\bin” and “c:\Rtools\gcc-4.6.3\bin” (version number may differ) are located at the beginning of the System Path.</p>
-<p><img src="images/software-rtools_02.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-rtools_02.png" /></div>
 <p>Once installed, check if Rtools can be accessed through R. Close the current R session (assuming you have it open) and open a new R session. Paste the following command into the R Console to see if Rtools is included in the System Path.</p>
 <pre class="r"><code>Sys.getenv(&quot;PATH&quot;)</code></pre>
 <p>You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output.</p>
 </div>
 <div id="miktex" class="section level2">
 <h2>MiKTeX</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://miktex.org/">MiKTeX</a> is an implementation of TeX/LaTeX and related programs for Windows. <a href="http://miktex.org/download">Download</a> the latest 32-bit version of Basic MiKTeX. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
+<p><span style="color:red;">Optional</span>: <a href="https://miktex.org/">MiKTeX</a> is an implementation of TeX/LaTeX and related programs for Windows. <a href="https://miktex.org/download">Download</a> the latest 32-bit version of Basic MiKTeX. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
 <p>Change the installation directory to “C:\miktex”, its been my experience that other locations can result in access errors.</p>
-<p><img src="images/software-miktex_01.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-miktex_01.png" /></div>
 <p>Choose to install missing packages on-the-fly by specify <em>Yes</em> in the pull-down-menu.</p>
-<p><img src="images/software-miktex_02.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-miktex_02.png" /></div>
 <p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu, and select the <em>Roots</em> tab, it should look something like this</p>
-<p><img src="images/software-miktex_03.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-miktex_03.png" /></div>
 <p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the “texmf” folder within the R installation directory structure, such as “C:\Users\&lt;user&gt;\Tools\R\R-3.3.1\share\texmf”.</p>
 <p>R functions that let you write LaTeX documents are included in the <a href="https://CRAN.R-project.org/package=knitr">knitr</a> package.</p>
 </div>
 <div id="pandoc" class="section level2">
 <h2>Pandoc</h2>
-<p><span style="color:red;">Optional</span>: <a href="http://pandoc.org/">Pandoc</a> is a universal document converter. <a href="http://pandoc.org/installing.html">Download</a> the latest version of pandoc for Windows. Once the installer downloads, double left-click the installation file. Pandoc is used by the <a href="https://CRAN.R-project.org/package=rmarkdown"><strong>rmarkdown</strong></a> package to convert R Markdown documents into a variety of formats, such as HTML. Accept default options on all dialogs and install for a single user.</p>
+<p><span style="color:red;">Optional</span>: <a href="https://pandoc.org/">Pandoc</a> is a universal document converter. <a href="https://pandoc.org/installing.html">Download</a> the latest version of pandoc for Windows. Once the installer downloads, double left-click the installation file. Pandoc is used by the <a href="https://CRAN.R-project.org/package=rmarkdown"><strong>rmarkdown</strong></a> package to convert R Markdown documents into a variety of formats, such as HTML. Accept default options on all dialogs and install for a single user.</p>
 </div>
 <div id="qpdf" class="section level2">
 <h2>QPDF</h2>
@@ -369,7 +367,7 @@ div.tocify {
 <div id="git" class="section level2">
 <h2>Git</h2>
 <p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/">Git</a> is a version control system that is used for software development and other version control tasks. <a href="https://git-scm.com/download">Download</a> the latest 64-bit (or 32-bit) version of Git for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu. Startup a <em>Git Bash</em> session, it should look something like this</p>
-<p><img src="images/software-git_01.png" /></p>
+<div style="white-space: pre-line;"><img src="images/software-git_01.png" /></div>
 </div>
 
 <div id="page-footer">
@@ -394,8 +392,11 @@ div.tocify {
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
 
 

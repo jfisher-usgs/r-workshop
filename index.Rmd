@@ -51,7 +51,7 @@ data analysis, statistical computing, and graphics.
   [R mailing lists](https://www.r-project.org/mail.html).
 
 - Provides tools for communicating your research using dynamic
-  [report](http://yihui.name/knitr/) and
+  [report](https://yihui.name/knitr/) and
   [website](http://rmarkdown.rstudio.com/rmarkdown_websites.html) generation.
 
 - Designed to connect to other programming languages such as
@@ -101,7 +101,7 @@ such as updating packages, installing package(s) from local files, or opening he
 
 ### Functions
 
-As John Chambers ([2008](http://www.springer.com/gp/book/9780387759357)) states:
+As John Chambers ([2008](https://www.springer.com/gp/book/9780387759357)) states:
 
 > Nearly everything that happens in R results from a function call.
 > Therefore, basic programming centers on creating and refining functions.
@@ -382,7 +382,7 @@ At this point, you can either
 
 #### Task views
 
-[CRAN Task Views](http://cran.r-project.org/web/views/)
+[CRAN Task Views](https://cran.r-project.org/web/views/)
 are guides to the packages and functions useful for certain disciplines and methodologies.
 These guides are maintained by volunteers with expertise in a specified area.
 The maintainers provide annotated guidance to routines and packages.
@@ -392,13 +392,13 @@ This is particularly helpful to track new packages or functionality.
 
 There are endless resources online, here's just a few
 
-- [R for cats](http://rforcats.net/) is a lighthearted introduction to
+- [R for cats](https://rforcats.net/) is a lighthearted introduction to
   the R-programming language.
 
 - [R-bloggers](https://www.r-bloggers.com/) is a blog aggregator of content contributed by
   bloggers who write about R.
 
-- [StackOverflow](http://stackoverflow.com/questions/tagged/r) is a discussion forum for
+- [StackOverflow](https://stackoverflow.com/questions/tagged/r) is a discussion forum for
   all things related to programming.
 
 - [R for Data Science](http://r4ds.had.co.nz/index.html), a book by Hadley Wickham.
@@ -455,7 +455,7 @@ Sources of material include:
 
 - Tutorials by William B. King -- [Saving and Loading Objects in R](https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html)
 
-- SAS and R blog -- [another look at CRAN Task Views](http://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
+- SAS and R blog -- [another look at CRAN Task Views](https://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
 
 ## Website Information
 

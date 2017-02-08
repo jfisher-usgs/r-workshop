@@ -22,12 +22,11 @@
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="site_libs/highlight/textmate.css"
-      type="text/css" />
-<script src="site_libs/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -155,7 +154,6 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -181,7 +179,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
@@ -240,8 +238,9 @@ div.tocify {
 }
 
 .tocify-subheader .tocify-item {
-  font-size: 0.9em;
-  padding-left: 5px;
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -253,7 +252,6 @@ div.tocify {
 }
 .tocify-subheader .tocify-item {
   font-size: 0.95em;
-  padding-left: 10px;
 }
 
 </style>
@@ -331,10 +329,10 @@ div.tocify {
 <pre class="bash"><code>git add repo-example/test/file2.txt</code></pre>
 <p>The <code>status</code> command can be used to check the current state of your repository.</p>
 <pre class="bash"><code>git state</code></pre>
-<p><img src="images/git-bash_01.png" /></p>
+<div style="white-space: pre-line;"><img src="images/git-bash_01.png" /></div>
 <p>At what seems like a good stopping point in your workflow, say after completing some interesting function in R. Commit all your changes using the following command and leave a message to help you find these changes in the future. To commit changes, use:</p>
 <pre class="bash"><code>git commit -m &quot;Commit message&quot;</code></pre>
-<p><img src="images/git-bash_02.png" /></p>
+<div style="white-space: pre-line;"><img src="images/git-bash_02.png" /></div>
 </div>
 <div id="setup-github" class="section level2">
 <h2>Setup GitHub</h2>
@@ -346,7 +344,7 @@ div.tocify {
 <li><p>Account should use the user’s real name.</p></li>
 <li><p>Password should not be used for any other account.</p></li>
 </ul>
-<p>Notify the <a href="mailto:%22gs_github_admin@usgs.gov">&quot;gs_github_admin@usgs.gov</a>&quot; email group of your new username, and they will add you to the list of users on <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>, and add you to the <a href="mailto:%22gs_github@usgs.gov">&quot;gs_github@usgs.gov</a>&quot; email discussion and announcements group.</p>
+<p>Notify the “<a href="mailto:gs_github_admin@usgs.gov">gs_github_admin@usgs.gov</a>” email group of your new username, and they will add you to the list of users on <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>, and add you to the “<a href="mailto:gs_github@usgs.gov">gs_github@usgs.gov</a>” email discussion and announcements group.</p>
 <p>Once we add you to the USGS org (<a href="https://github.com/usgs" class="uri">https://github.com/usgs</a>), click the “publicize” option in your account settings. Once you do this, GitHub will publicly list you as a member of the USGS organization.</p>
 </div>
 <div id="generate-an-ssh-key" class="section level2">
@@ -356,7 +354,7 @@ div.tocify {
 <div id="create-remote-repository" class="section level2">
 <h2>Create Remote Repository</h2>
 <p>In the upper-right corner of any of your GitHub pages, click <strong>+</strong>, and then select <em>New repository</em>.</p>
-<p><img src="images/git-github_01.png" /></p>
+<div style="white-space: pre-line;"><img src="images/git-github_01.png" /></div>
 <p>Create a short, memorable name for your repository. For example, “repo-example”. Leave everything else with default values, and click the Create repository button.</p>
 <p>Head back over to your <strong>Git Bash</strong> and establish a connection to the GitHub repository, use the following commands (and change URL as needed):</p>
 <pre class="bash"><code>git remote add origin git@github.com:jfisher-usgs/repo-example.git
@@ -400,8 +398,11 @@ git push -u origin master</code></pre>
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
 
 
