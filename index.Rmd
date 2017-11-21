@@ -1,5 +1,8 @@
 ---
 title: "Introduction"
+output:
+  html_document:
+    fig_caption: false
 ---
 
 Over the course of this 1-day workshop you will learn the basics of the R-programming language and
@@ -84,7 +87,7 @@ Startup an R session.
 For Windows users you will be opening a GUI for R called the "R Console".
 You will notice a number of pull-down menus that look something like this
 
-| ![](images/intro-r_01.png)
+![](images/intro-r_01.png)
 
 Because everything in R can be done from the command line,
 these pull-down menus are unnecessary for working in R.
@@ -349,7 +352,7 @@ To start R's online documentation in a web browser, the command is
 help.start()
 ```
 
-| ![](images/intro-help_01.png)
+![](images/intro-help_01.png)
 
 To get more information on any specific package, such as the **sp** package, the command is
 
@@ -357,7 +360,7 @@ To get more information on any specific package, such as the **sp** package, the
 help(package = "sp")
 ```
 
-| ![](images/intro-help_02.png)
+![](images/intro-help_02.png)
 
 And to open the help documentation for a specific function, such as the `bbox` function, the command is
 
@@ -378,7 +381,7 @@ At this point, you can either
 ?sp::bbox
 ```
 
-| ![](images/intro-help_03.png)
+![](images/intro-help_03.png)
 
 #### Task views
 
@@ -421,7 +424,7 @@ Every time you terminate an R session,
 by either typing `q()` at the command prompt or manually shutting down the R Console via point-and-click,
 you are prompted as to whether to save the workspace image, it may look something like this
 
-| ![](images/intro-closingr_01.png)
+![](images/intro-closingr_01.png)
 
 Your workspace image consists of all R objects you've created or loaded during your R session.
 Recall that you can use the `ls()` command to list these objects.

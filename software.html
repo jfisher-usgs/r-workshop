@@ -316,32 +316,32 @@ div.tocify {
 <h2>R</h2>
 <p><a href="https://www.r-project.org/">R</a> is a programming language and software environment for statistical computing and graphics. <a href="https://cran.rstudio.com/bin/windows/base/">Download</a> the latest binary distribution of R from the <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (CRAN). Once the installer downloads, double left-click the installation file. Accept default options on all but the following dialogs.</p>
 <p>Set the location for the R installation to someplace you have write access (such as “C:\Users\&lt;user&gt;\Tools\R”).</p>
-<div style="white-space: pre-line;"><img src="images/software-r_01.png" /></div>
+<p><img src="images/software-r_01.png" /></p>
 <p>Customize startup options by specifying <em>Yes (customized startup)</em>.</p>
-<div style="white-space: pre-line;"><img src="images/software-r_02.png" /></div>
+<p><img src="images/software-r_02.png" /></p>
 <p>Set the R graphical user interface to operate with multiple top-level windows for the console, graphics and pager, by specifying <em>SDI (separate windows)</em>.</p>
-<div style="white-space: pre-line;"><img src="images/software-r_03.png" /></div>
+<p><img src="images/software-r_03.png" /></p>
 <p>Once installed, R should be accessible from the start menu or desktop shortcut. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. Once running the R Console should look something like this</p>
-<div style="white-space: pre-line;"><img src="images/software-r_04.png" /></div>
+<p><img src="images/software-r_04.png" /></p>
 <p>R comes with a standard set of packages, these are collections of R functions, data, and compiled code in a well-defined format. Other user-contributed packages are available for download and installation. Install the following packages available from <a href="https://cloud.r-project.org/web/packages/">CRAN</a> by pasting the following code in the R console and pressing Enter.</p>
 </div>
 <div id="notepad" class="section level2">
 <h2>Notepad++</h2>
 <p>If you don’t already have a favorite text editor (Notepad and Wordpad don’t count, <a href="https://www.ultraedit.com/">UltraEdit</a> does), <a href="https://notepad-plus-plus.org/download/">download</a> the latest 32-bit version of <a href="https://notepad-plus-plus.org/">Notepad++</a>. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Notepad++ is accessible from Windows Explorer, right-click on a text file (such as an R source file [*.R]) and select <em>Edit with Notepad++</em>. Once running the file is opened in the text editor, it should look something like this</p>
-<div style="white-space: pre-line;"><img src="images/software-notepad_01.png" /></div>
+<p><img src="images/software-notepad_01.png" /></p>
 </div>
 <div id="rstudio" class="section level2">
 <h2>RStudio</h2>
 <p><span style="color:red;">Optional</span>: <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> is an integrated development environment (IDE) for R; it requires R to run. <a href="https://www.rstudio.com/products/rstudio/download/">Download</a> the latest free-license version of RStudio Desktop. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, RStudio should be accessible from the start menu. Startup an RStudio session, it should look something like this</p>
-<div style="white-space: pre-line;"><img src="images/software-rstudio_01.png" /></div>
+<p><img src="images/software-rstudio_01.png" /></p>
 </div>
 <div id="rtools" class="section level2">
 <h2>RTools</h2>
 <p><span style="color:red;">Optional</span>: RTools is a collection of resources for building packages for R. <a href="https://cloud.r-project.org/bin/windows/Rtools/">Download</a> the latest “frozen” version of Rtools. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
 <p>Select the additional task to edit the current value of the System Path.</p>
-<div style="white-space: pre-line;"><img src="images/software-rtools_01.png" /></div>
+<p><img src="images/software-rtools_01.png" /></p>
 <p>Confirm that “c:\Rtools\bin” and “c:\Rtools\gcc-4.6.3\bin” (version number may differ) are located at the beginning of the System Path.</p>
-<div style="white-space: pre-line;"><img src="images/software-rtools_02.png" /></div>
+<p><img src="images/software-rtools_02.png" /></p>
 <p>Once installed, check if Rtools can be accessed through R. Close the current R session (assuming you have it open) and open a new R session. Paste the following command into the R Console to see if Rtools is included in the System Path.</p>
 <pre class="r"><code>Sys.getenv(&quot;PATH&quot;)</code></pre>
 <p>You should see “c:\\Rtools\\bin;c:\\Rtools\\gcc-4.6.3\\bin;…” in the output.</p>
@@ -350,11 +350,11 @@ div.tocify {
 <h2>MiKTeX</h2>
 <p><span style="color:red;">Optional</span>: <a href="https://miktex.org/">MiKTeX</a> is an implementation of TeX/LaTeX and related programs for Windows. <a href="https://miktex.org/download">Download</a> the latest 32-bit version of Basic MiKTeX. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all but the following dialogs.</p>
 <p>Change the installation directory to “C:\miktex”, its been my experience that other locations can result in access errors.</p>
-<div style="white-space: pre-line;"><img src="images/software-miktex_01.png" /></div>
+<p><img src="images/software-miktex_01.png" /></p>
 <p>Choose to install missing packages on-the-fly by specify <em>Yes</em> in the pull-down-menu.</p>
-<div style="white-space: pre-line;"><img src="images/software-miktex_02.png" /></div>
+<p><img src="images/software-miktex_02.png" /></p>
 <p>Once installed, open the <strong>MiKTeX Settings</strong> application from the start menu, and select the <em>Roots</em> tab, it should look something like this</p>
-<div style="white-space: pre-line;"><img src="images/software-miktex_03.png" /></div>
+<p><img src="images/software-miktex_03.png" /></p>
 <p>Push the <em>Add…</em> button and select the root directory for R’s LaTeX supplementary files. Your looking for the “texmf” folder within the R installation directory structure, such as “C:\Users\&lt;user&gt;\Tools\R\R-3.3.1\share\texmf”.</p>
 <p>R functions that let you write LaTeX documents are included in the <a href="https://CRAN.R-project.org/package=knitr">knitr</a> package.</p>
 </div>
@@ -369,7 +369,7 @@ div.tocify {
 <div id="git" class="section level2">
 <h2>Git</h2>
 <p><span style="color:red;">Optional</span>: <a href="https://git-scm.com/">Git</a> is a version control system that is used for software development and other version control tasks. <a href="https://git-scm.com/download">Download</a> the latest 64-bit (or 32-bit) version of Git for Windows. Once the installer downloads, right-click on it and select <em>Run as administrator</em>. Accept default options on all dialogs. Once installed, Git should be accessible from the start menu. Startup a <em>Git Bash</em> session, it should look something like this</p>
-<div style="white-space: pre-line;"><img src="images/software-git_01.png" /></div>
+<p><img src="images/software-git_01.png" /></p>
 </div>
 
 <div id="page-footer">

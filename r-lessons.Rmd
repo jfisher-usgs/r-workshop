@@ -1,5 +1,8 @@
 ---
 title: "R Lessons"
+output:
+  html_document:
+    fig_caption: false
 ---
 
 ## USGS-R

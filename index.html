@@ -350,7 +350,7 @@ div.tocify {
 <div id="using-r" class="section level2">
 <h2>Using R</h2>
 <p>R should be accessible from the start menu, desktop shortcut, or command shell. Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version. The 64-bit version of R (R x64) is preferred. Startup an R session. For Windows users you will be opening a GUI for R called the “R Console”. You will notice a number of pull-down menus that look something like this</p>
-<div style="white-space: pre-line;"><img src="images/intro-r_01.png" /></div>
+<p><img src="images/intro-r_01.png" /></p>
 <p>Because everything in R can be done from the command line, these pull-down menus are unnecessary for working in R. That said, they do provide a convenient way to execute common tasks in R, such as updating packages, installing package(s) from local files, or opening help documentation.</p>
 <div id="exercise" class="section level4">
 <h4>Exercise</h4>
@@ -475,17 +475,17 @@ install.packages(&quot;smwrData&quot;, repos = repos)</code></pre>
 <h4>Getting help from the console</h4>
 <p>To start R’s online documentation in a web browser, the command is</p>
 <pre class="r"><code>help.start()</code></pre>
-<div style="white-space: pre-line;"><img src="images/intro-help_01.png" /></div>
+<p><img src="images/intro-help_01.png" /></p>
 <p>To get more information on any specific package, such as the <strong>sp</strong> package, the command is</p>
 <pre class="r"><code>help(package = &quot;sp&quot;)</code></pre>
-<div style="white-space: pre-line;"><img src="images/intro-help_02.png" /></div>
+<p><img src="images/intro-help_02.png" /></p>
 <p>And to open the help documentation for a specific function, such as the <code>bbox</code> function, the command is</p>
 <pre class="r"><code>?bbox</code></pre>
 <pre><code>## No documentation for &#39;bbox&#39; in specified packages and libraries:
 ## you could try &#39;??bbox&#39;</code></pre>
 <p>Wait a gosh-darn minute, that didn’t work! It appears that R is unable to find the help documentation for <code>bbox</code> because it belongs to the <strong>sp</strong> package. We never loaded the <strong>sp</strong> package, so it should come as no suprise that its documentation is unavailable for use. At this point, you can either (1) do a fuzzy match of the function name using the <code>??bbox</code> command, as recommended in the error message and appropriate when you don’t know the package name; (2) load the <strong>sp</strong> package using the <code>library</code> function and rerun <code>?bbox</code>; or (3) bypass the package loading step by running the command</p>
 <pre class="r"><code>?sp::bbox</code></pre>
-<div style="white-space: pre-line;"><img src="images/intro-help_03.png" /></div>
+<p><img src="images/intro-help_03.png" /></p>
 </div>
 <div id="task-views" class="section level4">
 <h4>Task views</h4>
@@ -515,7 +515,7 @@ install.packages(&quot;smwrData&quot;, repos = repos)</code></pre>
 <div id="closing-r" class="section level3">
 <h3>Closing R</h3>
 <p>Every time you terminate an R session, by either typing <code>q()</code> at the command prompt or manually shutting down the R Console via point-and-click, you are prompted as to whether to save the workspace image, it may look something like this</p>
-<div style="white-space: pre-line;"><img src="images/intro-closingr_01.png" /></div>
+<p><img src="images/intro-closingr_01.png" /></p>
 <p>Your workspace image consists of all R objects you’ve created or loaded during your R session. Recall that you can use the <code>ls()</code> command to list these objects. When R asks if you want to save your workspace image, and you respond <em>No</em>, all of the new objects you’ve created during the current R session are deleted forever. If you say <em>Yes</em>, the <code>save.image</code> and <code>savehistory</code> functions are run and result in files “.RData” and “.Rhistory” being written to (updated in) your working directory. The “.RData” file stores your R objects and the “.Rhistory” file stores a transcript of your previous commands entered at the command prompt. The next time you start an R session in this directory, your workspace image is restored and all objects and commands will be made available for use.</p>
 <p>My recommendation to you is to <strong>never save your workspace image</strong>. This is because your code should almost always be typed in a script file and not directly in the console. In other words, save your R-source code in a text file (adhering to a <a href="https://google.github.io/styleguide/Rguide.xml">style guide</a>), and then just load the code into a new R session to re-create the previous workspace. In my opinion, this is the key behind making your work reproducible.</p>
 </div>

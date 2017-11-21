@@ -1,5 +1,8 @@
 ---
 title: "Software"
+output:
+  html_document:
+    fig_caption: false
 ---
 
 Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested.
@@ -20,16 +23,16 @@ Accept default options on all but the following dialogs.
 
 Set the location for the R installation to someplace you have write access (such as "C:\\Users\\\<user\>\\Tools\\R").
 
-| ![](images/software-r_01.png)
+![](images/software-r_01.png)
 
 Customize startup options by specifying *Yes (customized startup)*.
 
-| ![](images/software-r_02.png)
+![](images/software-r_02.png)
 
 Set the R graphical user interface to operate with multiple top-level windows for the console,
 graphics and pager, by specifying *SDI (separate windows)*.
 
-| ![](images/software-r_03.png)
+![](images/software-r_03.png)
 
 Once installed, R should be accessible from the start menu or desktop shortcut.
 Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version.
@@ -37,7 +40,7 @@ The 64-bit version of R (R x64) is preferred.
 Startup an R session.
 Once running the R Console should look something like this
 
-| ![](images/software-r_04.png)
+![](images/software-r_04.png)
 
 R comes with a standard set of packages,
 these are collections of R functions, data, and compiled code in a well-defined format.
@@ -57,7 +60,7 @@ Once installed, Notepad++ is accessible from Windows Explorer,
 right-click on a text file (such as an R source file [*.R]) and select *Edit with Notepad++*.
 Once running the file is opened in the text editor, it should look something like this
 
-| ![](images/software-notepad_01.png)
+![](images/software-notepad_01.png)
 
 ## RStudio
 
@@ -69,7 +72,7 @@ Accept default options on all dialogs.
 Once installed, RStudio should be accessible from the start menu.
 Startup an RStudio session, it should look something like this
 
-| ![](images/software-rstudio_01.png)
+![](images/software-rstudio_01.png)
 
 ## RTools
 
@@ -81,12 +84,12 @@ Accept default options on all but the following dialogs.
 
 Select the additional task to edit the current value of the System Path.
 
-| ![](images/software-rtools_01.png)
+![](images/software-rtools_01.png)
 
 Confirm that "c:\\Rtools\\bin" and "c:\\Rtools\\gcc-4.6.3\\bin" (version number may differ)
 are located at the beginning of the System Path.
 
-| ![](images/software-rtools_02.png)
+![](images/software-rtools_02.png)
 
 Once installed, check if Rtools can be accessed through R.
 Close the current R session (assuming you have it open) and open a new R session.
@@ -109,16 +112,16 @@ Accept default options on all but the following dialogs.
 Change the installation directory to "C:\\miktex",
 its been my experience that other locations can result in access errors.
 
-| ![](images/software-miktex_01.png)
+![](images/software-miktex_01.png)
 
 Choose to install missing packages on-the-fly by specify *Yes* in the pull-down-menu.
 
-| ![](images/software-miktex_02.png)
+![](images/software-miktex_02.png)
 
 Once installed, open the **MiKTeX Settings** application from the start menu, and
 select the *Roots* tab, it should look something like this
 
-| ![](images/software-miktex_03.png)
+![](images/software-miktex_03.png)
 
 Push the *Add...* button and select the root directory for R's LaTeX supplementary files.
 Your looking for the "texmf" folder within the R installation directory structure, such as
@@ -160,4 +163,4 @@ Accept default options on all dialogs.
 Once installed, Git should be accessible from the start menu.
 Startup a *Git Bash* session, it should look something like this
 
-| ![](images/software-git_01.png)
+![](images/software-git_01.png)

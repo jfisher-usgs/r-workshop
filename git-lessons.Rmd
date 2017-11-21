@@ -1,5 +1,8 @@
 ---
 title: "Git Lessons"
+output:
+  html_document:
+    fig_caption: false
 ---
 
 Git is an open source version control system (VCS).
@@ -57,7 +60,7 @@ The `status` command can be used to check the current state of your repository.
 git state
 ```
 
-| ![](images/git-bash_01.png)
+![](images/git-bash_01.png)
 
 At what seems like a good stopping point in your workflow,
 say after completing some interesting function in R.
@@ -69,7 +72,7 @@ To commit changes, use:
 git commit -m "Commit message"
 ```
 
-| ![](images/git-bash_02.png)
+![](images/git-bash_02.png)
 
 ## Setup GitHub
 
@@ -108,7 +111,7 @@ You can generate an SSH key and add the public key to your GitHub account by fol
 In the upper-right corner of any of your GitHub pages,
 click **+**, and then select *New repository*.
 
-| ![](images/git-github_01.png)
+![](images/git-github_01.png)
 
 Create a short, memorable name for your repository.
 For example, "repo-example".
