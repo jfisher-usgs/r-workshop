@@ -44,7 +44,7 @@ PlotNoisyData(x = 1:50, y = rep(0, 50), type = "b", col = "red")
 ## devtools::install_github("twitter/AnomalyDetection")
 
 ## ------------------------------------------------------------------------
-library(viridis)
+library(viridisLite)
 
 ## ---- eval=FALSE---------------------------------------------------------
 ## help.start()

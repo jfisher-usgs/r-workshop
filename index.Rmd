@@ -334,10 +334,10 @@ compares it with those installed and offers to download and install any that hav
 
 Only when a package is loaded are its contents (functions, datasets, and documentation) available in your R session.
 The `library` function is used to load a package into the current R session.
-For example, to load the **viridis** package use the command
+For example, to load the **viridisLite** package use the command
 
 ```{r}
-library(viridis)
+library(viridisLite)
 ```
 
 ### Help
