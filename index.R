@@ -31,7 +31,7 @@ PlotNoisyData(x = 1:50, y = rep(0, 50), type = "b", col = "red")
 ## search()
 
 ## ---- eval=FALSE---------------------------------------------------------
-## install.packages("inlmisc")
+## install.packages("inlmisc", dependencies = TRUE)
 
 ## ---- eval=FALSE---------------------------------------------------------
 ## repos <- c(GRAN = "https://owi.usgs.gov/R", CRAN = "https://cran.r-project.org/")

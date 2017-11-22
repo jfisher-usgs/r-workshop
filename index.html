@@ -448,7 +448,7 @@ div.tocify {
 <div id="installing-packages" class="section level4">
 <h4>Installing packages</h4>
 <p>R packages only need to be installed once on your computer. Use the <code>install.packages</code> function to install packages from a CRAN-like repository. For example, to install the <strong>inlmisc</strong> package from CRAN, use the command</p>
-<pre class="r"><code>install.packages(&quot;inlmisc&quot;)</code></pre>
+<pre class="r"><code>install.packages(&quot;inlmisc&quot;, dependencies = TRUE)</code></pre>
 <p>By default, <code>install.packages</code> also installs the packages which <strong>inlmisc</strong> depends on, links to, or imports; see the <a href="https://CRAN.R-project.org/package=inlmisc">package description</a> for its dependencies. If you wish to install a package from a different CRAN-like repository, such as the <strong>G</strong>eological survey <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork (<a href="https://owi.usgs.gov/R/gran.html">GRAN</a>), the <code>repos</code> argument must be specified. For example, to install the <strong>smwrData</strong> package from GRAN, use</p>
 <pre class="r"><code>repos &lt;- c(GRAN = &quot;https://owi.usgs.gov/R&quot;, CRAN = &quot;https://cran.r-project.org/&quot;)
 install.packages(&quot;smwrData&quot;, repos = repos)</code></pre>
@@ -466,6 +466,7 @@ install.packages(&quot;smwrData&quot;, repos = repos)</code></pre>
 <h4>Load a package</h4>
 <p>Only when a package is loaded are its contents (functions, datasets, and documentation) available in your R session. The <code>library</code> function is used to load a package into the current R session. For example, to load the <strong>viridis</strong> package use the command</p>
 <pre class="r"><code>library(viridis)</code></pre>
+<pre><code>## Loading required package: viridisLite</code></pre>
 </div>
 </div>
 <div id="help" class="section level3">

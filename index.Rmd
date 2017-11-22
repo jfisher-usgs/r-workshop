@@ -289,7 +289,7 @@ Use the `install.packages` function to install packages from a CRAN-like reposit
 For example, to install the **inlmisc** package from CRAN, use the command
 
 ```{r, eval=FALSE}
-install.packages("inlmisc")
+install.packages("inlmisc", dependencies = TRUE)
 ```
 
 By default, `install.packages` also installs the packages which **inlmisc** depends on, links to, or imports;
