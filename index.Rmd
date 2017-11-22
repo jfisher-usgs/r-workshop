@@ -460,6 +460,12 @@ Sources of material include:
 
 - SAS and R blog -- [another look at CRAN Task Views](https://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
 
+## R Session Information
+
+```{r}
+sessionInfo()
+```
+
 ## Website Information
 
 This website was written in [Rmarkdown](http://rmarkdown.rstudio.com/) and
