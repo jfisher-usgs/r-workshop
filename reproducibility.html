@@ -11,7 +11,7 @@
 
 
 
-<title>Git Lessons</title>
+<title>Reproducibility</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -309,76 +309,51 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Git Lessons</h1>
+<h1 class="title toc-ignore">Reproducibility</h1>
 
 </div>
 
 
-<p>Git is an open source version control system (VCS).</p>
-<div id="setup-git" class="section level2">
-<h2>Setup Git</h2>
-<p>Startup the <strong>Git Bash</strong> application.</p>
-<p>Tell Git your name so your commits will be properly labeled by typing the following command (for example, replace <code>&quot;&lt;YOUR NAME&gt;&quot;</code> with <code>&quot;Jason Fisher&quot;</code>):</p>
-<pre class="bash"><code>git config --global user.name &quot;&lt;YOUR NAME&gt;&quot;</code></pre>
-<p>Tell Git the <em>email address</em> that will be associated with your <em>git commits</em>. (for example, replace <code>&lt;YOUR EMAIL ADDRESS&gt;</code> with <code>jfisher@usgs.gov</code>):</p>
-<pre class="bash"><code>git config --global user.email &lt;YOUR EMAIL ADDRESS&gt;</code></pre>
-</div>
-<div id="create-local-repository" class="section level2">
-<h2>Create Local Repository</h2>
-<p>Let’s assume you have an existing working directory (such as “repo-example”) that contains files and folders. Again startup <strong>Git Bash</strong>, but this time open the application through File Explorer by right clicking the folder of interest and selecting <em>Git Bash Here</em>. To create the git repository, use the following command:</p>
-<pre class="bash"><code>git init</code></pre>
-<p>Notice that a <code>.git</code> file was written to your working directory. This file stores the future history of any edits made to file content in the repository.</p>
-<p>There is, however, an additional command need to start tracking changes. Files must be added to the repository in order for them to be tracked. The following command tells git to start tracking all files within your repository.</p>
-<pre class="bash"><code>git add .</code></pre>
-<p>Any future files that may be added to your working directory need to be added. For example, if you want to add a single text file located in “repo-example/test/file.txt”, use</p>
-<pre class="bash"><code>git add repo-example/test/file2.txt</code></pre>
-<p>The <code>status</code> command can be used to check the current state of your repository.</p>
-<pre class="bash"><code>git state</code></pre>
-<p><img src="images/git-bash_01.png" /></p>
-<p>At what seems like a good stopping point in your workflow, say after completing some interesting function in R. Commit all your changes using the following command and leave a message to help you find these changes in the future. To commit changes, use:</p>
-<pre class="bash"><code>git commit -m &quot;Commit message&quot;</code></pre>
-<p><img src="images/git-bash_02.png" /></p>
-</div>
-<div id="setup-github" class="section level2">
-<h2>Setup GitHub</h2>
-<p>Now that the files are committed, setup your remote repository. <a href="https://github.com/">GitHub</a> is probably the most popular git repository hosting service out there. And the USGS has a presence on GitHub, see its organization page at <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>.</p>
-<p>Sign up for a GitHub account at <a href="https://github.com/join">github.com</a>:</p>
-<ul>
-<li><p>Account name should be in the following format: “AD shortname”-usgs. Example: jfisher-usgs. If you have a special character such as an underscore in your username, replace it with a dash.</p></li>
-<li><p>Account should use the user’s official USGS email address.</p></li>
-<li><p>Account should use the user’s real name.</p></li>
-<li><p>Password should not be used for any other account.</p></li>
-</ul>
-<p>Notify the “<a href="mailto:gs_github_admin@usgs.gov">gs_github_admin@usgs.gov</a>” email group of your new username, and they will add you to the list of users on <a href="https://github.com/usgs/" class="uri">https://github.com/usgs/</a>, and add you to the “<a href="mailto:gs_github@usgs.gov">gs_github@usgs.gov</a>” email discussion and announcements group.</p>
-<p>Once we add you to the USGS org (<a href="https://github.com/usgs" class="uri">https://github.com/usgs</a>), click the “publicize” option in your account settings. Once you do this, GitHub will publicly list you as a member of the USGS organization.</p>
-</div>
-<div id="generate-an-ssh-key" class="section level2">
-<h2>Generate an SSH Key</h2>
-<p>SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined on this <a href="https://help.github.com/articles/generating-an-ssh-key/">website</a>.</p>
-</div>
-<div id="create-remote-repository" class="section level2">
-<h2>Create Remote Repository</h2>
-<p>In the upper-right corner of any of your GitHub pages, click <strong>+</strong>, and then select <em>New repository</em>.</p>
-<p><img src="images/git-github_01.png" /></p>
-<p>Create a short, memorable name for your repository. For example, “repo-example”. Leave everything else with default values, and click the Create repository button.</p>
-<p>Head back over to your <strong>Git Bash</strong> and establish a connection to the GitHub repository, use the following commands (and change URL as needed):</p>
-<pre class="bash"><code>git remote add origin git@github.com:jfisher-usgs/repo-example.git
-git push -u origin master</code></pre>
-<p>From here on out, all that is need to push your commits to your online repository is</p>
-<pre class="bash"><code>git push</code></pre>
-<div id="exercise" class="section level4">
-<h4>Exercise</h4>
-<ol style="list-style-type: decimal">
-<li><p>Initiate your own repository, you can use “repo-example” as a starting point.</p></li>
-<li><p>Add and commit your file content to your new local repository.</p></li>
-<li><p>Sign-up for a GitHub account and create a new remote repository.</p></li>
-<li><p>Establish a connection between your local and remote repository.</p></li>
-<li><p>Push commits to GitHub.</p></li>
-<li><p>Make changes to file content locally.</p></li>
-<li><p>Repeat steps 2 and 5.</p></li>
-<li><p>Can you find a graphical representation of your commits on GitHub.</p></li>
-</ol>
-</div>
+<p>This website was written in <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a> and rendered as a static website using the <a href="https://CRAN.R-project.org/package=rmarkdown">rmarkdown</a> package. Website files are hosted using <a href="https://pages.github.com/">GitHub Pages</a> and the complete source is available on <a href="https://github.com/jfisher-usgs/r-workshop">GitHub</a>.</p>
+<div id="r-session-information" class="section level2">
+<h2>R Session Information</h2>
+<p>The R session information when compiling this website is shown below.</p>
+<pre><code>## Session info ------------------------------------------------------------------
+##  setting  value                       
+##  version  R version 3.4.2 (2017-09-28)
+##  system   x86_64, mingw32             
+##  ui       Rgui                        
+##  language (EN)                        
+##  collate  English_United States.1252  
+##  tz       America/Los_Angeles         
+##  date     2017-11-22
+## Packages ----------------------------------------------------------------------
+##  package     * version date       source        
+##  backports     1.1.1   2017-09-25 CRAN (R 3.4.1)
+##  base        * 3.4.2   2017-09-28 local         
+##  compiler      3.4.2   2017-09-28 local         
+##  datasets    * 3.4.2   2017-09-28 local         
+##  devtools      1.13.4  2017-11-09 CRAN (R 3.4.2)
+##  digest        0.6.12  2017-01-27 CRAN (R 3.4.1)
+##  evaluate      0.10.1  2017-06-24 CRAN (R 3.4.1)
+##  graphics    * 3.4.2   2017-09-28 local         
+##  grDevices   * 3.4.2   2017-09-28 local         
+##  htmltools     0.3.6   2017-04-28 CRAN (R 3.4.1)
+##  knitr         1.17    2017-08-10 CRAN (R 3.4.1)
+##  magrittr      1.5     2014-11-22 CRAN (R 3.4.1)
+##  memoise       1.1.0   2017-04-21 CRAN (R 3.4.1)
+##  methods     * 3.4.2   2017-09-28 local         
+##  Rcpp          0.12.13 2017-09-28 CRAN (R 3.4.2)
+##  rmarkdown   * 1.8     2017-11-17 CRAN (R 3.4.2)
+##  rprojroot     1.2     2017-01-16 CRAN (R 3.4.1)
+##  stats       * 3.4.2   2017-09-28 local         
+##  stringi       1.1.6   2017-11-17 CRAN (R 3.4.2)
+##  stringr       1.2.0   2017-02-18 CRAN (R 3.4.1)
+##  tools         3.4.2   2017-09-28 local         
+##  utils       * 3.4.2   2017-09-28 local         
+##  viridisLite * 0.2.0   2017-03-24 CRAN (R 3.4.1)
+##  withr         2.1.0   2017-11-01 CRAN (R 3.4.2)
+##  yaml          2.1.14  2016-11-12 CRAN (R 3.4.1)</code></pre>
 </div>
 
 <div id="page-footer">

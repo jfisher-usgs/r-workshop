@@ -11,6 +11,8 @@ navbar:
       href: git-lessons.html
     - text: "R Lessons"
       href: r-lessons.html
+    - text: "Reproducibility"
+      href: reproducibility.html
 
 output_dir: "."
 output:

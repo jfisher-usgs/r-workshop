@@ -459,16 +459,3 @@ Sources of material include:
 - Tutorials by William B. King -- [Saving and Loading Objects in R](https://ww2.coastal.edu/kingw/statistics/R-tutorials/savingloading.html)
 
 - SAS and R blog -- [another look at CRAN Task Views](https://sas-and-r.blogspot.com/2011/05/another-look-at-cran-task-views.html)
-
-## R Session Information
-
-```{r}
-sessionInfo()
-```
-
-## Website Information
-
-This website was written in [Rmarkdown](http://rmarkdown.rstudio.com/) and
-rendered as a static website using the [rmarkdown](https://CRAN.R-project.org/package=rmarkdown) package.
-Website files are hosted using [GitHub Pages](https://pages.github.com/)
-and the complete source is available on [GitHub](https://github.com/jfisher-usgs/r-workshop).
