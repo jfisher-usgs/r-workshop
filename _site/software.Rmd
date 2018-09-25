@@ -1,0 +1,157 @@
+Prior to the start of the workshop everyone bringing a computer will need to have had the software installed and tested.
+Below are the instructions for installing software used in this workshop.
+If you do not have install access to your computer,
+you will need to contact your IT representative to have them install it.
+You can give them a link to this page for instructions.
+These instructions are for installing software on a Windows 7 (or higher) operating system (OS).
+
+## R
+
+[R](https://www.r-project.org/) is a programming language and software environment
+for statistical computing and graphics.
+[Download](https://cran.rstudio.com/bin/windows/base/) the latest binary distribution of R
+from the **C**omprehensive **R** **A**rchive **N**etwork (CRAN).
+Once the installer downloads, double left-click the installation file.
+Accept default options on all but the following dialogs.
+
+Set the location for the R installation to someplace you have write access (such as "C:\\Users\\\<user\>\\Tools\\R").
+
+![](images/software-r_01.png)
+
+Customize startup options by specifying *Yes (customized startup)*.
+
+![](images/software-r_02.png)
+
+Set the R graphical user interface to operate with multiple top-level windows for the console,
+graphics and pager, by specifying *SDI (separate windows)*.
+
+![](images/software-r_03.png)
+
+Once installed, R should be accessible from the start menu or desktop shortcut.
+Assuming you installed R on a 64-bit OS, two versions of R are made available, that is, a 32-bit and 64-bit version.
+The 64-bit version of R (R x64) is preferred.
+Startup an R session.
+Once running the R Console should look something like this
+
+![](images/software-r_04.png)
+
+R comes with a standard set of packages,
+these are collections of R functions, data, and compiled code in a well-defined format.
+Other user-contributed packages are available for download and installation.
+
+## Notepad++
+
+If you don't already have a favorite text editor
+(Notepad and Wordpad don't count, [UltraEdit](https://www.ultraedit.com/) does),
+[download](https://notepad-plus-plus.org/download/) the latest 32-bit version of
+[Notepad++](https://notepad-plus-plus.org/).
+Once the installer downloads, right-click on it and select *Run as administrator*.
+Accept default options on all dialogs.
+Once installed, Notepad++ is accessible from Windows Explorer,
+right-click on a text file (such as an R source file [*.R]) and select *Edit with Notepad++*.
+Once running the file is opened in the text editor, it should look something like this
+
+![](images/software-notepad_01.png)
+
+## RStudio
+
+<span style="color:red;">Optional</span>:
+[RStudio](https://www.rstudio.com/products/rstudio/) is an integrated development environment (IDE) for R; it requires R to run.
+[Download](https://www.rstudio.com/products/rstudio/download/) the latest free-license version of RStudio Desktop.
+Once the installer downloads, right-click on it and select *Run as administrator*.
+Accept default options on all dialogs.
+Once installed, RStudio should be accessible from the start menu.
+Startup an RStudio session, it should look something like this
+
+![](images/software-rstudio_01.png)
+
+## RTools
+
+<span style="color:red;">Optional</span>:
+RTools is a collection of resources for building packages for R.
+[Download](https://cloud.r-project.org/bin/windows/Rtools/) the latest "frozen" version of Rtools.
+Once the installer downloads, right-click on it and select *Run as administrator*.
+Accept default options on all but the following dialogs.
+
+Select the additional task to edit the current value of the System Path.
+
+![](images/software-rtools_01.png)
+
+Confirm that "c:\\Rtools\\bin" and "c:\\Rtools\\gcc-4.6.3\\bin" (version number may differ)
+are located at the beginning of the System Path.
+
+![](images/software-rtools_02.png)
+
+Once installed, check if Rtools can be accessed through R.
+Close the current R session (assuming you have it open) and open a new R session.
+Paste the following command into the R Console to see if Rtools is included in the System Path.
+
+```{r, eval=FALSE}
+Sys.getenv("PATH")
+```
+
+You should see "c:\\\\Rtools\\\\bin;c:\\\\Rtools\\\\gcc-4.6.3\\\\bin;..." in the output.
+
+## MiKTeX
+
+<span style="color:red;">Optional</span>:
+[MiKTeX](https://miktex.org/) is an implementation of TeX/LaTeX and related programs for Windows.
+[Download](https://miktex.org/download) the latest 32-bit version of Basic MiKTeX.
+Once the installer downloads, right-click on it and select *Run as administrator*.
+Accept default options on all but the following dialogs.
+
+Change the installation directory to "C:\\miktex",
+its been my experience that other locations can result in access errors.
+
+![](images/software-miktex_01.png)
+
+Choose to install missing packages on-the-fly by specify *Yes* in the pull-down-menu.
+
+![](images/software-miktex_02.png)
+
+Once installed, open the **MiKTeX Settings** application from the start menu, and
+select the *Roots* tab, it should look something like this
+
+![](images/software-miktex_03.png)
+
+Push the *Add...* button and select the root directory for R's LaTeX supplementary files.
+Your looking for the "texmf" folder within the R installation directory structure, such as
+"C:\\Users\\\<user\>\\Tools\\R\\R-3.3.1\\share\\texmf".
+
+R functions that let you write LaTeX documents are included in the
+[knitr](https://CRAN.R-project.org/package=knitr) package.
+
+## Pandoc
+
+<span style="color:red;">Optional</span>:
+[Pandoc](https://pandoc.org/) is a universal document converter.
+[Download](https://pandoc.org/installing.html) the latest version of pandoc for Windows.
+Once the installer downloads, double left-click the installation file.
+Pandoc is used by the [**rmarkdown**](https://CRAN.R-project.org/package=rmarkdown) package to
+convert R Markdown documents into a variety of formats, such as HTML.
+Accept default options on all dialogs and install for a single user.
+
+## QPDF
+
+<span style="color:red;">Optional</span>:
+[QPDF](http://qpdf.sourceforge.net/) does structural, content-preserving transformations on PDF files.
+[Download](https://sourceforge.net/projects/qpdf/files/) the latest 64-bit (or 32-bit) version of QPDF built with mingw.
+Once the distribution file downloads, extract it someplace you have write access  (such asC:\\Users\\\<user\>\\Tools\\QPDF).
+Manually edit the Windows *system environment variables* to include the QPDF bin directory
+(such as "C:\\Users\\\<user\>\\Tools\\QPDF\\qpdf-6.0.0\\bin") in the *Path*.
+The QPDF executable will then be accessible through R using the `compactPDF` function
+in the **tools** package (pre-installed with R).
+
+
+## Git
+
+<span style="color:red;">Optional</span>:
+[Git](https://git-scm.com/) is a version control system that is used for
+software development and other version control tasks.
+[Download](https://git-scm.com/download) the latest 64-bit (or 32-bit) version of Git for Windows.
+Once the installer downloads, right-click on it and select *Run as administrator*.
+Accept default options on all dialogs.
+Once installed, Git should be accessible from the start menu.
+Startup a *Git Bash* session, it should look something like this
+
+![](images/software-git_01.png)
